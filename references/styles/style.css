@@ -66,7 +66,7 @@ body {
 	padding: 0px;
 	min-height: 100vh;
 	box-shadow: 0px 0px 15px #000000b6;
-	margin-top: -100px;
+	margin-top: -150px;
 }
 
 /* Main content area */
@@ -79,7 +79,7 @@ body {
 	font-size: var(--fontsize);
 	margin-left: 12%;
 	margin-right: 12%;
-	padding-top: 70px;
+	padding-top: 50px;
 }
 
 .lessTopMargin {
