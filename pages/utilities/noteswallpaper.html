@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wallpaper With Notes</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url('../images/yosemite.jpg'); /* Replace 'background-image.jpg' with your image file path */
+        background-size: cover;
+        background-position: center;
+        height: 100vh; /* This ensures the body covers the entire height of the viewport */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Verdana, "Comic Sans Ms";
+    }
+    
+    .textInputContainer {
+        width: 100%;
+        display: flex;
+        margin: 30px;
+        height: 100%;
+    }
+    
+    .textInputContainer textarea {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        font-size: 1.1rem;
+        color: white;
+        text-align: left;
+        margin: 20px;
+        color: #ffffff;
+        text-shadow: 0px 0px 10px #000000;
+
+        top: 0;
+        max-height: 100%;
+        height:95%;
+        width:33.333333%;
+        resize: horizontal;
+    }
+</style>
+</head>
+<body>
+<div class="textInputContainer">
+    <textarea placeholder="Enter notes..."></textarea>
+    <textarea placeholder="Enter notes..."></textarea>
+    <textarea placeholder="Enter notes..."></textarea>
+</div>
+</body>
+</html>

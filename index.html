@@ -1,0 +1,172 @@
+<!-- aight so i kinda wanna redo this entire site. 
+id like to categorize the projects
+make a portfolio for photos and cool things
+idk what else but the site could really use a refresh
+its not bad looking per say but its just kinda clunky
+but it'd be good to keep it from looking like every bog standard portfolio (they're all wordpress templates)
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="width=device-width, initial-scale=1" charset="utf-8" />
+        <title>
+            Evaniel
+        </title>
+		<link rel="stylesheet" type="text/css" href="../references/styles/style.css">
+		<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+		<script src="../references/scripts/load.js"></script>
+        <script src="../references/scripts/randomFrontImage.js" defer></script>
+
+	</head>
+	<body>
+		<div id="front-image">
+			<h1>Hello</h1>
+			<img id="front-image-image" src="images/portfolio/IMG_0402.jpg">
+		</div>
+		
+		<div id="main-container">
+            <div class="bgisolate">
+                <div class="bgnoise"></div>
+                <div class="bgoverlay"></div>
+            </div>
+
+            <div id="main" class="lessTopMargin">
+
+                <div id="columns">
+                    <div class="column">
+                        <div class="tile-column">
+                            <div class="tile tile-title">
+                                <h2>Utilities</h2>
+                            </div>
+                            <a href="pages/projects/drvc.html" class="tile">
+                                <h2>Deformable Rigidbody Vehicle Creator</h2>
+                                <img src="images/projects/vds.png">
+                                <p>
+                                    An addon that'll never be finished
+                                </p>
+                            </a>
+
+
+                            <div class="tile tile-title">
+                                <h2>Games</h2>
+                            </div>
+                            <a href="pages/projects/msg.html" class="tile">
+                                <h2>Multiplayer Shooty Game</h2>
+                                <img src="images/projects/msg.jpg">
+                                <p>
+                                    A game that'll never be finished
+                                </p>
+                            </a>
+                            <a href="pages/projects/skidsteer.html" class="tile">
+                                <h2>Skid Steer Simulator</h2>
+                                <img src="images/projects/skidsteer.png">
+                                <p>
+                                    First game of mine
+                                </p>
+                            </a>
+                            <a href="pages/projects/train.html" class="tile">
+                                <h2>Train</h2>
+                                <img src="images/projects/train.png">
+                                <p>
+                                    Train game thats superceded by Derail Valley
+                                </p>
+                            </a>
+                            <!-- <a href="pages/utilities/noteswallpaper.html" class="tile">
+                                <h2>Article 3</h2>
+                                <img src="images/portfolio/IMG_9964.jpg">
+                                <p>
+                                    placeholder text
+                                </p>
+                            </a> -->
+                            
+                            <div class="tile tile-title">
+                                <h2>Testing</h2>
+                            </div>
+                            <a href="pages/projects/msg.html" class="tile">
+                                <h2>Article 1</h2>
+                                <img src="images/portfolio/IMG_9583.jpg">
+                                <p>
+                                    placeholder text
+                                </p>
+                            </a>
+                            <a href="projects/msg" class="tile">
+                                <h2>Article 2</h2>
+                                <img src="images/portfolio/IMG_9674.jpg">
+                                <p>
+                                    placeholder text
+                                </p>
+                            </a>
+                            <a href="projects/msg" class="tile">
+                                <h2>Article 3</h2>
+                                <img src="images/portfolio/IMG_9964.jpg">
+                                <p>
+                                    placeholder text
+                                </p>
+                            </a>
+                        </div>
+
+                        <hr>
+                    </div>
+
+                    <div class="column">
+                        <div id="description">
+                            <h1>I'm working on it</h1>
+                            <p>
+                                A big inspiration for this site has been Japanese car ads from the 80's. What I've I noticed:
+                            </p>
+                            <ul>
+                                <li>They don't have borders around things</li>
+                                <li>The photographs have sharp corners, no border radius</li>
+                                <li>They don't usually have drop shadow, but I need to keep the drop shadow to add some separation between elements</li>
+                                <li>Lots of dithering and grain</li>
+                                <li>Honda in particular made use of geometric shapes</li>
+                            </ul> 
+                            <p>
+                                I'm happy with it so far, but I want to lean into the 80's graphic design even more. I know I need more dithering and gradients (especially on the tiles) and I should probably add some geometric icons or ribbons. I gotta remove the border radius but I couldn't figure out how without making it look clunky. My background gradient has gotta be better too.
+                            </p>
+                        </div>
+
+                        <hr>
+
+                        <div id="about-me">
+                            <p>
+                                Hey guys, what's going on, EvGames here. In today's video, I'm going to show you the best mage setup for midgame.
+                            </p>
+                        </div>
+
+                        <hr>
+
+                        <div class="tile-column">
+                            <a href="pages/collections/models.html" class="tile tile-small">
+                                <h2>3D Models</h2>
+                                <img src="images/portfolio/IMG_20240407_124828_958.jpg">
+                            </a>
+                            <a href="pages/collections/spots.html" class="tile tile-small">
+                                <h2>Places Map</h2>
+                                <img src="images/portfolio/IMG_20250720_152017_668.jpg">
+                            </a>
+                            <a href="pages/collections/portfolio.html" class="tile tile-small">
+                                <h2>Portfolio</h2>
+                                <img src="images/portfolio/IMG_9277.JPG">
+                            </a>
+                            <a href="pages/utilities/random.html" class="tile tile-small">
+                                <h2>Random</h2>
+                                <img src="images/portfolio/IMG_9998.jpg">
+                            </a>
+                        </div>
+
+                        <hr>
+                    </div>
+                </div>
+
+                <div id="footer"></div>
+            </div>
+        </div>
+		<div id="navbar"></div>
+	</body>
+
+
+
+
+</html>

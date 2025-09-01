@@ -1,0 +1,37 @@
+[
+    { 
+        "name": "River in Arnold", 
+        "coord": [-120.295568, 38.231973], 
+        "description": "",
+        "type": "place",
+        "recommended": "yes"
+    },
+    { 
+        "name": "Walk in Briones",
+        "coord": [-122.135206, 37.954060], 
+        "description": "",
+        "type": "place",
+        "recommended": "yes"
+    },
+    { 
+        "name": "Cool park",
+        "coord": [-121.59163, 37.57023],         
+        "description": "Cool park that at night feels like a liminal spaces",
+        "type": "place", 
+        "recommended": "yes"
+    },
+    { 
+        "name": "Redwood Rd",
+        "coord": [-122.179934, 37.795490], 
+        "description": "Cool road to drive on. Starts in Oakland and spits you out in Castro Valley",
+        "type": "road",
+        "recommended": "yes"
+    },
+    { 
+        "name": "Cummings Skyway",
+        "coord": [-122.235566, 38.045020], 
+        "description": "Cool driving road",
+        "type": "road",
+        "recommended": "yes"
+    }
+]
