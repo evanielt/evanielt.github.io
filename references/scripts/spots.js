@@ -23,9 +23,9 @@ var spots = []
 
 var spotStyle = new Style({
     image: new ol.style.Icon({
-      anchor: [0.5, 0.5],
+      anchor: [0.5, 1],
       src: '/images/marker.svg',
-      scale: 0.029,
+      scale: 0.045,
     })
     // image: new Circle({
     //     radius: 5,
@@ -41,9 +41,9 @@ var spotStyle = new Style({
 
 var spotSelectedStyle = new Style({
     image: new ol.style.Icon({
-      anchor: [0.5, 0.5],
+      anchor: [0.5, 1],
       src: '/images/markerselected.svg',
-      scale: 0.04,
+      scale: 0.065,
     })
     // image: new Circle({
     //     radius: 8,

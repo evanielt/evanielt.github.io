@@ -25,13 +25,13 @@
      inkscape:document-units="mm"
      inkscape:zoom="0.6743757"
      inkscape:cx="453.01158"
-     inkscape:cy="343.28046"
+     inkscape:cy="344.76331"
      inkscape:window-width="1536"
      inkscape:window-height="1001"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g2" />
+     inkscape:current-layer="layer1" />
   <defs
      id="defs1">
     <clipPath
@@ -49,49 +49,15 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <g
-       id="g2"
-       clip-path="url(#clipPath2)"
-       transform="translate(-4.9999928,-50.456937)">
-      <g
-         id="g3"
-         transform="rotate(-45,104.99999,150.45694)">
-        <rect
-           style="fill:#eb7221;fill-opacity:1;stroke:none;stroke-width:0.298164;stroke-opacity:1"
-           id="rect1-8"
-           width="154.91809"
-           height="55.535801"
-           x="27.540949"
-           y="121.57934" />
-        <rect
-           style="fill:#e2523f;fill-opacity:1;stroke:none;stroke-width:0.298164;stroke-opacity:1"
-           id="rect1-8-1"
-           width="154.91809"
-           height="40"
-           x="27.540949"
-           y="170.45694"
-           ry="0"
-           transform="translate(1.3985672e-6)" />
-        <rect
-           style="fill:#e9ae31;fill-opacity:1;stroke:none;stroke-width:0.298164;stroke-opacity:1"
-           id="rect1"
-           width="154.91809"
-           height="40"
-           x="27.540949"
-           y="90.45694" />
-      </g>
-    </g>
     <path
-       id="path54"
-       style="fill:none;fill-opacity:1;stroke:#f1ebe0;stroke-width:13;stroke-opacity:1;stroke-dasharray:none"
-       d="m 100.0001,40.000142 c -33.137054,2.3e-5 -59.999935,26.862904 -59.999958,59.999958 2.8e-5,33.13705 26.862907,59.99993 59.999958,59.99995 33.13705,-3e-5 59.99992,-26.8629 59.99995,-59.99995 -2e-5,-33.137051 -26.8629,-59.99993 -59.99995,-59.999958 z"
-       sodipodi:nodetypes="ccccc" />
-    <ellipse
-       style="fill:#31c56d;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
-       id="path56"
-       cx="41.82819"
-       cy="99.952156"
-       rx="1.8280522"
-       ry="0.047939707" />
+       style="fill:#eb7221;fill-opacity:1;stroke:none;stroke-width:13"
+       d="M 157.5794,63.55098 109.87197,160.30684 62.164534,63.55098 Z m -53.26367,38.01837"
+       id="path3-8"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:#e9ae31;fill-opacity:1;stroke:none;stroke-width:13"
+       d="M 147.75791,58.662105 100.05048,155.41798 52.343049,58.662105 Z M 94.49423,96.680478"
+       id="path3"
+       sodipodi:nodetypes="cccc" />
   </g>
 </svg>
