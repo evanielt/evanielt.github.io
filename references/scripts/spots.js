@@ -40,21 +40,21 @@ var spotStyle = new Style({
 });
 
 var spotSelectedStyle = new Style({
-    // image: new ol.style.Icon({
-    //   anchor: [0.5, 0.5],
-    //   src: '/images/marker.svg',
-    //   scale: 0.04,
-    // })
-    image: new Circle({
-        radius: 8,
-        fill: new Fill({
-            color: color4,
-        }),
-        stroke: new Stroke({
-            color: color3,
-            width: 3
-        }),
+    image: new ol.style.Icon({
+      anchor: [0.5, 0.5],
+      src: '/images/markerselected.svg',
+      scale: 0.04,
     })
+    // image: new Circle({
+    //     radius: 8,
+    //     fill: new Fill({
+    //         color: color4,
+    //     }),
+    //     stroke: new Stroke({
+    //         color: color3,
+    //         width: 3
+    //     }),
+    // })
 });
 // creates map
 var map = new Map({
