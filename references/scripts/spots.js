@@ -18,6 +18,10 @@ var color2 = "#eb7221";
 var color3 = "#e2523f";
 var color4 = "#661717";
 
+var colorGood = "#4e7fa5ff";
+var colorFine = "#e67943ff";
+var colorBad = "#af2f54";
+
 
 var spots = []
 
@@ -25,36 +29,45 @@ var spotStyle = new Style({
     image: new ol.style.Icon({
       anchor: [0.5, 1],
       src: '/images/marker.svg',
-      scale: 0.045,
+      scale: 0.05,
+      color: colorGood,
     })
-    // image: new Circle({
-    //     radius: 5,
-    //     fill: new Fill({
-    //         color: color
-    //     }),
-    //     stroke: new Stroke({
-    //         color: color1,
-    //         width: 3
-    //     }),
-    // })
+});
+
+var spotGoodStyle = new Style({
+    image: new ol.style.Icon({
+      anchor: [0.5, 1],
+      src: '/images/marker.svg',
+      scale: 0.05,
+      color: colorGood,
+    })
+});
+
+var spotFineStyle = new Style({
+    image: new ol.style.Icon({
+      anchor: [0.5, 1],
+      src: '/images/marker.svg',
+      scale: 0.05,
+      color: colorFine,
+    })
+});
+
+var spotBadStyle = new Style({
+    image: new ol.style.Icon({
+      anchor: [0.5, 1],
+      src: '/images/marker.svg',
+      scale: 0.05,
+      color: colorBad,
+    })
 });
 
 var spotSelectedStyle = new Style({
     image: new ol.style.Icon({
       anchor: [0.5, 1],
-      src: '/images/markerselected.svg',
-      scale: 0.065,
+      src: '/images/marker.svg',
+      scale: 0.07,
+      color: color0,
     })
-    // image: new Circle({
-    //     radius: 8,
-    //     fill: new Fill({
-    //         color: color4,
-    //     }),
-    //     stroke: new Stroke({
-    //         color: color3,
-    //         width: 3
-    //     }),
-    // })
 });
 // creates map
 var map = new Map({
@@ -73,12 +86,11 @@ var map = new Map({
 });
 
 
-
 // fills in the spots variable with data from the spots.json file
-fetch('../../spots.json')
+fetch('/references/spots.json')
     .then(response => {
         if (!response.ok) {
-            throw new Error('Couldn\'t find spot.json');
+            throw new Error('Couldn\'t find spot.json at ROOT/references/spots.json');
         }
         return response.json();
     })
@@ -109,10 +121,20 @@ function createMarkers() {
             name: spotData.name,
             category: spotData.category,
             description: spotData.description,
-            recommended: spotData.recommended
+            rating: spotData.rating,
         });
 
-        spot.setStyle(spotStyle);
+        console.log(spot.get("rating"));
+
+        if(spot.get("rating") == "good") {
+            spot.setStyle(spotGoodStyle);
+        } else if(spot.get("rating") == "fine") {
+            spot.setStyle(spotFineStyle);
+        } else if(spot.get("rating") == "bad") {
+            spot.setStyle(spotBadStyle);
+        } else {
+            spot.setStyle(spotStyle);
+        }
 
         vectorSource.addFeature(spot);
 

@@ -11,6 +11,7 @@
    inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
@@ -23,9 +24,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.6743757"
-     inkscape:cx="453.01158"
-     inkscape:cy="344.76331"
+     inkscape:zoom="0.47685563"
+     inkscape:cx="231.72632"
+     inkscape:cy="330.28864"
      inkscape:window-width="1536"
      inkscape:window-height="1001"
      inkscape:window-x="-8"
@@ -34,6 +35,18 @@
      inkscape:current-layer="layer1" />
   <defs
      id="defs1">
+    <linearGradient
+       id="linearGradient3"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop4" />
+      <stop
+         style="stop-color:#bc8715;stop-opacity:1;"
+         offset="1"
+         id="stop3" />
+    </linearGradient>
     <clipPath
        clipPathUnits="userSpaceOnUse"
        id="clipPath2">
@@ -44,20 +57,113 @@
          cy="150.45694"
          r="60" />
     </clipPath>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3"
+       id="linearGradient4"
+       x1="55.220169"
+       y1="90.723137"
+       x2="144.8808"
+       y2="123.35695"
+       gradientUnits="userSpaceOnUse" />
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Noise Fill"
+       id="filter13"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feTurbulence
+         type="fractalNoise"
+         baseFrequency="20 25.1534"
+         numOctaves="5"
+         seed="50"
+         result="turbulence"
+         id="feTurbulence12" />
+      <feComposite
+         in="SourceGraphic"
+         in2="turbulence"
+         operator="in"
+         result="composite1"
+         id="feComposite12" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 3.23404 -1.06383 "
+         result="color"
+         id="feColorMatrix12" />
+      <feFlood
+         flood-opacity="1"
+         flood-color="rgb(79,50,5)"
+         result="flood"
+         id="feFlood12" />
+      <feMerge
+         result="merge"
+         id="feMerge13">
+        <feMergeNode
+           in="flood"
+           id="feMergeNode12" />
+        <feMergeNode
+           in="color"
+           id="feMergeNode13" />
+      </feMerge>
+      <feComposite
+         in2="SourceGraphic"
+         operator="in"
+         result="composite2"
+         id="feComposite13" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow"
+       id="filter32"
+       x="-0.31362629"
+       y="-0.27785907"
+       width="1.6272526"
+       height="1.6208948">
+      <feFlood
+         result="flood"
+         in="SourceGraphic"
+         flood-opacity="0.854902"
+         flood-color="rgb(255,255,255)"
+         id="feFlood31" />
+      <feGaussianBlur
+         result="blur"
+         in="SourceGraphic"
+         stdDeviation="9.118541"
+         id="feGaussianBlur31" />
+      <feOffset
+         result="offset"
+         in="blur"
+         dx="0.000000"
+         dy="0.000000"
+         id="feOffset31" />
+      <feComposite
+         result="comp1"
+         operator="in"
+         in="flood"
+         in2="offset"
+         id="feComposite31" />
+      <feComposite
+         result="comp2"
+         operator="over"
+         in="SourceGraphic"
+         in2="comp1"
+         id="feComposite32" />
+    </filter>
   </defs>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:#eb7221;fill-opacity:1;stroke:none;stroke-width:13"
-       d="M 157.5794,63.55098 109.87197,160.30684 62.164534,63.55098 Z m -53.26367,38.01837"
-       id="path3-8"
-       sodipodi:nodetypes="cccc" />
-    <path
-       style="fill:#e9ae31;fill-opacity:1;stroke:none;stroke-width:13"
+       style="fill:#191919;fill-opacity:1;stroke:#ffffff;stroke-width:10;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter32)"
        d="M 147.75791,58.662105 100.05048,155.41798 52.343049,58.662105 Z M 94.49423,96.680478"
        id="path3"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="display:none;fill:url(#linearGradient4);fill-opacity:1;stroke:none;stroke-width:13;filter:url(#filter13)"
+       d="M 147.75791,58.662105 100.05048,155.41798 52.343049,58.662105 Z M 94.49423,96.680478"
+       id="path3-1"
        sodipodi:nodetypes="cccc" />
   </g>
 </svg>

@@ -1,29 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+
+/* a thing to do eventually is to make everything is the border-box model which is just better */
 
 :root {
-    --bgcolor: #222222; /*for the background these colors arent quite whats shown cause of the filters applied */
-    --bgcolor2: #131313;
+    --bgcolor: #131313; /*for the background these colors arent quite whats shown cause of the filters applied */
+    --bgcolor2: #070707;
     --bgcolor3: #1a1c1f6b; /* transparency */
     --bggradient: linear-gradient(
         to bottom right,
         var(--bgcolor), var(--bgcolor2)
     );
-    --bgcolortile: #303030;
+    --bgcolortile: #131313;
     --color0: #f1ebe0;
     --color1: #e9ae31;
     --color2: #eb7221;
     --color3: #e2523f;
     --color4: #661717;
+    --tricolorgradient: linear-gradient(to right, #dca327 0 33%, #e77541 33% 66%, #d83c38 66%) 1;
+    --border-color: #55534e;
+
     --textcolor: #e0dfd9;
     --textcolor2: #6d6d6d;
     --errorcolor: #751c4d;
-    --tricolorgradient: linear-gradient(to right, #dca327 0 33%, #e77541 33% 66%, #d83c38 66%) 1;
+
     --fontminsize: 14px;   /* 14px → 0.88rem */
     --fontmaxsize: 18px;   /* 18px → 1.13rem */
     --transitionms: 5ms;
-    --borderradius: 0.19rem;  /* 3px → 0.19rem */
+    --borderradius: 0rem;  /* 3px → 0.19rem */
 }
 
 /* Highlight color */
@@ -31,15 +36,14 @@
     background: #131313;
 }
 
-/* Main styling */
 html {
     height: 100%;
     width: 100%;
     padding: 0;
     margin: 0;
     color: var(--textcolor);
-    font-family:  "Roboto", "Comic Sans Ms";
-    font-weight: 300;
+    font-family:  "Roboto Flex", "Comic Sans Ms";
+    font-weight: 150;
     font-style: normal;
     font-size: 16px;
     /* font-size: clamp(var(--fontminsize), 4vw, var(--fontmaxsize)); */
@@ -58,37 +62,37 @@ html {
 body {
     margin: 0;
     padding: 0;
-}
-
-/* used to allow for a scrollable background on the index */
-#main-container {
-    position: relative;
     min-height: 100%;
-    flex-direction: column;
-    padding: 0;
-    min-height: 100vh;
-    box-shadow: 0px 0px 10px #0000009f;
-    margin-top: 10rem;
-    z-index: 0;
-    background: var(--bggradient);
-    width: 100%;
-    max-width: 100%;
-    margin-left: 0;
-    flex-grow: 0;
-    flex-shrink: 0;
+    height: 100%;
 }
 
 /* Main content area */
 #main {
-    position: relative;
-    min-height: 100%;
+    box-sizing: border-box; 
+    position: absolute;
     flex-direction: column;
-    padding: 0;
-    /* min-height: 100vh; */
-    margin-left: 10vw;
-    margin-right: 10vw;
-    margin-top: 5rem;
+    z-index: 0;
+
+    min-height: 100%;
+    width: 100vw;
+
+    box-shadow: 0px 0px 10px #0000009f;
+    background: var(--bggradient);
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    padding-left: 12%;
+    padding-right: 12%;
     padding-top: 5rem;
+    padding-bottom: 0;
+
+
+    margin: 0;
+}
+/* because of front image */
+.more-top-margin {
+    margin-top: 28rem !important;
+    padding-top: 3rem !important;
 }
 
 /* ----------------------------- Basic styling ------------------------------------------------------------------- */
@@ -112,8 +116,8 @@ a:hover {
 h1 {
     color: var(--color0);
     text-shadow: 0.06rem 0.06rem 0px var(--color1);
-    font-family: "Gelasio";
-    font-weight: 300;
+    font-family: "Oxanium", "Gelasio";
+    font-weight: 700;
     font-size: 2rem;          /* 40px → 2.5rem */
     font-style: italic;
     line-height: 1em;
@@ -122,17 +126,17 @@ h1 {
 h2 {
     color: var(--color0);
     text-shadow: 0.06rem 0.06rem 0px var(--color1);
-    font-family: "Gelasio";
+    font-family: "Oxanium", "Gelasio";
     font-size: 1.8rem;         /* 35px → 2.19rem */
-    font-weight: 300;
+    font-weight: 500;
     padding: 0em;
 }
 
 h3 {
     color: var(--color3);
     text-shadow: 0.06rem 0.06rem 0px var(--color3);
-    font-family: "Gelasio";
-    font-weight: 300;
+    font-family: "Oxanium", "Gelasio";
+    font-weight: 500;
 }
 
 hr {
@@ -147,22 +151,24 @@ iframe {
     border-radius: var(--borderradius);
     color: var(--color1);
     border-radius: var(--borderradius);
-    border-color: var(--color0);
+    border-color: var(--border-color);
     border-style: solid;
-    border-width: 0.19rem;     /* 3px → 0.19rem */
+    border-width: 0.1rem;     /* 3px → 0.19rem */
     background-color: transparent;
-    box-shadow: 0.06rem 0.06rem 0px var(--color1);
+    /* box-shadow: 0.2rem 0.2rem 0px var(--color1); */
     transition-duration: var(--transitionms);
 }
 
 iframe:hover {
     border-color: var(--color1);
-    box-shadow: 0.06rem 0.06rem 0px var(--color2);
+    box-shadow: 0.12rem 0.12rem 0px var(--color2);
 }
 
 iframe:active {
     background: var(--color1);
-    box-shadow: 0.06rem 0.06rem 0px var(--color2);
+    border-width: 0.1rem;     /* 3px → 0.19rem */
+    border-color: var(--color1);
+    box-shadow: 0.12rem 0.12rem 0px var(--color2);
 }
 
 /* Table */
@@ -291,17 +297,20 @@ footer {
 	max-height: 2em;
 }
 
-/* Navbar */
 #navbar {
-	height: 3.13rem; /* 50px */
-	width: 100%;
 	position: fixed;
 	top: 0;
 	left: 0;
-	vertical-align: middle;
 	z-index: 1;
+	overflow: scroll;
 
-	/* background-color: var(--bgcolor); */
+	height: 3.13rem; 
+	width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-left: 10vw;
+
+	vertical-align: middle;
 
     border-color: transparent;
     border-bottom: 0.13rem; /* 2px */
@@ -309,11 +318,6 @@ footer {
     border-bottom-style: solid;
     border-image: var(--tricolorgradient);
     border-width: 0.13rem; /* 2px */
-
-	/* box-shadow: 0px 0px 10px var(--bgcolor3); */
-	overflow: hidden;
-	transition: 250ms;
-    padding-left: 10vw;
 }
 
 #navbar a {
@@ -350,20 +354,21 @@ footer {
 
 /* Front Image */
 #front-image { 
+    position: absolute;
 	min-width: 100%;
-	min-height: 30vh; /* 60vh (assuming 1vh = 1rem) */
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin: 0rem;
 	padding: 0rem;
     z-index: -100;
+    top: 15rem;
 }
 #front-image h1 {
 	color: var(--color0);
 	font-size: 7rem;
     text-shadow: 0.2rem 0.2rem 0px var(--color1); /* 0.2rem */
-    margin-top: 35vh;
+    top: -8rem;
 	z-index: 1;
     position: absolute;
 }
@@ -411,22 +416,20 @@ footer {
 
 	white-space: normal;
 	margin-bottom: 1rem;
-    border-width: 0.18rem;
+    border-width: 0.1rem;
 	border-radius: var(--borderradius);
 	border-style: solid;
 	background-color: var(--bgcolortile);
     
-
-    border-color: transparent;
+    border-color: var(--border-color);
 
 	color: var(--color1);
     z-index: 0;
 }
 a.tile:hover {
 	filter: brightness(80%);
-    border-width: 0.18rem;
     border-color: var(--color1);
-    box-shadow: 0.18rem 0.18rem 0px var(--color2);
+    box-shadow: 0.12rem 0.12rem 0px var(--color2);
 }
 .tile img {
 	border-radius: var(--borderradius) var(--borderradius) 0rem 0rem; /* 0px */
@@ -463,7 +466,7 @@ a.tile:hover {
 .tile-small h2 {
     position: absolute;
     left: 1.2rem; /* already in rem */
-    bottom: 1rem; /* corrected from --1rem to -1rem */
+    bottom: 0.7rem; /* corrected from --1rem to -1rem */
 }
 .tile-small img {
     height: 100%;

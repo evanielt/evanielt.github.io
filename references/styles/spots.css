@@ -54,5 +54,5 @@
 }
 
 .ol_bw {
-    filter: invert(100%) hue-rotate(180deg) saturate(30%);/* contrast(70%) brightness(70%);*/
+    filter: invert(100%) hue-rotate(180deg) saturate(20%) brightness(90%);/* contrast(100%);*/
 }
