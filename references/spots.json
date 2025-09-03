@@ -1,44 +1,58 @@
 [
     { 
-        "name": "River in Arnold", 
-        "coords": [-120.295568, 38.231973], 
+        "name": "River in Arnold",
+        "rating": "good",
         "description": "",
+        "coords": [38.231973, -120.295568], 
         "type": "place",
-        "rating": "good"
+        "date": ""
     },
     { 
         "name": "Walk in Briones",
-        "coords": [-122.135206, 37.954060], 
-        "description": "",
+        "rating": "good",
+        "description": "Really pretty in late summer and autumn. When you get to the top you enter into this meadow that doesn't even feel possible. It's really cool",
+        "coords": [37.954060, -122.135206],
         "type": "place",
-        "rating": "good"
+        "date": ""
     },
     { 
         "name": "Cool park",
-        "coords": [-121.59163, 37.57023],         
-        "description": "Cool park that at night feels like a liminal spaces",
+        "rating": "fine",
+        "description": "Cool park that at night feels like a liminal spaces. Also these coordinates are not in the right spot at all",
+        "coords": [37.57023, -121.59163],         
         "type": "place", 
-        "rating": "good"
+        "date": ""
     },
     { 
         "name": "Redwood Rd",
-        "coords": [-122.179934, 37.795490], 
+        "rating": "good",
         "description": "Cool road to drive on. Starts in Oakland and spits you out in Castro Valley",
+        "coords": [37.795490, -122.179934], 
         "type": "road",
-        "rating": "good"
+        "date": ""
     },
     { 
         "name": "Cummings Skyway",
-        "coords": [-122.235566, 38.045020], 
+        "rating": "fine",
         "description": "Pretty cool driving road",
+        "coords": [38.045020, -122.235566], 
         "type": "road",
-        "rating": "fine"
+        "date": ""
     },
     {
         "name": "Pinole overlook",
-        "coords": [-122.296809, 38.014334], 
+        "rating": "bad",
         "description": "Very pretty especially in the evening but it smells shyte",
+        "coords": [38.014334, -122.296809], 
         "type": "place",
-        "rating": "bad"
+        "date": ""
+    },
+    {
+        "name": "Eastport Staging Area",
+        "rating": "good",
+        "description": "A cool bike ride from here gets you all the way up into sibley. Really, really steep, but coming down is worth it. I'm timing myself on my ascents so I can see my improvement. The ride back down is real fun too.",
+        "coords": [37.839777, -122.181212], 
+        "type": "place",
+        "date": "9/2/2025"
     }
 ]

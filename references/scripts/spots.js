@@ -113,8 +113,9 @@ function createMarkers() {
 
     // creates all the markers
     for(const spotData of spots) {
+        switchedCoords = [spotData.coords[1], spotData.coords[0]]
         var spot = new Feature({
-            geometry: new Point(fromLonLat(spotData.coords)),
+            geometry: new Point(fromLonLat(switchedCoords)),
         });
 
         spot.setProperties({
@@ -122,7 +123,7 @@ function createMarkers() {
             coords: spotData.coords,
             description: spotData.description,
             type: spotData.type,
-            rating: spotData.rating,
+            rating: spotData.rating, //should change the ratings from good fine bad to smth else, cause the spots arent bad, theyre good enough to be put on the map, but maybe not my favorites.
         });
 
         console.log(spot.get("rating"));
