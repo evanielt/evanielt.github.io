@@ -1,28 +1,7 @@
 @import "node_modules/ol/ol.css";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('/references/styles/style.css');
 
-/* Variables */
-:root {
-	--bgcolor: #2a2b2e;
-	--bgcolor2: #1b1c1f;
-	--bgcolor3: #1a1c1fc7;
-	--bgcolor4: #1a1c1f6b;
-	--bgcolorhover: #1a1c1f;
-	--bggradient: linear-gradient(
-		to bottom right,  
-		var(--bgcolor), var(--bgcolor2)
-	);
-	--maincolor: #c5b2b2;
-	--maincolor2: #d1a7a7;
-	--linkcolor: #d48b8b;
-	--linkcolorhover: #a76464;
-	--linkcoloragain: #423535;
-	--errorcolor: #f12a45;
-
-	--fontsize: 16px;
-	--transitionms: 150ms;
-	--borderradius: 10px;
-}
 
 html {
     font-size: 15px;
@@ -51,6 +30,10 @@ html {
 
     padding: 20px;
 
+    border-width: 0;
+    border-left-width: 0.1rem;
+    border-color: var(--border-color);
+    border-style: solid;
 
     background-color: var(--bgcolor);
     box-shadow: 0px 0px 10px var(--bgcolorhover);
@@ -65,9 +48,33 @@ html {
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 13rem;
+    height: 16rem;
     width: 10rem;
     vertical-align: bottom;
 
     background-color: #0000003a;
+}
+
+.sidebar-section {
+    width: 100%;
+    box-sizing: border-box; 
+
+	display: block;
+	position: relative;
+
+	white-space: normal;
+	margin-bottom: 0rem;
+    margin-top: 0rem;
+
+    border-width: 0;
+    border-bottom-width: 0.1rem;
+    border-style: solid;
+	border-radius: var(--borderradius);
+    border-color: var(--border-color);
+
+	background-color: var(--bgcolortile);
+    
+
+    z-index: 0;
+    padding: 1rem;
 }

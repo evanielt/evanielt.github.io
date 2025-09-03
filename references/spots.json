@@ -5,6 +5,7 @@
         "description": "",
         "coords": [38.231973, -120.295568], 
         "type": "place",
+        "activities": ["hiking", "fishing"],
         "date": ""
     },
     { 
@@ -13,14 +14,16 @@
         "description": "Really pretty in late summer and autumn. When you get to the top you enter into this meadow that doesn't even feel possible. It's really cool",
         "coords": [37.954060, -122.135206],
         "type": "place",
+        "activities": ["hiking", "biking"],
         "date": ""
     },
     { 
         "name": "Cool park",
         "rating": "fine",
-        "description": "Cool park that at night feels like a liminal spaces. Also these coordinates are not in the right spot at all",
-        "coords": [37.57023, -121.59163],         
+        "description": "Cool park that feels like liminal space at night",
+        "coords": [37.950513, -121.987791],         
         "type": "place", 
+        "activities": ["hiking"],
         "date": ""
     },
     { 
@@ -29,7 +32,9 @@
         "description": "Cool road to drive on. Starts in Oakland and spits you out in Castro Valley",
         "coords": [37.795490, -122.179934], 
         "type": "road",
+        "activities": ["driving"],
         "date": ""
+        
     },
     { 
         "name": "Cummings Skyway",
@@ -37,22 +42,52 @@
         "description": "Pretty cool driving road",
         "coords": [38.045020, -122.235566], 
         "type": "road",
+        "activities": ["driving"],
         "date": ""
     },
     {
         "name": "Pinole overlook",
         "rating": "bad",
         "description": "Very pretty especially in the evening but it smells shyte",
-        "coords": [38.014334, -122.296809], 
+        "coords": [38.014334, -122.296809],
         "type": "place",
+        "activities": ["hiking"],
         "date": ""
     },
     {
         "name": "Eastport Staging Area",
         "rating": "good",
-        "description": "A cool bike ride from here gets you all the way up into sibley. Really, really steep, but coming down is worth it. I'm timing myself on my ascents so I can see my improvement. The ride back down is real fun too.",
+        "description": "A cool bike ride from here gets you all the way up into sibley. Really, really steep, but coming down is worth it. I'm timing myself on my ascents so I can see my improvement.",
         "coords": [37.839777, -122.181212], 
         "type": "place",
+        "activities": ["hiking", "biking"],
         "date": "9/2/2025"
+    },
+    {
+        "name": "Mt Hamilton",
+        "rating": "neverbeen",
+        "description": "apparently a good drive",
+        "coords": [37.342199, -121.637856],
+        "type": "road",
+        "activities": ["driving"],
+        "date": ""
+    },
+    {
+        "name": "Mines Rd livermore",
+        "rating": "neverbeen",
+        "description": "also apparently a good drive",
+        "coords": [37.548186, -121.570929],
+        "type": "road",
+        "activities": ["driving"],
+        "date": ""
+    },
+    {
+        "name": "Yumy Gurt",
+        "rating": "good",
+        "description": "name of the century",
+        "coords": [37.995106, -122.285315],
+        "type": "place",
+        "activities": ["eating"],
+        "date": ""
     }
 ]

@@ -18,21 +18,13 @@ var color2 = "#eb7221";
 var color3 = "#e2523f";
 var color4 = "#661717";
 
-var colorGood = "#4e7fa5ff";
-var colorFine = "#e67943ff";
-var colorBad = "#af2f54";
+var colorGood = "#419b58ff";
+var colorFine = "#e6a543ff";
+var colorBad = "#d13c66ff";
+var colorNeverBeen = "#4e7fa5";
 
 
 var spots = []
-
-var spotStyle = new Style({
-    image: new ol.style.Icon({
-      anchor: [0.5, 1],
-      src: '/images/marker.svg',
-      scale: 0.05,
-      color: colorGood,
-    })
-});
 
 var spotGoodStyle = new Style({
     image: new ol.style.Icon({
@@ -42,7 +34,6 @@ var spotGoodStyle = new Style({
       color: colorGood,
     })
 });
-
 var spotFineStyle = new Style({
     image: new ol.style.Icon({
       anchor: [0.5, 1],
@@ -51,7 +42,6 @@ var spotFineStyle = new Style({
       color: colorFine,
     })
 });
-
 var spotBadStyle = new Style({
     image: new ol.style.Icon({
       anchor: [0.5, 1],
@@ -60,15 +50,24 @@ var spotBadStyle = new Style({
       color: colorBad,
     })
 });
+var spotNeverBeenStyle = new Style({
+    image: new ol.style.Icon({
+      anchor: [0.5, 1],
+      src: '/images/marker.svg',
+      scale: 0.05,
+      color: colorNeverBeen,
+    })
+});
 
 var spotSelectedStyle = new Style({
     image: new ol.style.Icon({
       anchor: [0.5, 1],
       src: '/images/marker.svg',
-      scale: 0.07,
+      scale: 0.05,
       color: color0,
     })
 });
+
 // creates map
 var map = new Map({
     layers: [
@@ -134,8 +133,10 @@ function createMarkers() {
             spot.setStyle(spotFineStyle);
         } else if(spot.get("rating") == "bad") {
             spot.setStyle(spotBadStyle);
+        } else if(spot.get("rating") == "neverbeen") {
+            spot.setStyle(spotNeverBeenStyle);
         } else {
-            spot.setStyle(spotStyle);
+            spot.setStyle(spotNeverBeenStyle); //need a new style
         }
 
         vectorSource.addFeature(spot);
@@ -199,7 +200,7 @@ window.openSidebar = function openSidebar(spotData) {
 
     document.getElementById('sidebar-name').innerHTML = spotData.name;
 
-    document.getElementById('sidebar-rating').innerHTML = "Rating: "+ spotData.rating;
+    document.getElementById('sidebar-rating').innerHTML = firstLetterToUpperCase(spotData.rating);
 
     if(spotData.rating == "good") {
         document.getElementById('sidebar-rating').style.color = colorGood;
@@ -211,9 +212,9 @@ window.openSidebar = function openSidebar(spotData) {
         console.log("that rating shouldnt exist");
     }
     
-    document.getElementById('sidebar-description').innerHTML = "Description: "+ spotData.description;
-    document.getElementById('sidebar-type').innerHTML = "Type: "+ spotData.type;
-    document.getElementById('sidebar-coords').innerHTML = "coordinates: "+ spotData.coords;
+    document.getElementById('sidebar-description').innerHTML = spotData.description;
+    document.getElementById('sidebar-type').innerHTML = firstLetterToUpperCase(spotData.type);
+    document.getElementById('sidebar-coords').innerHTML = spotData.coords[0] + " " + spotData.coords[1];
 }
 
 window.setSidebarContent = function setSidebarContent(text) {
@@ -230,3 +231,6 @@ window.flyTo = function flyTo(location, dur = 500) {
     });
 }
 
+window.firstLetterToUpperCase = function firstLetterToUpperCase(word) {
+    return word[0].toUpperCase() + word.slice(1);
+}
