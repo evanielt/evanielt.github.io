@@ -114,13 +114,14 @@ function createMarkers() {
     // creates all the markers
     for(const spotData of spots) {
         var spot = new Feature({
-            geometry: new Point(fromLonLat(spotData.coord)),
+            geometry: new Point(fromLonLat(spotData.coords)),
         });
 
         spot.setProperties({
             name: spotData.name,
-            category: spotData.category,
+            coords: spotData.coords,
             description: spotData.description,
+            type: spotData.type,
             rating: spotData.rating,
         });
 
@@ -169,7 +170,7 @@ function initSelect(vectorLayer) {
         var spotData = spots.find(spot => spot.name === selectedName);
         
         if(spotData) {
-            openSidebar();
+            openSidebar(spotData);
             selectedFeature.setStyle(spotSelectedStyle);
         }
     } else {
@@ -182,18 +183,36 @@ function initSelect(vectorLayer) {
 // ------------------------------------- double click flying -------------------------------------
 
 // map.on('dblclick', function(evt) {
-//     var coordinates = evt.coordinate;
+//     var coordsinates = evt.coordsinate;
 //     console.log("double");
-//     flyTo(coordinates);
+//     flyTo(coordsinates);
 // });
 
 // ------------------------------------- global functions -------------------------------------
 
 window.closeSidebar = function closeSidebar() {
-    document.getElementById('sidebar').style.right = "-20%";
+    document.getElementById('sidebar').style.right = "-22rem";
 }
-window.openSidebar = function openSidebar() {
+window.openSidebar = function openSidebar(spotData) {
     document.getElementById('sidebar').style.right = "0";
+
+    document.getElementById('sidebar-name').innerHTML = spotData.name;
+
+    document.getElementById('sidebar-rating').innerHTML = "Rating: "+ spotData.rating;
+
+    if(spotData.rating == "good") {
+        document.getElementById('sidebar-rating').style.color = colorGood;
+    } else if(spotData.rating == "fine") {
+        document.getElementById('sidebar-rating').style.color = colorFine;
+    } else if(spotData.rating == "bad") {
+        document.getElementById('sidebar-rating').style.color = colorBad;
+    } else {
+        console.log("that rating shouldnt exist");
+    }
+    
+    document.getElementById('sidebar-description').innerHTML = "Description: "+ spotData.description;
+    document.getElementById('sidebar-type').innerHTML = "Type: "+ spotData.type;
+    document.getElementById('sidebar-coords').innerHTML = "coordinates: "+ spotData.coords;
 }
 
 window.setSidebarContent = function setSidebarContent(text) {

@@ -1,42 +1,42 @@
 [
     { 
         "name": "River in Arnold", 
-        "coord": [-120.295568, 38.231973], 
+        "coords": [-120.295568, 38.231973], 
         "description": "",
         "type": "place",
         "rating": "good"
     },
     { 
         "name": "Walk in Briones",
-        "coord": [-122.135206, 37.954060], 
+        "coords": [-122.135206, 37.954060], 
         "description": "",
         "type": "place",
         "rating": "good"
     },
     { 
         "name": "Cool park",
-        "coord": [-121.59163, 37.57023],         
+        "coords": [-121.59163, 37.57023],         
         "description": "Cool park that at night feels like a liminal spaces",
         "type": "place", 
         "rating": "good"
     },
     { 
         "name": "Redwood Rd",
-        "coord": [-122.179934, 37.795490], 
+        "coords": [-122.179934, 37.795490], 
         "description": "Cool road to drive on. Starts in Oakland and spits you out in Castro Valley",
         "type": "road",
         "rating": "good"
     },
     { 
         "name": "Cummings Skyway",
-        "coord": [-122.235566, 38.045020], 
+        "coords": [-122.235566, 38.045020], 
         "description": "Pretty cool driving road",
         "type": "road",
         "rating": "fine"
     },
     {
         "name": "Pinole overlook",
-        "coord": [-122.296809, 38.014334], 
+        "coords": [-122.296809, 38.014334], 
         "description": "Very pretty especially in the evening but it smells shyte",
         "type": "place",
         "rating": "bad"

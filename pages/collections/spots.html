@@ -9,8 +9,8 @@
         </title>
 
         
-		<link rel="stylesheet" type="text/css" href="../../references/styles/style.css">
-        <link rel="stylesheet" type="text/css" href="../../references/styles/spots.css">
+		<link rel="stylesheet" type="text/css" href="/references/styles/style.css">
+        <link rel="stylesheet" type="text/css" href="/references/styles/spots.css">
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@latest/ol.css">
         <script src="https://cdn.jsdelivr.net/npm/ol@latest/dist/ol.js"></script>
@@ -18,17 +18,59 @@
 <body>
 
     <div id="map"></div>
+    <div id="map-buttons">
+        <div class="align-left">
+            <label class="check-box"> <!-- unfortunately seems theres no way to style checkboxes without a custom class -->
+                <input type="checkbox">
+                Show Good
+            </label>
+             <label class="check-box">
+                <input type="checkbox">
+                Show Fine
+            </label>
+             <label class="check-box">
+                <input type="checkbox">
+                Show Bad
+            </label>
+            <br>
+            <label class="check-box">
+                <input type="checkbox">
+                Driving
+            </label>
+            <label class="check-box">
+                <input type="checkbox">
+                Biking
+            </label>
+            <label class="check-box">
+                <input type="checkbox">
+                Hiking
+            </label>
+            <label class="check-box">
+                <input type="checkbox">
+                Fishing
+            </label>
+        </div>
+        <div class="align-right">
+
+        </div>
+    </div>
 
     <div id="sidebar">
         <button onclick="closeSidebar()">
             X
         </button>
+
         <br>
-        <h1>Header</h1>
-        <p>description text</p>
+
+        <h1 id="sidebar-name">Header</h1>
+        <p id="sidebar-rating">Rating: </p>
+        <p id="sidebar-description">Description: </p>
+        <p id="sidebar-type">Type: shi</p>
+        <p id="sidebar-coords">Coordinates: </p>
+        <hr>
     </div>
 
-    <script src="../../references/scripts/spots.js" defer></script>
+    <script src="/references/scripts/spots.js" defer></script>
     <script>
         
     </script>
