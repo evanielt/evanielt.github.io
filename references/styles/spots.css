@@ -37,7 +37,16 @@ html {
 
     background-color: var(--bgcolor);
     box-shadow: 0px 0px 10px var(--bgcolorhover);
-	transition: 250ms;
+	transition: 100ms;
+}
+
+@media (max-width: 48rem) { /* 768px */
+    #sidebar {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 22rem;
+    }
 }
 
 .ol_bw {
@@ -48,11 +57,14 @@ html {
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 16rem;
-    width: 10rem;
+    width: 20rem;
     vertical-align: bottom;
 
     background-color: #0000003a;
+}
+
+#legend {
+    display: block;
 }
 
 .sidebar-section {
@@ -77,4 +89,22 @@ html {
 
     z-index: 0;
     padding: 1rem;
+}
+
+#map-buttons {
+    display: block;
+}
+.check-box-box {
+    display: block;
+}
+
+#legend ul {
+    list-style: none;
+    margin-left: 0rem;
+    left: 0;
+}
+
+#legend img {
+    height: 2rem;
+    vertical-align: middle;
 }

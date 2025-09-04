@@ -210,32 +210,51 @@ button {
     color: var(--color1);
     padding: 0.63rem;          /* 10px → 0.63rem */
     border-radius: var(--borderradius);
-    border-color: var(--bgcolor);
+    border-color: var(--border-color);
     border-style: solid;
-    background-color: transparent;
+    background-color: var(--bgcolortile);
+    border-width: 0.1rem;
     box-shadow: 0rem 0rem 0.63rem var(--bgcolor3);
     transition-duration: var(--transitionms);
     outline: None;
 }
 
 button:hover {
-    border-color: var(--color2);
+    border-color: var(--color1);
+}
+button:active {
+    filter: brightness(80%);
 }
 
-button:active {
-    background: var(--color2);
+select {
+    color: var(--color1);
+    padding: 0.63rem;          /* 10px → 0.63rem */
+    border-radius: var(--borderradius);
+    border-color: var(--border-color);
+    border-width: 0.1rem;
+    border-style: solid;
+    background-color: var(--bgcolortile);
+    box-shadow: 0rem 0rem 0.63rem var(--bgcolor3);
+    transition-duration: var(--transitionms);
+    outline: None;
+}
+
+select:hover {
+    border-color: var(--color1);
+}
+select:active {
+    filter: brightness(80%);
 }
 
 /* Input */
 input {
-    padding: 0.31rem;          /* 5px → 0.31rem */
-    margin-top: 0.31rem;       /* 5px → 0.31rem */
-    margin-bottom: 0.31rem;    /* 5px → 0.31rem */
-    border-radius: var(--borderradius);
-    border-color: var(--bgcolor);
     color: var(--color1);
+    padding: 0.63rem;          /* 10px → 0.63rem */
+    border-radius: var(--borderradius);
+    border-color: var(--border-color);
+    border-width: 0.1rem;
     border-style: solid;
-    background-color: transparent;
+    background-color: var(--bgcolortile);
     box-shadow: 0rem 0rem 0.63rem var(--bgcolor3);
     transition-duration: var(--transitionms);
     outline: None;
@@ -263,19 +282,6 @@ input[type=number] {
 label {
     display: inline-block;
     margin-right: 0.63rem;     /* 10px → 0.63rem */
-}
-
-/* Select */
-select {
-    padding: 0.31rem;          /* 5px → 0.31rem */
-    margin-top: 0.31rem;       /* 5px → 0.31rem */
-    margin-bottom: 0.31rem;    /* 5px → 0.31rem */
-    color: var(--color1);
-    border-radius: var(--borderradius);
-    border-color: var(--bgcolor);
-    border-style: solid;
-    box-shadow: 0rem 0rem;
-		transition-duration: var(--transitionms);
 }
 
 /* Footer */

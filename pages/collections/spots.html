@@ -18,8 +18,31 @@
 <body>
 
     <div id="map"></div>
+
     <div id="map-buttons">
-        <div class="align-left">
+        <div id="legend">
+            <ul>
+                <li><img src="/images/marker.svg"> Text 1</li>
+                <li><img src="/images/marker.svg"> Text 1</li>
+                <li><img src="/images/marker.svg"> Text 1</li>
+                <li><img src="/images/marker.svg"> Text 1</li>
+            </ul>
+        </div>
+
+        
+        <button>
+            Info
+        </button>
+
+        <label>
+            Marker color shows:
+            <select onchange="redrawMarkers()" id="marker-color-shows">
+                <option value="type">Type</option> <!-- place, road-->
+                <option value="rating">Rating</option>
+                <option value="activity">Best Activity</option>
+            </select>
+        </label>
+        <div class="check-box-box">
             <label class="check-box"> <!-- unfortunately seems theres no way to style checkboxes without a custom class -->
                 <input type="checkbox">
                 Show Good
@@ -34,10 +57,10 @@
             </label>
             <label class="check-box">
                 <input type="checkbox">
-                Show Never Been
+                Show Unexplored
             </label>
-            <br>
-            <br>
+        </div>
+        <div class="check-box-box">
             <label class="check-box">
                 <input type="checkbox">
                 Food
@@ -59,24 +82,25 @@
                 Fishing
             </label>
         </div>
-        <div class="align-right">
-
-        </div>
     </div>
 
     <div id="sidebar">
         <button onclick="closeSidebar()">
-            X
+            Close
         </button>
 
         <br>
+        <br>
+        <br>
 
         <h1 id="sidebar-name" class="sidebar-section">Header</h1>
+        <p id="sidebar-rating" class="sidebar-section">rating</p>
         <p id="sidebar-description" class="sidebar-section">description text</p>
-
         <p id="sidebar-coords" class="sidebar-section">coords</p>
         <p id="sidebar-type" class="sidebar-section">type</p>
-        <p id="sidebar-rating" class="sidebar-section">rating</p>
+        <p id="sidebar-activities" class="sidebar-section">activities</p>
+        <p id="sidebar-date" class="sidebar-section">date</p>
+
     </div>
 
     <script src="/references/scripts/spots.js" defer></script>

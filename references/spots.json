@@ -2,20 +2,22 @@
     { 
         "name": "River in Arnold",
         "rating": "good",
-        "description": "",
+        "description": "Caught my first fish in about 8 years here",
         "coords": [38.231973, -120.295568], 
         "type": "place",
-        "activities": ["hiking", "fishing"],
-        "date": ""
+        "activities": ["fishing", "hiking"],
+        "date": "",
+        "images": []
     },
     { 
         "name": "Walk in Briones",
         "rating": "good",
-        "description": "Really pretty in late summer and autumn. When you get to the top you enter into this meadow that doesn't even feel possible. It's really cool",
+        "description": "Really pretty in late summer and autumn. When you get to the top you enter into this meadow that doesn't even feel real",
         "coords": [37.954060, -122.135206],
         "type": "place",
         "activities": ["hiking", "biking"],
-        "date": ""
+        "date": "",
+        "images": []
     },
     { 
         "name": "Cool park",
@@ -24,7 +26,8 @@
         "coords": [37.950513, -121.987791],         
         "type": "place", 
         "activities": ["hiking"],
-        "date": ""
+        "date": "",
+        "images": []
     },
     { 
         "name": "Redwood Rd",
@@ -33,8 +36,8 @@
         "coords": [37.795490, -122.179934], 
         "type": "road",
         "activities": ["driving"],
-        "date": ""
-        
+        "date": "",
+        "images": []
     },
     { 
         "name": "Cummings Skyway",
@@ -43,7 +46,8 @@
         "coords": [38.045020, -122.235566], 
         "type": "road",
         "activities": ["driving"],
-        "date": ""
+        "date": "",
+        "images": []
     },
     {
         "name": "Pinole overlook",
@@ -52,7 +56,8 @@
         "coords": [38.014334, -122.296809],
         "type": "place",
         "activities": ["hiking"],
-        "date": ""
+        "date": "",
+        "images": []
     },
     {
         "name": "Eastport Staging Area",
@@ -60,26 +65,29 @@
         "description": "A cool bike ride from here gets you all the way up into sibley. Really, really steep, but coming down is worth it. I'm timing myself on my ascents so I can see my improvement.",
         "coords": [37.839777, -122.181212], 
         "type": "place",
-        "activities": ["hiking", "biking"],
-        "date": "9/2/2025"
+        "activities": ["biking", "hiking"],
+        "date": "9/2/2025",
+        "images": []
     },
     {
         "name": "Mt Hamilton",
-        "rating": "neverbeen",
+        "rating": "unexplored",
         "description": "apparently a good drive",
         "coords": [37.342199, -121.637856],
         "type": "road",
         "activities": ["driving"],
-        "date": ""
+        "date": "",
+        "images": []
     },
     {
         "name": "Mines Rd livermore",
-        "rating": "neverbeen",
+        "rating": "unexplored",
         "description": "also apparently a good drive",
         "coords": [37.548186, -121.570929],
         "type": "road",
         "activities": ["driving"],
-        "date": ""
+        "date": "",
+        "images": []
     },
     {
         "name": "Yumy Gurt",
@@ -88,6 +96,7 @@
         "coords": [37.995106, -122.285315],
         "type": "place",
         "activities": ["eating"],
-        "date": ""
+        "date": "",
+        "images": []
     }
 ]
