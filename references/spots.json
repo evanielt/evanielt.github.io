@@ -62,7 +62,7 @@
     {
         "name": "Eastport Staging Area",
         "rating": "good",
-        "description": "A cool bike ride from here gets you all the way up into sibley. Really, really steep, but coming down is really fun. I'm timing myself on my ascents so I can see my improvement.",
+        "description": "A cool bike ride from here gets you all the way up into sibley. Really, really steep, but the ride down is fun. I'm timing myself on my ascents so I can see my improvement.",
         "coords": [37.839777, -122.181212], 
         "type": "place",
         "activities": ["biking", "hiking"],
@@ -96,6 +96,26 @@
         "coords": [37.995106, -122.285315],
         "type": "place",
         "activities": ["eating"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Bishop Creek Canyon",
+        "rating": "unexplored",
+        "description": "Surrounded by the Inyo National Forest and Kings Canyon National park. Apparently one of the best places to view the Sierra fall colors",
+        "coords": [37.248694, -118.579383],
+        "type": "place",
+        "activities": ["hiking", "driving"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "June Lake",
+        "rating": "unexplored",
+        "description": "A pretty drive leads past hot springs, mountains, and lakes.",
+        "coords": [37.787740, -119.072453],
+        "type": "place",
+        "activities": ["hiking", "driving"],
         "date": "",
         "images": []
     }

@@ -384,7 +384,7 @@ window.openSidebar = function openSidebar(spotData) {
     } else {
         console.log("this rating shouldnt exist");
     }
-    document.getElementById('sidebar-rating').innerHTML = firstLetterToUpperCase(spotData.rating);
+    document.getElementById('sidebar-rating').innerHTML = "Rating: " + firstLetterToUpperCase(spotData.rating);
 
     if(spotData.type == "place") {
         document.getElementById('sidebar-type').style.color = markerColoring.markerType.place.color;
