@@ -53,19 +53,6 @@ html {
     filter: invert(100%) hue-rotate(180deg) saturate(20%) brightness(90%);/* contrast(100%);*/
 }
 
-#map-buttons {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 20rem;
-    vertical-align: bottom;
-
-    background-color: #0000003a;
-}
-
-#legend {
-    display: block;
-}
 
 .sidebar-section {
     width: 100%;
@@ -93,18 +80,133 @@ html {
 
 #map-buttons {
     display: block;
-}
-.check-box-box {
-    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 13rem;
+    padding: 1em;
+
+    background-color: var(--bgcolortile);/* #0000003a; */
+    border-radius: var(--borderradius);
+    border-radius: var(--borderradius);
+    border-color: var(--border-color);
+    border-right-style: solid;
+    border-top-style: solid;
+    border-width: 0.1rem;
 }
 
-#legend ul {
+#map-buttons * {
+    padding: 0.2em;
+}
+
+hr {
+    padding: 0 !important;
+    margin: 1rem;
+}
+
+#legend {
+    display: block;
+    padding-left: 0;
+    margin: 0;
+}
+
+#legend ul, #legend li {
     list-style: none;
     margin-left: 0rem;
     left: 0;
+    padding: 0;
+    margin: 0;
 }
 
 #legend img {
     height: 2rem;
     vertical-align: middle;
+}
+
+select {
+    padding: 0;
+    margin: 0;
+}
+
+label {
+    padding: 1rem;
+    margin:0;
+}
+
+.check-box {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;    
+}
+
+.check-box input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    display: inline-block;
+    vertical-align: middle;
+    top: 0;
+    left: 0;
+    height: 0.7rem;
+    width: 0.7rem;
+    cursor: pointer;
+    background-color: var(--bgcolortile);
+
+
+    border-radius: var(--borderradius);
+    border-radius: var(--borderradius);
+    border-color: var(--border-color);
+    border-style: solid;
+    border-width: 0.1rem;
+}
+
+/* On mouse-over*/
+.check-box:hover input ~ .checkmark {
+    border-color: var(--color1);
+}
+/* When checkbox is checked */
+.check-box input:checked ~ .checkmark {
+    color: var(--color1);
+    border-color: var(--color1);
+}
+
+
+/* Show the checkmark when checked */
+.check-box input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "/";
+    position: absolute;
+    display: none;
+    color: var(--color1);
+    vertical-align: middle;
+    top: 0.3rem;
+    left: 0.73rem;
+}
+
+.legend-color {
+    display: inline-block;
+    vertical-align: middle;
+    top: 0;
+    left: 0;
+    height: 0.3rem;
+    width: 0.3rem;
+    background-color: var(--bgcolortile);
+    border-radius: var(--borderradius);
+    border-color: var(--border-color);
+    border-style: solid;
+    border-width: 0.2rem;
 }

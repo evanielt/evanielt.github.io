@@ -62,7 +62,7 @@
     {
         "name": "Eastport Staging Area",
         "rating": "good",
-        "description": "A cool bike ride from here gets you all the way up into sibley. Really, really steep, but coming down is worth it. I'm timing myself on my ascents so I can see my improvement.",
+        "description": "A cool bike ride from here gets you all the way up into sibley. Really, really steep, but coming down is really fun. I'm timing myself on my ascents so I can see my improvement.",
         "coords": [37.839777, -122.181212], 
         "type": "place",
         "activities": ["biking", "hiking"],
@@ -80,9 +80,9 @@
         "images": []
     },
     {
-        "name": "Mines Rd livermore",
+        "name": "Mines Rd",
         "rating": "unexplored",
-        "description": "also apparently a good drive",
+        "description": "In Livermore, apparently a good drive",
         "coords": [37.548186, -121.570929],
         "type": "road",
         "activities": ["driving"],

@@ -22,66 +22,79 @@
     <div id="map-buttons">
         <div id="legend">
             <ul>
-                <li><img src="/images/marker.svg"> Text 1</li>
-                <li><img src="/images/marker.svg"> Text 1</li>
-                <li><img src="/images/marker.svg"> Text 1</li>
-                <li><img src="/images/marker.svg"> Text 1</li>
             </ul>
         </div>
 
-        
-        <button>
-            Info
-        </button>
+        <hr>
 
         <label>
-            Marker color shows:
-            <select onchange="redrawMarkers()" id="marker-color-shows">
-                <option value="type">Type</option> <!-- place, road-->
-                <option value="rating">Rating</option>
-                <option value="activity">Best Activity</option>
-            </select>
+            <button>
+                Info
+            </button>
         </label>
-        <div class="check-box-box">
-            <label class="check-box"> <!-- unfortunately seems theres no way to style checkboxes without a custom class -->
-                <input type="checkbox">
-                Show Good
-            </label>
-            <label class="check-box">
-                <input type="checkbox">
-                Show Fine
-            </label>
-            <label class="check-box">
-                <input type="checkbox">
-                Show Bad
-            </label>
-            <label class="check-box">
-                <input type="checkbox">
-                Show Unexplored
-            </label>
-        </div>
-        <div class="check-box-box">
-            <label class="check-box">
-                <input type="checkbox">
-                Food
-            </label>
-            <label class="check-box">
-                <input type="checkbox">
-                Driving
-            </label>
-            <label class="check-box">
-                <input type="checkbox">
-                Biking
-            </label>
-            <label class="check-box">
-                <input type="checkbox">
-                Hiking
-            </label>
-            <label class="check-box">
-                <input type="checkbox">
-                Fishing
-            </label>
-        </div>
+
+        <br>
+
+        <label>
+            <select onchange="redrawMarkers()" id="marker-color-shows">
+                <option value="markerType">Type</option> <!-- place, road-->
+                <option value="markerRating">Rating</option>
+                <option value="markerActivity">Best Activity</option>
+            </select>
+            Color
+        </label>
+
+        <br>
+        <br>
+        checkboxes dont work rn
+        <label class="check-box"> <!-- unfortunately seems theres no way to style checkboxes without a custom class -->
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Show Good
+        </label>
+        <label class="check-box">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Show Fine
+        </label>
+        <label class="check-box">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Show Bad
+        </label>
+        <label class="check-box">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Show Unexplored
+        </label>
+
+        <br>
+
+        <label class="check-box">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Food
+        </label>
+        <label class="check-box">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Driving
+        </label>
+        <label class="check-box">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Biking
+        </label>
+        <label class="check-box">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Hiking
+        </label>
+        <label class="check-box">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Fishing
+        </label>
     </div>
 
     <div id="sidebar">
