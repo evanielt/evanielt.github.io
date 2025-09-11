@@ -24,28 +24,19 @@
             </ul>
         </div>
 
-        <hr>
-
-        <label>
-            <button>
-                Info
-            </button>
-        </label>
-
         <br>
 
         <label>
             <select onchange="redrawMarkers()" id="marker-color-shows">
-                <option value="markerType">Type</option> <!-- place, road-->
-                <option value="markerRating">Rating</option>
-                <option value="markerActivity">Best Activity</option>
+                <option value="type">Type</option> <!-- place, road-->
+                <option value="rating">Rating</option>
+                <option value="activities">Best Activity</option>
             </select>
             Color
         </label>
 
         <br>
         <br>
-        checkboxes dont work rn
         <label class="check-box"> <!-- unfortunately seems theres no way to style checkboxes without a custom class -->
             <input type="checkbox">
             <span class="checkmark"></span>
@@ -97,14 +88,6 @@
     </div>
 
     <div id="sidebar">
-        <button onclick="closeSidebar()">
-            Close
-        </button>
-
-        <br>
-        <br>
-        <br>
-
         <h1 id="sidebar-name" class="sidebar-section">Header</h1>
         <p id="sidebar-description" class="sidebar-section">description text</p>
         <p id="sidebar-coords" class="sidebar-section">coords</p>

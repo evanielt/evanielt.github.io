@@ -28,7 +28,8 @@ html {
     right: -22rem;
     width: 22rem;
 
-    padding: 20px;
+    padding: 2rem;
+    padding-top: 3rem;
 
     border-width: 0;
     border-left-width: 0.1rem;
@@ -115,12 +116,14 @@ hr {
     margin-left: 0rem;
     left: 0;
     padding: 0;
+    padding-left: 0.1rem;
     margin: 0;
 }
 
 #legend img {
     height: 2rem;
     vertical-align: middle;
+    margin-left: 0;
 }
 
 select {
@@ -208,5 +211,6 @@ label {
     border-radius: var(--borderradius);
     border-color: var(--border-color);
     border-style: solid;
-    border-width: 0.2rem;
+    border-width: 0.15rem; 
+    margin-left: 13;
 }

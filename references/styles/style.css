@@ -33,7 +33,7 @@
 
 /* Highlight color */
 ::selection {
-    background: #131313;
+    background: #442c11;
 }
 
 html {
@@ -133,10 +133,11 @@ h2 {
 }
 
 h3 {
-    color: var(--color3);
-    text-shadow: 0.06rem 0.06rem 0px var(--color3);
+    color: var(--color1);
+    text-shadow: 0.06rem 0.06rem 0px var(--color2);
     font-family: "Oxanium", "Gelasio";
     font-weight: 500;
+    margin: 0em;
 }
 
 hr {

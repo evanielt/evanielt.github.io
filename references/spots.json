@@ -122,7 +122,7 @@
     {
         "name": "A+ Burger",
         "rating": "good",
-        "description": "I went to A+ burger. A+!",
+        "description": "I went to A+ burger. A plus!",
         "coords": [37.848549, -122.260670],
         "type": "place",
         "activities": ["eating"],
@@ -132,7 +132,7 @@
     {
         "name": "The yard",
         "rating": "good",
-        "description": "hella baddies",
+        "description": "abg waitress 🤤",
         "coords": [37.932929, -121.693852],
         "type": "place",
         "activities": ["eating"],

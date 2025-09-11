@@ -18,147 +18,70 @@ var color2 = "#eb7221";
 var color3 = "#e2523f";
 var color4 = "#661717";
 
+var colorUnexplored = "#691065ff";
+
 var markerColoring = {
-    markerType: {
+    type: {
         place: {
             name: "Place", 
-            color: "#419b58ff"
+            color: "#419b58ff",
+            style: null,
         },
         road: {
             name: "Road",
-            color: "#c02b37ff"
+            color: "#c02b37ff",
+            style: null,
         }
     },
 
-    markerRating: {
+    rating: {
         good: {
             name: "Good", 
-            color: "#419b58ff"
+            color: "#419b58ff",
+            style: null,
         },
         fine: {
             name: "Fine",
-            color: "#e6a543ff"
+            color: "#e6a543ff",
+            style: null,
         },
         bad: {
             name: "Bad", 
-            color: "#c02b37ff"
+            color: "#c02b37ff",
+            style: null,
         }
     },
 
-    markerActivity: {
+    activities: {
         hiking: {
             name: "Hiking",
-            color: "#419b58ff"
+            color: "#419b58ff",
+            style: null,
         },
         biking: {
             name: "Biking",
-            color: "#e6a543ff"
+            color: "#e6a543ff",
+            style: null,
         },
         driving: {
             name: "Driving", 
-            color: "#c02b37ff"
+            color: "#c02b37ff",
+            style: null,
         },
         fishing: {
             name: "Fishing",
-            color: "#4e7fa5"
+            color: "#4e7fa5ff",
+            style: null,
         },
         eating: {
             name: "Eating",
-            color: "#9f73e7ff"
+            color: "#9f73e7ff",
+            style: null,
         }
     }
 }
 
-var colorUnexplored = "#691065ff";
-
-
-var spots = []
-
-// type based
-var spotPlaceStyle = new Style({
-    image: new ol.style.Icon({
-      anchor: [0.5, 1],
-      src: '/images/marker.svg',
-      scale: 0.05,
-      color: markerColoring.markerType.place.color,
-    })
-});
-var spotRoadStyle = new Style({
-    image: new ol.style.Icon({
-      anchor: [0.5, 1],
-      src: '/images/marker.svg',
-      scale: 0.05,
-      color: markerColoring.markerType.road.color,
-    })
-});
-
-// rating based
-var spotGoodStyle = new Style({
-    image: new ol.style.Icon({
-      anchor: [0.5, 1],
-      src: '/images/marker.svg',
-      scale: 0.05,
-      color: markerColoring.markerRating.good.color,
-    })
-});
-var spotFineStyle = new Style({
-    image: new ol.style.Icon({
-      anchor: [0.5, 1],
-      src: '/images/marker.svg',
-      scale: 0.05,
-      color: markerColoring.markerRating.fine.color,
-    })
-});
-var spotBadStyle = new Style({
-    image: new ol.style.Icon({
-      anchor: [0.5, 1],
-      src: '/images/marker.svg',
-      scale: 0.05,
-      color: markerColoring.markerRating.bad.color,
-    })
-});
-
-// activity based
-var spotHikingStyle = new Style({
-    image: new ol.style.Icon({
-      anchor: [0.5, 1],
-      src: '/images/marker.svg',
-      scale: 0.05,
-      color: markerColoring.markerActivity.hiking.color,
-    })
-});
-var spotBikingStyle = new Style({
-    image: new ol.style.Icon({
-      anchor: [0.5, 1],
-      src: '/images/marker.svg',
-      scale: 0.05,
-      color: markerColoring.markerActivity.biking.color,
-    })
-});
-var spotDrivingStyle = new Style({
-    image: new ol.style.Icon({
-      anchor: [0.5, 1],
-      src: '/images/marker.svg',
-      scale: 0.05,
-      color: markerColoring.markerActivity.driving.color,
-    })
-});
-var spotFishingStyle = new Style({
-    image: new ol.style.Icon({
-      anchor: [0.5, 1],
-      src: '/images/marker.svg',
-      scale: 0.05,
-      color: markerColoring.markerActivity.fishing.color,
-    })
-});
-var spotEatingStyle = new Style({
-    image: new ol.style.Icon({
-      anchor: [0.5, 1],
-      src: '/images/marker.svg',
-      scale: 0.05,
-      color: markerColoring.markerActivity.eating.color,
-    })
-});
+var spots = [];
 
 var spotUnexploredStyle = new Style({
     image: new ol.style.Icon({
@@ -177,7 +100,6 @@ var spotSelectedStyle = new Style({
     })
 });
 
-
 // creates map
 var map = new Map({
     layers: [
@@ -193,6 +115,8 @@ var map = new Map({
     }),
     target: 'map',
 });
+
+createMarkerStyles();
 
 
 var markerLayer;
@@ -227,6 +151,21 @@ fetch('/references/spots.json')
 
 
 
+function createMarkerStyles() {
+    Object.entries(markerColoring).forEach(([key, val]) => {
+        Object.entries(val).forEach(([key2, markerData]) => {
+            markerData.style = new Style({
+                image: new ol.style.Icon({
+                    anchor: [0.5, 1],
+                    src: '/images/marker.svg',
+                    scale: 0.05,
+                    color: markerData.color,
+                })
+            });
+        });
+    });
+}
+
 
 function createMarkerSource() {
     var vectorSource = new VectorSource();
@@ -245,7 +184,6 @@ function createMarkerLayer(markerSource) {
 
 
 function createMarkers(dropdownValue) {
-    // creates all the markers
     for(const spotData of spots) {
         switchedCoords = [spotData.coords[1], spotData.coords[0]]
         var spot = new Feature({
@@ -261,43 +199,16 @@ function createMarkers(dropdownValue) {
             activities: spotData.activities
         });
 
-        // horrendous code to deal with the marker coloring
         if(spot.get("rating") == "unexplored") {
             spot.setStyle(spotUnexploredStyle);
         } else {
-            if(dropdownValue == "markerType") {
-                if(spot.get("type") == "place") {
-                    spot.setStyle(spotPlaceStyle);
-                } else if(spot.get("type") == "road") {
-                    spot.setStyle(spotRoadStyle);
-                } else {
-                    spot.setStyle(spotUnexploredStyle);
-                }
-            } else if(dropdownValue == "markerRating") {
-                if(spot.get("rating") == "good") {
-                    spot.setStyle(spotGoodStyle);
-                } else if(spot.get("rating") == "fine") {
-                    spot.setStyle(spotFineStyle);
-                } else if(spot.get("rating") == "bad") {
-                    spot.setStyle(spotBadStyle);
-                } else {
-                    spot.setStyle(spotUnexploredStyle);
-                }
-            } else if(dropdownValue == "markerActivity") {
-                if(spot.get("activities")[0] == "hiking") {
-                    spot.setStyle(spotHikingStyle);
-                } else if(spot.get("activities")[0] == "biking") {
-                    spot.setStyle(spotBikingStyle);
-                } else if(spot.get("activities")[0] == "driving") {
-                    spot.setStyle(spotDrivingStyle);
-                } else if(spot.get("activities")[0] == "fishing") {
-                    spot.setStyle(spotFishingStyle);
-                } else if(spot.get("activities")[0] == "eating") {
-                    spot.setStyle(spotEatingStyle);
-                } else {
-                    spot.setStyle(spotUnexploredStyle);
-                }
+            var dropdownValueSingle;
+            if(Array.isArray(spot.get(dropdownValue))) {
+                dropdownValueSingle = spot.get(dropdownValue)[0];
+            } else {
+                dropdownValueSingle = spot.get(dropdownValue);
             }
+            spot.setStyle(markerColoring[dropdownValue][dropdownValueSingle].style);
         }
 
         markerSource.addFeature(spot);
@@ -350,6 +261,12 @@ function setLegend(dropdownValue) {
         }
     }
 
+    legendText += `
+                <li>
+                    <span class="legend-color" style="border-color: ${colorUnexplored}; box-shadow: 0px 0px 0.3rem ${colorUnexplored};"></span>
+                    Unexplored
+                </li>`;
+
     document.getElementById('legend').innerHTML = legendText;
 }
 // ------------------------------------- double click flying -------------------------------------
@@ -373,43 +290,27 @@ window.openSidebar = function openSidebar(spotData) {
     document.getElementById('sidebar-coords').innerHTML = spotData.coords[0] + ", " + spotData.coords[1];
     document.getElementById('sidebar-date').innerHTML = "Date: " + spotData.date;
 
-    if(spotData.rating == "good") {
-        document.getElementById('sidebar-rating').style.color = markerColoring.markerRating.good.color;
-    } else if(spotData.rating == "fine") {
-        document.getElementById('sidebar-rating').style.color = markerColoring.markerRating.fine.color;
-    } else if(spotData.rating == "bad") {
-        document.getElementById('sidebar-rating').style.color = markerColoring.markerRating.bad.color;
-    } else if(spotData.rating == "unexplored") {
+    if(spotData.rating == "unexplored") {
         document.getElementById('sidebar-rating').style.color = colorUnexplored;
     } else {
-        console.log("this rating shouldnt exist");
+        document.getElementById('sidebar-rating').style.color = markerColoring.rating[spotData.rating].color;
     }
     document.getElementById('sidebar-rating').innerHTML = "Rating: " + firstLetterToUpperCase(spotData.rating);
 
-    if(spotData.type == "place") {
-        document.getElementById('sidebar-type').style.color = markerColoring.markerType.place.color;
-    } else if(spotData.type == "road") {
-        document.getElementById('sidebar-type').style.color = markerColoring.markerType.road.color;
-    } else {
-        console.log("this type shouldnt exist");
-    }
+
+    document.getElementById('sidebar-type').style.color = markerColoring.type[spotData.type].color;
     document.getElementById('sidebar-type').innerHTML = "Type: " + firstLetterToUpperCase(spotData.type);
 
-
-    if(spotData.activities == "hiking") {
-        document.getElementById('sidebar-activities').style.color = markerColoring.markerActivity.hiking.color;
-    } else if(spotData.type == "biking") {
-        document.getElementById('sidebar-activities').style.color = markerColoring.markerActivity.biking.color;
-    } else if(spotData.type == "driving") {
-        document.getElementById('sidebar-activities').style.color = markerColoring.markerActivity.biking.color;
-    } else if(spotData.type == "fishing") {
-        document.getElementById('sidebar-activities').style.color = markerColoring.markerActivity.biking.color;
-    } else if(spotData.type == "eating") {
-        document.getElementById('sidebar-activities').style.color = markerColoring.markerActivity.biking.color;
-    } else {
-        console.log("this type shouldnt exist");
+    var activitiesText = "Activities: ";
+    for(var i in spotData.activities) {
+        // console.log(spotData.activities[i]);
+        activitiesText += `<span style="color: ${markerColoring.activities[spotData.activities[i]].color};">${firstLetterToUpperCase(spotData.activities[i])}`
+        if(i + 1 < spotData.activities.length) {
+            activitiesText += ", "
+        }
+        activitiesText += `</span>`;
     }
-    document.getElementById('sidebar-activities').innerHTML = "Activities: " + spotData.activities;
+    document.getElementById('sidebar-activities').innerHTML = activitiesText;
 }
 
 window.setSidebarContent = function setSidebarContent(text) {
