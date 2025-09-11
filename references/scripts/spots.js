@@ -344,7 +344,7 @@ function setLegend(dropdownValue) {
             // Create a tinted SVG using a filter
             legendText += `
                 <li>
-                    <span class="legend-color" style="border-color: ${color};"></span>
+                    <span class="legend-color" style="border-color: ${color}; border-width: 0.15rem; box-shadow: 0px 0px 0.3rem ${color};"></span>
                     ${marker.name}
                 </li>`;
         }
