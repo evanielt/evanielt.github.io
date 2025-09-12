@@ -18,7 +18,7 @@ var color2 = "#eb7221";
 var color3 = "#e2523f";
 var color4 = "#661717";
 
-var colorUnexplored = "#691065ff";
+var colorUnexplored = "#94148dff";
 
 var markerColoring = {
     type: {
@@ -73,6 +73,11 @@ var markerColoring = {
             color: "#4e7fa5ff",
             style: null,
         },
+        // camping: {
+        //     name: "Camping",
+        //     color: "#e97446ff",
+        //     style: null,
+        // },
         eating: {
             name: "Eating",
             color: "#9f73e7ff",

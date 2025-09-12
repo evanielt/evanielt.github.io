@@ -28,9 +28,9 @@
 
         <label>
             <select onchange="redrawMarkers()" id="marker-color-shows">
-                <option value="type">Type</option> <!-- place, road-->
-                <option value="rating">Rating</option>
                 <option value="activities">Best Activity</option>
+                <option value="rating">Rating</option>
+                <option value="type">Type</option> <!--Place, Road, Trail - last two will probably match up with driving and hiking/biking-->
             </select>
             Color
         </label>
@@ -60,15 +60,11 @@
 
         <br>
 
+
         <label class="check-box">
             <input type="checkbox">
             <span class="checkmark"></span>
-            Food
-        </label>
-        <label class="check-box">
-            <input type="checkbox">
-            <span class="checkmark"></span>
-            Driving
+            Hiking
         </label>
         <label class="check-box">
             <input type="checkbox">
@@ -78,12 +74,22 @@
         <label class="check-box">
             <input type="checkbox">
             <span class="checkmark"></span>
-            Hiking
+            Driving
         </label>
         <label class="check-box">
             <input type="checkbox">
             <span class="checkmark"></span>
             Fishing
+        </label>
+         <label class="check-box">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Camping
+        </label>
+        <label class="check-box">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Eating
         </label>
     </div>
 
@@ -97,6 +103,9 @@
         <p id="sidebar-activities" class="sidebar-section">activities</p>
         <p id="sidebar-date" class="sidebar-section">date</p>
 
+        <button onclick="closeSidebar()">
+            Close
+        </button>
     </div>
 
     <script src="/references/scripts/spots.js" defer></script>

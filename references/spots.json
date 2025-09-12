@@ -138,5 +138,15 @@
         "activities": ["eating"],
         "date": "",
         "images": []
+    },
+    {
+        "name": "Sonora Pass",
+        "rating": "unexplored",
+        "description": "Really pretty especially in the fall. Road is winding and very steep (26% grade in spots!). The road is unplowed and closes to vehicles when there's snow, usually from November to May.",
+        "coords": [38.327716, -119.636829],
+        "type": "place",
+        "activities": ["driving", "hiking"],
+        "date": "",
+        "images": []
     }
 ]
