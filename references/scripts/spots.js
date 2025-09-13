@@ -18,7 +18,7 @@ var color2 = "#eb7221";
 var color3 = "#e2523f";
 var color4 = "#661717";
 
-var colorUnexplored = "#94148dff";
+var colorUnexplored = "#771072ff";
 
 var markerColoring = {
     type: {
@@ -80,7 +80,7 @@ var markerColoring = {
         // },
         eating: {
             name: "Eating",
-            color: "#9f73e7ff",
+            color: "#d16646ff",
             style: null,
         }
     }
@@ -295,16 +295,17 @@ window.openSidebar = function openSidebar(spotData) {
     document.getElementById('sidebar-coords').innerHTML = spotData.coords[0] + ", " + spotData.coords[1];
     document.getElementById('sidebar-date').innerHTML = "Date: " + spotData.date;
 
+    var ratingText = "Rating: "
     if(spotData.rating == "unexplored") {
-        document.getElementById('sidebar-rating').style.color = colorUnexplored;
+        ratingText += `<span style="color: ${colorUnexplored};">${firstLetterToUpperCase(spotData.rating)}</span>`
     } else {
-        document.getElementById('sidebar-rating').style.color = markerColoring.rating[spotData.rating].color;
+        ratingText += `<span style="color: ${markerColoring.rating[spotData.rating].color};">${firstLetterToUpperCase(spotData.rating)}</span>`
     }
-    document.getElementById('sidebar-rating').innerHTML = "Rating: " + firstLetterToUpperCase(spotData.rating);
+    document.getElementById('sidebar-rating').innerHTML = ratingText;
 
 
-    document.getElementById('sidebar-type').style.color = markerColoring.type[spotData.type].color;
-    document.getElementById('sidebar-type').innerHTML = "Type: " + firstLetterToUpperCase(spotData.type);
+    var typeText = `Type: <span style="color: ${markerColoring.type[spotData.type].color};">${firstLetterToUpperCase(spotData.type)}</span>`;
+    document.getElementById('sidebar-type').innerHTML = typeText;
 
     var activitiesText = "Activities: ";
     for(var i in spotData.activities) {

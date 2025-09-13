@@ -6,7 +6,7 @@
         "coords": [38.231973, -120.295568], 
         "type": "place",
         "activities": ["fishing", "hiking"],
-        "date": "",
+        "date": "7/20/2025",
         "images": []
     },
     { 
@@ -16,7 +16,7 @@
         "coords": [37.954060, -122.135206],
         "type": "place",
         "activities": ["hiking", "biking"],
-        "date": "",
+        "date": "8/15/2025",
         "images": []
     },
     { 
@@ -52,7 +52,7 @@
     {
         "name": "Pinole overlook",
         "rating": "bad",
-        "description": "Very pretty especially in the evening but it smells shyte",
+        "description": "Very pretty, especially in the evening, but it smells shyte",
         "coords": [38.014334, -122.296809],
         "type": "place",
         "activities": ["hiking"],
@@ -147,6 +147,26 @@
         "type": "place",
         "activities": ["driving", "hiking"],
         "date": "",
+        "images": []
+    },
+    {
+        "name": "Dunbarton Rail Bridge",
+        "rating": "good",
+        "description": "An old abandoned rail bridge. Although it was closed in 1982, you can just crawl under the fence and walk out onto the bridge. It's very pretty there and really cool to explore. The bridge has definitely seen better days. The bridge caught fire in 1998 and again in 2019, so be careful of the wooden ties. The surrounding area is weird (Fremont). The marsh has a strange odor and attracts a lot of flies and birds. People fish near the trailhead parking lot but I wouldn't eat anything caught there.",
+        "coords": [37.497876, -122.109268],
+        "type": "place",
+        "activities": ["hiking"],
+        "date": "8/3/25",
+        "images": []
+    },
+    {
+        "name": "Montara State Beach",
+        "rating": "good",
+        "description": "A lot of people are saying this beach is the best. Everyone's talking about it, they say it's an incredible beach. Believe me, this beach, it's fabulous. Absolutely fabulous. One of the most fabulous beaches you'll ever see.",
+        "coords": [37.547668, -122.514862],
+        "type": "place",
+        "activities": ["Fishing", "hiking"],
+        "date": "8/30/25",
         "images": []
     }
 ]
