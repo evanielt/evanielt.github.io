@@ -18,7 +18,8 @@ var color2 = "#eb7221";
 var color3 = "#e2523f";
 var color4 = "#661717";
 
-var colorUnexplored = "#771072ff";
+var colorUnexplored = "#971591ff";
+var colorError = "#000000ff";
 
 var markerColoring = {
     type: {
@@ -82,7 +83,12 @@ var markerColoring = {
             name: "Eating",
             color: "#d16646ff",
             style: null,
-        }
+        },
+        // boning: {
+        //     name: "Boning",
+        //     color: "#8b1010ff",
+        //     style: null,
+        // }
     }
 }
 
@@ -94,6 +100,14 @@ var spotUnexploredStyle = new Style({
       src: '/images/marker.svg',
       scale: 0.05,
       color: colorUnexplored,
+    })
+});
+var spotErrorStyle = new Style({
+    image: new ol.style.Icon({
+      anchor: [0.5, 1],
+      src: '/images/marker.svg',
+      scale: 0.05,
+      color: colorError,
     })
 });
 var spotSelectedStyle = new Style({
@@ -213,7 +227,16 @@ function createMarkers(dropdownValue) {
             } else {
                 dropdownValueSingle = spot.get(dropdownValue);
             }
-            spot.setStyle(markerColoring[dropdownValue][dropdownValueSingle].style);
+            var v = markerColoring[dropdownValue][dropdownValueSingle]
+            if(v != null) {
+                var sLocal = v.style;
+            }
+            
+            if(sLocal != null) {
+                spot.setStyle(sLocal);
+            } else {
+                spot.setStyle(spotErrorStyle);
+            }
         }
 
         markerSource.addFeature(spot);
@@ -251,6 +274,11 @@ function initSelect(vectorLayer) {
 
 function setLegend(dropdownValue) {
     var legendText = `<ul>`;
+
+    if(dropdownValue == null) {
+        console.log("dropdownValue is null, this wont work");
+        return;
+    }
 
     for(var key in markerColoring[dropdownValue]) {
         if(markerColoring[dropdownValue].hasOwnProperty(key)) {

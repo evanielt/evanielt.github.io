@@ -81,8 +81,8 @@
     },
     {
         "name": "Mines Rd",
-        "rating": "unexplored",
-        "description": "In Livermore, apparently a good drive",
+        "rating": "bad",
+        "description": "kinda dih",
         "coords": [37.548186, -121.570929],
         "type": "road",
         "activities": ["driving"],
@@ -162,11 +162,71 @@
     {
         "name": "Montara State Beach",
         "rating": "good",
-        "description": "A lot of people are saying this beach is the best. Everyone's talking about it, they say it's an incredible beach. Believe me, this beach, it's fabulous. Absolutely fabulous. One of the most fabulous beaches you'll ever see.",
+        "description": "A lot of people say this beach is the best. Everyone talks about it, they say it's an incredible beach. Believe me, this beach, it's fabulous. Absolutely fabulous. One of the most fabulous beaches you'll ever see.",
         "coords": [37.547668, -122.514862],
         "type": "place",
         "activities": ["fishing", "hiking"],
         "date": "8/30/25",
+        "images": []
+    },
+    {
+        "name": "Japanese Gardens",
+        "rating": "unexplored",
+        "description": "",
+        "coords": [37.680175, -122.080200],
+        "type": "place",
+        "activities": ["hiking"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Tiburon",
+        "rating": "unexplored",
+        "description": "",
+        "coords": [37.874083960527, -122.4554011678015],
+        "type": "place",
+        "activities": ["hiking"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Sycamore Park",
+        "rating": "fine",
+        "description": "we go there too much",
+        "coords": [37.80816480223186, -121.94403384614154],
+        "type": "place",
+        "activities": ["hiking"],
+        "date": "7/2025",
+        "images": []
+    },
+    {
+        "name": "Spicy Joi",
+        "rating": "good",
+        "description": "",
+        "coords": [37.9735586358711, -122.0421143316963],
+        "type": "place",
+        "activities": ["eating"],
+        "date": "7/2025",
+        "images": []
+    },
+    {
+        "name": "San Mateo Guitar Center",
+        "rating": "good",
+        "description": "Best guitar center",
+        "coords": [37.53523658266157, -122.29883658578991],
+        "type": "place",
+        "activities": [""],
+        "date": "7/2025",
+        "images": []
+    },
+    {
+        "name": "Hidden Valley",
+        "rating": "good",
+        "description": "we caught like 25 crawdads",
+        "coords": [37.53523658266157, -122.29883658578991],
+        "type": "place",
+        "activities": ["fishing"],
+        "date": "7/2025",
         "images": []
     }
 ]

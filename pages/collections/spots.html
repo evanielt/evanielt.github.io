@@ -19,6 +19,7 @@
     <div id="map"></div>
 
     <div id="map-buttons">
+        <h4>Legend</h4>
         <div id="legend">
             <ul>
             </ul>
@@ -26,41 +27,57 @@
 
         <br>
 
+        <h4>Map Display</h4>
         <label>
             <select onchange="redrawMarkers()" id="marker-color-shows">
-                <option value="activities">Best Activity</option>
-                <option value="rating">Rating</option>
                 <option value="type">Type</option> <!--Place, Road, Trail - last two will probably match up with driving and hiking/biking-->
+                <option value="rating">Rating</option>
+                <option value="activities">Best Activity</option>
             </select>
-            Color
         </label>
 
         <br>
         <br>
+
+        <h4>Type</h4>
         <label class="check-box"> <!-- unfortunately seems theres no way to style checkboxes without a custom class -->
             <input type="checkbox">
             <span class="checkmark"></span>
-            Show Good
+            Place
         </label>
         <label class="check-box">
             <input type="checkbox">
             <span class="checkmark"></span>
-            Show Fine
-        </label>
-        <label class="check-box">
-            <input type="checkbox">
-            <span class="checkmark"></span>
-            Show Bad
-        </label>
-        <label class="check-box">
-            <input type="checkbox">
-            <span class="checkmark"></span>
-            Show Unexplored
+            Road
         </label>
 
         <br>
 
+        <h4>Rating</h4>
+        <label class="check-box"> <!-- unfortunately seems theres no way to style checkboxes without a custom class -->
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Good
+        </label>
+        <label class="check-box">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Fine
+        </label>
+        <label class="check-box">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Bad
+        </label>
+        <label class="check-box">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Unexplored
+        </label>
 
+        <br>
+
+        <h4>Activity</h4>
         <label class="check-box">
             <input type="checkbox">
             <span class="checkmark"></span>
@@ -94,18 +111,20 @@
     </div>
 
     <div id="sidebar">
+        <button onclick="closeSidebar()" id="sidebar-close">
+            ×
+        </button>
+        <br>
+
         <h1 id="sidebar-name" class="sidebar-section">Header</h1>
         <p id="sidebar-description" class="sidebar-section">description text</p>
         <p id="sidebar-coords" class="sidebar-section">coords</p>
-        <p id="sidebar-type" class="sidebar-section">type</p>
-        
-        <p id="sidebar-rating" class="sidebar-section">rating</p>
-        <p id="sidebar-activities" class="sidebar-section">activities</p>
         <p id="sidebar-date" class="sidebar-section">date</p>
 
-        <button onclick="closeSidebar()">
-            Close
-        </button>
+
+        <p id="sidebar-type" class="sidebar-section">type</p>
+        <p id="sidebar-rating" class="sidebar-section">rating</p>
+        <p id="sidebar-activities" class="sidebar-section">activities</p>
     </div>
 
     <script src="/references/scripts/spots.js" defer></script>
