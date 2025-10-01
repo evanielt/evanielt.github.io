@@ -21,17 +21,19 @@ var color4 = "#661717";
 var colorUnexplored = "#971591ff";
 var colorError = "#000000ff";
 
-var markerColoring = {
+var markerData = {
     type: {
         place: {
             name: "Place", 
             color: "#419b58ff",
             style: null,
+            checked: false,
         },
         road: {
             name: "Road",
             color: "#c02b37ff",
             style: null,
+            checked: false,
         }
     },
 
@@ -40,54 +42,70 @@ var markerColoring = {
             name: "Good", 
             color: "#419b58ff",
             style: null,
+            checked: false,
         },
         fine: {
             name: "Fine",
             color: "#e6a543ff",
             style: null,
+            checked: false,
         },
         bad: {
             name: "Bad", 
             color: "#c02b37ff",
             style: null,
+            checked: false,
+        },
+        unexplored: { // this ones only there to store some of the data right now.
+            name: "Unexplored", 
+            color: "#ff0015ff",
+            style: null,
+            checked: false,
         }
     },
 
-    activities: {
+    activity: {
         hiking: {
             name: "Hiking",
             color: "#419b58ff",
             style: null,
+            checked: false,
         },
         biking: {
             name: "Biking",
             color: "#e6a543ff",
             style: null,
+            checked: false,
         },
         driving: {
             name: "Driving", 
             color: "#c02b37ff",
             style: null,
+            checked: false,
         },
         fishing: {
             name: "Fishing",
             color: "#4e7fa5ff",
             style: null,
+            checked: false,
         },
         // camping: {
         //     name: "Camping",
         //     color: "#e97446ff",
         //     style: null,
+        //     checked: false,
         // },
         eating: {
             name: "Eating",
             color: "#d16646ff",
             style: null,
+            checked: false,
         },
         // boning: {
         //     name: "Boning",
         //     color: "#8b1010ff",
         //     style: null,
+        //     checked: false,
         // }
     }
 }
@@ -129,8 +147,8 @@ var map = new Map({
         
     ],
     view: new View({
-        center: fromLonLat([-121.59163, 37.57023]),
-        zoom: 8,
+        center: fromLonLat([-121.59163, 37.77023]),
+        zoom: 9,
     }),
     target: 'map',
 });
@@ -158,6 +176,7 @@ fetch('/references/spots.json')
 
         markerSource = createMarkerSource();
         markerLayer = createMarkerLayer(markerSource);
+        getCheckboxState();
         createMarkers(val);
         setLegend(val);
 
@@ -171,7 +190,7 @@ fetch('/references/spots.json')
 
 
 function createMarkerStyles() {
-    Object.entries(markerColoring).forEach(([key, val]) => {
+    Object.entries(markerData).forEach(([key, val]) => {
         Object.entries(val).forEach(([key2, markerData]) => {
             markerData.style = new Style({
                 image: new ol.style.Icon({
@@ -204,6 +223,19 @@ function createMarkerLayer(markerSource) {
 
 function createMarkers(dropdownValue) {
     for(const spotData of spots) {
+        const shouldCreateMarker = 
+            (markerData.type[spotData.type]?.checked || false) &&
+            (markerData.rating[spotData.rating]?.checked || false) &&
+            (Object.keys(markerData.activity).some(activity => 
+                spotData.activity.includes(activity) && 
+                markerData.activity[activity]?.checked
+            ));
+
+
+        if(!shouldCreateMarker) {
+            continue;
+        }
+
         switchedCoords = [spotData.coords[1], spotData.coords[0]]
         var spot = new Feature({
             geometry: new Point(fromLonLat(switchedCoords)),
@@ -215,7 +247,7 @@ function createMarkers(dropdownValue) {
             description: spotData.description,
             type: spotData.type,
             rating: spotData.rating,
-            activities: spotData.activities
+            activity: spotData.activity
         });
 
         if(spot.get("rating") == "unexplored") {
@@ -227,7 +259,7 @@ function createMarkers(dropdownValue) {
             } else {
                 dropdownValueSingle = spot.get(dropdownValue);
             }
-            var v = markerColoring[dropdownValue][dropdownValueSingle]
+            var v = markerData[dropdownValue][dropdownValueSingle]
             if(v != null) {
                 var sLocal = v.style;
             }
@@ -280,9 +312,9 @@ function setLegend(dropdownValue) {
         return;
     }
 
-    for(var key in markerColoring[dropdownValue]) {
-        if(markerColoring[dropdownValue].hasOwnProperty(key)) {
-            var marker = markerColoring[dropdownValue][key];
+    for(var key in markerData[dropdownValue]) {
+        if(markerData[dropdownValue].hasOwnProperty(key)) {
+            var marker = markerData[dropdownValue][key];
             var color = marker.color; // Get the color value
             
             // Create a tinted SVG using a filter
@@ -301,6 +333,25 @@ function setLegend(dropdownValue) {
                 </li>`;
 
     document.getElementById('legend').innerHTML = legendText;
+}
+
+function getCheckboxState() {
+    markerData.type.place.checked = document.getElementById('check-type-place').checked;
+    markerData.type.road.checked = document.getElementById('check-type-road').checked;
+
+    markerData.rating.good.checked = document.getElementById('check-rating-good').checked;
+    markerData.rating.fine.checked = document.getElementById('check-rating-fine').checked;
+    markerData.rating.bad.checked = document.getElementById('check-rating-bad').checked;
+    markerData.rating.unexplored.checked = document.getElementById('check-rating-unexplored').checked;
+
+    markerData.activity.hiking.checked = document.getElementById('check-activity-hiking').checked;
+    markerData.activity.biking.checked = document.getElementById('check-activity-biking').checked;
+    markerData.activity.driving.checked = document.getElementById('check-activity-driving').checked;
+    markerData.activity.fishing.checked = document.getElementById('check-activity-fishing').checked;
+    // markerData.activity.camping.checked = document.getElementById('check-activity-camping').checked;
+    markerData.activity.eating.checked = document.getElementById('check-activity-eating').checked;
+
+    console.log(markerData);
 }
 // ------------------------------------- double click flying -------------------------------------
 
@@ -327,24 +378,24 @@ window.openSidebar = function openSidebar(spotData) {
     if(spotData.rating == "unexplored") {
         ratingText += `<span style="color: ${colorUnexplored};">${firstLetterToUpperCase(spotData.rating)}</span>`
     } else {
-        ratingText += `<span style="color: ${markerColoring.rating[spotData.rating].color};">${firstLetterToUpperCase(spotData.rating)}</span>`
+        ratingText += `<span style="color: ${markerData.rating[spotData.rating].color};">${firstLetterToUpperCase(spotData.rating)}</span>`
     }
     document.getElementById('sidebar-rating').innerHTML = ratingText;
 
 
-    var typeText = `Type: <span style="color: ${markerColoring.type[spotData.type].color};">${firstLetterToUpperCase(spotData.type)}</span>`;
+    var typeText = `Type: <span style="color: ${markerData.type[spotData.type].color};">${firstLetterToUpperCase(spotData.type)}</span>`;
     document.getElementById('sidebar-type').innerHTML = typeText;
 
-    var activitiesText = "Activities: ";
-    for(var i in spotData.activities) {
-        // console.log(spotData.activities[i]);
-        activitiesText += `<span style="color: ${markerColoring.activities[spotData.activities[i]].color};">${firstLetterToUpperCase(spotData.activities[i])}`
-        if(i + 1 < spotData.activities.length) {
-            activitiesText += ", "
+    var activityText = "activity: ";
+    for(var i in spotData.activity) {
+        // console.log(spotData.activity[i]);
+        activityText += `<span style="color: ${markerData.activity[spotData.activity[i]].color};">${firstLetterToUpperCase(spotData.activity[i])}`
+        if(i + 1 < spotData.activity.length) {
+            activityText += ", "
         }
-        activitiesText += `</span>`;
+        activityText += `</span>`;
     }
-    document.getElementById('sidebar-activities').innerHTML = activitiesText;
+    document.getElementById('sidebar-activity').innerHTML = activityText;
 }
 
 window.setSidebarContent = function setSidebarContent(text) {
@@ -372,6 +423,30 @@ window.redrawMarkers = function redrawMarkers() {
     var dropdown = document.getElementById("marker-color-shows");
     var val = dropdown.options[dropdown.selectedIndex].value;
 
+    getCheckboxState();
     createMarkers(val);
     setLegend(val);
+}
+
+
+window.closeMapButtons = function closeMapButtons() {
+    var elemStyle = document.getElementById('map-buttons').style;
+
+    elemStyle.width = "0";
+    elemStyle.height = "0";
+    elemStyle.padding = "0";
+    elemStyle.opacity = "0";
+
+    document.getElementById('map-buttons-open').style.opacity = 1;
+}
+
+window.openMapButtons = function openMapButtons() {
+    var elemStyle = document.getElementById('map-buttons').style;
+
+    elemStyle.width = "13rem";
+    elemStyle.height = "auto";
+    elemStyle.padding = "1rem";
+    elemStyle.opacity = "1.0";
+
+    document.getElementById('map-buttons-open').style.opacity = 0;
 }

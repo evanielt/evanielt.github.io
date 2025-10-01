@@ -19,7 +19,6 @@
     <div id="map"></div>
 
     <div id="map-buttons">
-        <h4>Legend</h4>
         <div id="legend">
             <ul>
             </ul>
@@ -29,10 +28,10 @@
 
         <h4>Map Display</h4>
         <label>
-            <select onchange="redrawMarkers()" id="marker-color-shows">
+            <select id="marker-color-shows" onchange="redrawMarkers()">
                 <option value="type">Type</option> <!--Place, Road, Trail - last two will probably match up with driving and hiking/biking-->
                 <option value="rating">Rating</option>
-                <option value="activities">Best Activity</option>
+                <option value="activity" selected>Best Activity</option>
             </select>
         </label>
 
@@ -41,12 +40,12 @@
 
         <h4>Type</h4>
         <label class="check-box"> <!-- unfortunately seems theres no way to style checkboxes without a custom class -->
-            <input type="checkbox">
+            <input type="checkbox" id="check-type-place" onchange="redrawMarkers()" checked>
             <span class="checkmark"></span>
             Place
         </label>
         <label class="check-box">
-            <input type="checkbox">
+            <input type="checkbox" id="check-type-road" onchange="redrawMarkers()" checked>
             <span class="checkmark"></span>
             Road
         </label>
@@ -54,23 +53,23 @@
         <br>
 
         <h4>Rating</h4>
-        <label class="check-box"> <!-- unfortunately seems theres no way to style checkboxes without a custom class -->
-            <input type="checkbox">
+        <label class="check-box">
+            <input type="checkbox" id="check-rating-good" onchange="redrawMarkers()" checked>
             <span class="checkmark"></span>
             Good
         </label>
         <label class="check-box">
-            <input type="checkbox">
+            <input type="checkbox" id="check-rating-fine" onchange="redrawMarkers()" checked>
             <span class="checkmark"></span>
             Fine
         </label>
         <label class="check-box">
-            <input type="checkbox">
+            <input type="checkbox" id="check-rating-bad" onchange="redrawMarkers()">
             <span class="checkmark"></span>
             Bad
         </label>
         <label class="check-box">
-            <input type="checkbox">
+            <input type="checkbox" id="check-rating-unexplored" onchange="redrawMarkers()">
             <span class="checkmark"></span>
             Unexplored
         </label>
@@ -79,36 +78,44 @@
 
         <h4>Activity</h4>
         <label class="check-box">
-            <input type="checkbox">
+            <input type="checkbox" id="check-activity-hiking" onchange="redrawMarkers()" checked>
             <span class="checkmark"></span>
             Hiking
         </label>
         <label class="check-box">
-            <input type="checkbox">
+            <input type="checkbox" id="check-activity-biking" onchange="redrawMarkers()" checked>
             <span class="checkmark"></span>
             Biking
         </label>
         <label class="check-box">
-            <input type="checkbox">
+            <input type="checkbox" id="check-activity-driving" onchange="redrawMarkers()" checked>
             <span class="checkmark"></span>
             Driving
         </label>
         <label class="check-box">
-            <input type="checkbox">
+            <input type="checkbox" id="check-activity-fishing" onchange="redrawMarkers()" checked>
             <span class="checkmark"></span>
             Fishing
         </label>
-         <label class="check-box">
-            <input type="checkbox">
+        <!-- <label class="check-box">
+            <input type="checkbox" id="check-activity-camping" onchange="redrawMarkers()" checked>
             <span class="checkmark"></span>
             Camping
-        </label>
+        </label> -->
         <label class="check-box">
-            <input type="checkbox">
+            <input type="checkbox" id="check-activity-eating" onchange="redrawMarkers()" checked>
             <span class="checkmark"></span>
             Eating
         </label>
+
+        <button onclick="closeMapButtons()" id="map-buttons-close">
+            ×
+        </button>
     </div>
+
+    <button onclick="openMapButtons()" id="map-buttons-open">
+        »
+    </button>
 
     <div id="sidebar">
         <button onclick="closeSidebar()" id="sidebar-close">
@@ -124,7 +131,7 @@
 
         <p id="sidebar-type" class="sidebar-section">type</p>
         <p id="sidebar-rating" class="sidebar-section">rating</p>
-        <p id="sidebar-activities" class="sidebar-section">activities</p>
+        <p id="sidebar-activity" class="sidebar-section">activity</p>
     </div>
 
     <script src="/references/scripts/spots.js" defer></script>

@@ -5,7 +5,7 @@
         "description": "Caught my first fish in about 8 years here",
         "coords": [38.231973, -120.295568], 
         "type": "place",
-        "activities": ["fishing", "hiking"],
+        "activity": ["fishing", "hiking"],
         "date": "7/20/2025",
         "images": []
     },
@@ -15,7 +15,7 @@
         "description": "Really pretty in late summer and autumn. When you get to the top you enter into this meadow that doesn't even feel real",
         "coords": [37.954060, -122.135206],
         "type": "place",
-        "activities": ["hiking", "biking"],
+        "activity": ["hiking", "biking"],
         "date": "8/15/2025",
         "images": []
     },
@@ -25,7 +25,7 @@
         "description": "Cool park that feels like liminal space at night",
         "coords": [37.950513, -121.987791],         
         "type": "place", 
-        "activities": ["hiking"],
+        "activity": ["hiking"],
         "date": "",
         "images": []
     },
@@ -35,7 +35,7 @@
         "description": "Cool road to drive on. Starts in Oakland and spits you out in Castro Valley",
         "coords": [37.795490, -122.179934], 
         "type": "road",
-        "activities": ["driving"],
+        "activity": ["driving"],
         "date": "",
         "images": []
     },
@@ -45,7 +45,7 @@
         "description": "Pretty cool driving road",
         "coords": [38.045020, -122.235566], 
         "type": "road",
-        "activities": ["driving"],
+        "activity": ["driving"],
         "date": "",
         "images": []
     },
@@ -55,7 +55,7 @@
         "description": "Very pretty, especially in the evening, but it smells shyte",
         "coords": [38.014334, -122.296809],
         "type": "place",
-        "activities": ["hiking"],
+        "activity": ["hiking"],
         "date": "",
         "images": []
     },
@@ -65,7 +65,7 @@
         "description": "A cool bike ride from here gets you all the way up into sibley. Really, really steep, but the ride down is fun. I'm timing myself on my ascents so I can see my improvement.",
         "coords": [37.839777, -122.181212], 
         "type": "place",
-        "activities": ["biking", "hiking"],
+        "activity": ["biking", "hiking"],
         "date": "9/2/2025",
         "images": []
     },
@@ -75,7 +75,7 @@
         "description": "apparently a good drive",
         "coords": [37.342199, -121.637856],
         "type": "road",
-        "activities": ["driving"],
+        "activity": ["driving"],
         "date": "",
         "images": []
     },
@@ -85,7 +85,7 @@
         "description": "kinda dih",
         "coords": [37.548186, -121.570929],
         "type": "road",
-        "activities": ["driving"],
+        "activity": ["driving"],
         "date": "",
         "images": []
     },
@@ -95,7 +95,7 @@
         "description": "name of the century",
         "coords": [37.995106, -122.285315],
         "type": "place",
-        "activities": ["eating"],
+        "activity": ["eating"],
         "date": "",
         "images": []
     },
@@ -105,7 +105,7 @@
         "description": "Surrounded by the Inyo National Forest and Kings Canyon National park. Apparently one of the best places to view the Sierra fall colors",
         "coords": [37.248694, -118.579383],
         "type": "place",
-        "activities": ["hiking", "driving"],
+        "activity": ["hiking", "driving"],
         "date": "",
         "images": []
     },
@@ -115,7 +115,7 @@
         "description": "A pretty drive leads past hot springs, mountains, and lakes.",
         "coords": [37.787740, -119.072453],
         "type": "place",
-        "activities": ["hiking", "driving"],
+        "activity": ["hiking", "driving"],
         "date": "",
         "images": []
     },
@@ -125,7 +125,7 @@
         "description": "I went to A+ burger. A plus!",
         "coords": [37.848549, -122.260670],
         "type": "place",
-        "activities": ["eating"],
+        "activity": ["eating"],
         "date": "",
         "images": []
     },
@@ -135,7 +135,7 @@
         "description": "abg waitress 🤤",
         "coords": [37.932929, -121.693852],
         "type": "place",
-        "activities": ["eating"],
+        "activity": ["eating"],
         "date": "",
         "images": []
     },
@@ -145,7 +145,7 @@
         "description": "Really pretty especially in the fall. Road is winding and very steep (26% grade in spots!). The road is unplowed and closes to vehicles when there's snow, usually from November to May.",
         "coords": [38.327716, -119.636829],
         "type": "place",
-        "activities": ["driving", "hiking"],
+        "activity": ["driving", "hiking"],
         "date": "",
         "images": []
     },
@@ -155,7 +155,7 @@
         "description": "An old abandoned rail bridge. Although it was closed in 1982, you can just crawl under the fence and walk out onto the bridge. It's very pretty there and really cool to explore. The bridge has definitely seen better days. The bridge caught fire in 1998 and again in 2019, so be careful of the wooden ties. The surrounding area is weird (Fremont). The marsh has a strange odor and attracts a lot of flies and birds. People fish near the trailhead parking lot but I wouldn't eat anything caught there.",
         "coords": [37.497876, -122.109268],
         "type": "place",
-        "activities": ["hiking"],
+        "activity": ["hiking"],
         "date": "8/3/25",
         "images": []
     },
@@ -165,7 +165,7 @@
         "description": "A lot of people say this beach is the best. Everyone talks about it, they say it's an incredible beach. Believe me, this beach, it's fabulous. Absolutely fabulous. One of the most fabulous beaches you'll ever see.",
         "coords": [37.547668, -122.514862],
         "type": "place",
-        "activities": ["fishing", "hiking"],
+        "activity": ["fishing", "hiking"],
         "date": "8/30/25",
         "images": []
     },
@@ -175,7 +175,7 @@
         "description": "",
         "coords": [37.680175, -122.080200],
         "type": "place",
-        "activities": ["hiking"],
+        "activity": ["hiking"],
         "date": "",
         "images": []
     },
@@ -185,7 +185,7 @@
         "description": "",
         "coords": [37.874083960527, -122.4554011678015],
         "type": "place",
-        "activities": ["hiking"],
+        "activity": ["hiking"],
         "date": "",
         "images": []
     },
@@ -195,7 +195,7 @@
         "description": "we go there too much",
         "coords": [37.80816480223186, -121.94403384614154],
         "type": "place",
-        "activities": ["hiking"],
+        "activity": ["hiking"],
         "date": "7/2025",
         "images": []
     },
@@ -205,7 +205,7 @@
         "description": "",
         "coords": [37.9735586358711, -122.0421143316963],
         "type": "place",
-        "activities": ["eating"],
+        "activity": ["eating"],
         "date": "7/2025",
         "images": []
     },
@@ -215,7 +215,7 @@
         "description": "Best guitar center",
         "coords": [37.53523658266157, -122.29883658578991],
         "type": "place",
-        "activities": [""],
+        "activity": [""],
         "date": "7/2025",
         "images": []
     },
@@ -225,7 +225,7 @@
         "description": "we caught like 25 crawdads",
         "coords": [37.53523658266157, -122.29883658578991],
         "type": "place",
-        "activities": ["fishing"],
+        "activity": ["fishing"],
         "date": "7/2025",
         "images": []
     }

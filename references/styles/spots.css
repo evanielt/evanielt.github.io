@@ -54,15 +54,30 @@ html {
     filter: invert(100%) hue-rotate(180deg) saturate(20%) brightness(90%);/* contrast(100%);*/
 }
 
-#sidebar-close {
+#sidebar-close, #map-buttons-close, #map-buttons-open{
     position: absolute;
-    left: 1rem;
-    top: 1rem;
     width: 1.5rem;
     height: 1.5rem;
     line-height: .4em;
     padding: 0.2em;
     text-align: center;
+}
+
+#sidebar-close {
+    left: 0.5rem;
+    top: 0.5rem;
+}
+
+#map-buttons-close {
+    right: 0.5rem;
+    top: 0.5rem;
+}
+
+#map-buttons-open {
+    left: 0.5rem;
+    bottom: 0.5rem;
+    transition: 200ms;
+    opacity: 0;
 }
 
 .sidebar-section {
@@ -92,18 +107,20 @@ html {
 #map-buttons {
     display: block;
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 0.5em;
+    left: 0.5em;
     width: 13rem;
+    height: auto;
     padding: 1em;
 
     background-color: var(--bgcolortile);/* #0000003a; */
     border-radius: var(--borderradius);
     border-radius: var(--borderradius);
     border-color: var(--border-color);
-    border-right-style: solid;
-    border-top-style: solid;
+    border-style: solid;
     border-width: 0.1rem;
+    transition: 200ms;
+    overflow: hidden;
 }
 
 #map-buttons * {
@@ -203,11 +220,13 @@ label {
 .checkmark:after {
     content: "«";
     display: none;
+    position: absolute;
     color: var(--color1);
     vertical-align: middle;
     text-align: center;
-    line-height: 0.5rem;
     font-size: 1.5rem;
+    left: 0.45rem;
+    top: -0.1rem;
 }
 
 .legend-color {
@@ -226,7 +245,7 @@ label {
     margin-left: 0.1rem;
 }
 
-.ol-control {
+.ol-control, .ol-zoom, .ol-unselectable {
     background-color: var(--bgcolor) !important;
     color: var(--textcolor) !important;
 
@@ -273,11 +292,11 @@ label {
 .ol-attribution {
     border-radius: var(--borderradius) !important;
     border-color: var(--border-color) !important;
-    border-left-style: solid !important;
-    border-top-style: solid !important;
+    border-style: solid !important;
     border-width: 0.15px !important; 
-    margin: 0 !important;
+    margin: 0.5rem !important;
     padding: 0 !important;
+
 }
 
 .ol-attribution ul {
@@ -290,10 +309,9 @@ label {
     }
 }
 
-.ol-attribution:hover{
+.ol-attribution:hover {
     border-radius: var(--borderradius) !important;
     border-color: var(--color1) !important;
-    border-left-style: solid !important;
-    border-top-style: solid !important;
+    border-style: solid !important;
     border-width: 0.15px !important; 
 }
