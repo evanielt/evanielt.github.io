@@ -8,8 +8,9 @@ const {
     style: { Style, Circle, Fill, Stroke },
     proj: { fromLonLat },
     interaction: { Select },
-    events: { condition: { click } }
-} = ol;
+    events: { condition: { click } },
+    control: { MousePosition } // Destructure MousePosition here
+    } = ol;
 
 
 var color0 = "#f1ebe0";
@@ -53,12 +54,6 @@ var markerData = {
         bad: {
             name: "Bad", 
             color: "#c02b37ff",
-            style: null,
-            checked: false,
-        },
-        unexplored: { // this ones only there to store some of the data right now.
-            name: "Unexplored", 
-            color: "#ff0015ff",
             style: null,
             checked: false,
         }
@@ -112,12 +107,19 @@ var markerData = {
 
 var spots = [];
 
+var unexploredData = {
+    name: "Unexplored", 
+    color: "#971591ff",
+    style: null,
+    checked: false,
+}
+
 var spotUnexploredStyle = new Style({
     image: new ol.style.Icon({
       anchor: [0.5, 1],
       src: '/images/marker.svg',
       scale: 0.05,
-      color: colorUnexplored,
+      color: unexploredData.color,
     })
 });
 var spotErrorStyle = new Style({
@@ -223,7 +225,7 @@ function createMarkerLayer(markerSource) {
 
 function createMarkers(dropdownValue) {
     for(const spotData of spots) {
-        const shouldCreateMarker = 
+        var shouldCreateMarker = 
             (markerData.type[spotData.type]?.checked || false) &&
             (markerData.rating[spotData.rating]?.checked || false) &&
             (Object.keys(markerData.activity).some(activity => 
@@ -231,6 +233,10 @@ function createMarkers(dropdownValue) {
                 markerData.activity[activity]?.checked
             ));
 
+
+        if(spotData.rating == "unexplored" && unexploredData.checked) {
+            shouldCreateMarker = true;
+        }
 
         if(!shouldCreateMarker) {
             continue;
@@ -328,7 +334,7 @@ function setLegend(dropdownValue) {
 
     legendText += `
                 <li>
-                    <span class="legend-color" style="border-color: ${colorUnexplored}; box-shadow: 0px 0px 0.3rem ${colorUnexplored};"></span>
+                    <span class="legend-color" style="border-color: ${unexploredData.color}; box-shadow: 0px 0px 0.3rem ${unexploredData.color};"></span>
                     Unexplored
                 </li>`;
 
@@ -342,7 +348,7 @@ function getCheckboxState() {
     markerData.rating.good.checked = document.getElementById('check-rating-good').checked;
     markerData.rating.fine.checked = document.getElementById('check-rating-fine').checked;
     markerData.rating.bad.checked = document.getElementById('check-rating-bad').checked;
-    markerData.rating.unexplored.checked = document.getElementById('check-rating-unexplored').checked;
+    unexploredData.checked = document.getElementById('check-rating-unexplored').checked;
 
     markerData.activity.hiking.checked = document.getElementById('check-activity-hiking').checked;
     markerData.activity.biking.checked = document.getElementById('check-activity-biking').checked;
@@ -376,7 +382,7 @@ window.openSidebar = function openSidebar(spotData) {
 
     var ratingText = "Rating: "
     if(spotData.rating == "unexplored") {
-        ratingText += `<span style="color: ${colorUnexplored};">${firstLetterToUpperCase(spotData.rating)}</span>`
+        ratingText += `<span style="color: ${unexploredData.color};">${firstLetterToUpperCase(spotData.rating)}</span>`
     } else {
         ratingText += `<span style="color: ${markerData.rating[spotData.rating].color};">${firstLetterToUpperCase(spotData.rating)}</span>`
     }
@@ -450,3 +456,14 @@ window.openMapButtons = function openMapButtons() {
 
     document.getElementById('map-buttons-open').style.opacity = 0;
 }
+
+var mouseCoords = document.getElementById('mouse-coords');
+
+map.on('pointermove', function(evt) {
+
+    var lonlat = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
+    var x = lonlat[1].toFixed(6);
+    var y = lonlat[0].toFixed(6);
+
+    mouseCoords.innerHTML = x + ", " + y;
+})

@@ -136,7 +136,7 @@
         "coords": [37.932929, -121.693852],
         "type": "place",
         "activity": ["eating"],
-        "date": "",
+        "date": "7/29/2025",
         "images": []
     },
     {
@@ -172,7 +172,7 @@
     {
         "name": "Japanese Gardens",
         "rating": "unexplored",
-        "description": "",
+        "description": "theres something for everyone here",
         "coords": [37.680175, -122.080200],
         "type": "place",
         "activity": ["hiking"],
@@ -182,7 +182,7 @@
     {
         "name": "Tiburon",
         "rating": "unexplored",
-        "description": "",
+        "description": "elias hates tiburon",
         "coords": [37.874083960527, -122.4554011678015],
         "type": "place",
         "activity": ["hiking"],
@@ -221,11 +221,21 @@
     },
     {
         "name": "Hidden Valley",
-        "rating": "good",
-        "description": "we caught like 25 crawdads",
+        "rating": "fine",
+        "description": "Caught 25 crawdads here. Brennan said we shouldn't eat the things here",
         "coords": [37.53523658266157, -122.29883658578991],
         "type": "place",
         "activity": ["fishing"],
+        "date": "7/2025",
+        "images": []
+    },
+    {
+        "name": "Honker Bay",
+        "rating": "unexplored",
+        "description": "🤯",
+        "coords": [38.072491, -121.928041],
+        "type": "place",
+        "activity": ["fishing", "camping"],
         "date": "7/2025",
         "images": []
     }
