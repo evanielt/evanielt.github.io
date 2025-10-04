@@ -43,10 +43,17 @@ html {
 
 @media (max-width: 48rem) { /* 768px */
     #sidebar {
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 22rem;
+        top: 0 !important;
+        bottom: 0 !important;
+        right: -100%;
+        width: 100%;
+        margin: 0 !important;
+    }
+
+    #sidebar-close, #map-buttons-close, #map-buttons-open {
+        font-size: 1.5em;
+        width: 1.375em !important;
+        height: 1.375em !important;
     }
 }
 
@@ -265,6 +272,7 @@ label {
     margin: 0 !important;
     padding: 0 !important;
 }
+
 
 .ol-control:hover {
     border: none !important;

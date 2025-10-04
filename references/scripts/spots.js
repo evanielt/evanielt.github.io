@@ -359,18 +359,15 @@ function getCheckboxState() {
 
     console.log(markerData);
 }
-// ------------------------------------- double click flying -------------------------------------
-
-// map.on('dblclick', function(evt) {
-//     var coordsinates = evt.coordsinate;
-//     console.log("double");
-//     flyTo(coordsinates);
-// });
 
 // ------------------------------------- global functions -------------------------------------
 
 window.closeSidebar = function closeSidebar() {
-    document.getElementById('sidebar').style.right = "-22rem";
+    if(window.matchMedia("(max-width: 768px)")) { // mobile
+        document.getElementById('sidebar').style.right = "-100%";
+    } else {
+        document.getElementById('sidebar').style.right = "-22rem";
+    }
 }
 window.openSidebar = function openSidebar(spotData) {
     document.getElementById('sidebar').style.right = "0";
@@ -438,10 +435,14 @@ window.redrawMarkers = function redrawMarkers() {
 window.closeMapButtons = function closeMapButtons() {
     var elemStyle = document.getElementById('map-buttons').style;
 
-    elemStyle.width = "0";
-    elemStyle.height = "0";
-    elemStyle.padding = "0";
-    elemStyle.opacity = "0";
+    if(window.matchMedia("(max-width: 768px)")) {
+        elemStyle.width = "0";
+        elemStyle.height = "0";
+        elemStyle.padding = "0";
+        elemStyle.opacity = "0";
+    }
+
+
 
     document.getElementById('map-buttons-open').style.opacity = 1;
 }
@@ -460,10 +461,32 @@ window.openMapButtons = function openMapButtons() {
 var mouseCoords = document.getElementById('mouse-coords');
 
 map.on('pointermove', function(evt) {
-
     var lonlat = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
     var x = lonlat[1].toFixed(6);
     var y = lonlat[0].toFixed(6);
 
     mouseCoords.innerHTML = x + ", " + y;
 })
+
+
+function initMap() {
+    // on mobile, hide the map buttons initially
+    if(window.matchMedia("(width <= 768px)").matches) {
+        closeMapButtons();
+    }
+
+    // set coordinates to map position initially, only noticeable on mobile
+    
+    var l = map.getView();
+
+    var lonlat = ol.proj.transform();
+    var x = lonlat[1].toFixed(6);
+    var y = lonlat[0].toFixed(6);
+
+    console.log(l);
+
+    mouseCoords = document.getElementById('mouse-coords');
+    mouseCoords.innerHTML = x + ", " + y;
+}
+
+initMap();
