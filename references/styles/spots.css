@@ -320,9 +320,11 @@ label {
 
 .ol-attribution:hover {
     border-radius: var(--borderradius) !important;
-    border-color: var(--color1) !important;
+    border-color: var(--border-color) !important;
     border-style: solid !important;
     border-width: 0.15px !important; 
+    margin: 0.5rem !important;
+    padding: 0 !important;
 }
 
 
