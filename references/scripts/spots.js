@@ -80,16 +80,16 @@ var markerData = {
         },
         fishing: {
             name: "Fishing",
-            color: "#4e7fa5ff",
+            color: "#629eccff",
             style: null,
             checked: false,
         },
-        // camping: {
-        //     name: "Camping",
-        //     color: "#e97446ff",
-        //     style: null,
-        //     checked: false,
-        // },
+        camping: {
+            name: "Camping",
+            color: "#82ce3bff",
+            style: null,
+            checked: false,
+        },
         eating: {
             name: "Eating",
             color: "#d16646ff",
@@ -253,7 +253,8 @@ function createMarkers(dropdownValue) {
             description: spotData.description,
             type: spotData.type,
             rating: spotData.rating,
-            activity: spotData.activity
+            activity: spotData.activity,
+            images: spotData.images
         });
 
         if(spot.get("rating") == "unexplored") {
@@ -366,7 +367,7 @@ window.closeSidebar = function closeSidebar() {
     if(window.matchMedia("(max-width: 768px)")) { // mobile
         document.getElementById('sidebar').style.right = "-100%";
     } else {
-        document.getElementById('sidebar').style.right = "-22rem";
+        document.getElementById('sidebar').style.right = "-25rem";
     }
 }
 window.openSidebar = function openSidebar(spotData) {
@@ -391,7 +392,6 @@ window.openSidebar = function openSidebar(spotData) {
 
     var activityText = "activity: ";
     for(var i in spotData.activity) {
-        // console.log(spotData.activity[i]);
         activityText += `<span style="color: ${markerData.activity[spotData.activity[i]].color};">${firstLetterToUpperCase(spotData.activity[i])}`
         if(i + 1 < spotData.activity.length) {
             activityText += ", "
@@ -399,6 +399,21 @@ window.openSidebar = function openSidebar(spotData) {
         activityText += `</span>`;
     }
     document.getElementById('sidebar-activity').innerHTML = activityText;
+
+    var imagesText = "";
+    for(var i in spotData.images) {
+        var url = spotData.images[i];
+        imagesText += `<img src="${url}" class="viewable-image" onclick="viewImage('${url}')">`
+
+        if(i + 1 < spotData.activity.length) {
+            activityText += "<br>"
+        }
+    }
+    document.getElementById('sidebar-images').innerHTML = imagesText;
+}
+
+window.viewImage = function viewImage(url) {
+    console.log("viewing image " + url);
 }
 
 window.setSidebarContent = function setSidebarContent(text) {
@@ -466,8 +481,11 @@ map.on('pointermove', function(evt) {
     var y = lonlat[0].toFixed(6);
 
     mouseCoords.innerHTML = x + ", " + y;
-})
 
+    if(!evt.dragging) {
+        map.getTargetElement().style.cursor = map.hasFeatureAtPixel(map.getEventPixel(evt.originalEvent)) ? 'pointer' : '';
+    }
+})
 
 function initMap() {
     // on mobile, hide the map buttons initially

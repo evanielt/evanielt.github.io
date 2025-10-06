@@ -47,8 +47,8 @@ html {
     font-style: normal;
     font-size: 16px;
     /* font-size: clamp(var(--fontminsize), 4vw, var(--fontmaxsize)); */
-    scrollbar-color: var(--bgcolor) var(--bgcolor3);
-    scrollbar-width: thin;
+    scrollbar-color: var(--color1) var(--bgcolor);
+    scrollbar-width: auto;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -56,7 +56,7 @@ html {
     box-sizing: border-box;
     /* white-space: nowrap; */
     background-color: var(--bgcolor);
-    overscroll-behavior: None;
+    overscroll-behavior: none;
 }
 
 body {
@@ -226,6 +226,7 @@ button {
     box-shadow: 0rem 0rem 0.63rem var(--bgcolor3);
     transition-duration: var(--transitionms);
     outline: None;
+    cursor: pointer;
 }
 
 button:hover {
@@ -246,6 +247,7 @@ select {
     box-shadow: 0rem 0rem 0.63rem var(--bgcolor3);
     transition-duration: var(--transitionms);
     outline: None;
+    cursor: pointer;
 }
 
 select:hover {

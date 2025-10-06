@@ -7,7 +7,7 @@
         "type": "place",
         "activity": ["fishing", "hiking"],
         "date": "7/20/2025",
-        "images": []
+        "images": ["/images/portfolio/IMG_20250720_152017_668.jpg", "/images/portfolio/IMG_9964.jpg"]
     },
     { 
         "name": "Walk in Briones",
@@ -157,7 +157,7 @@
         "type": "place",
         "activity": ["hiking"],
         "date": "8/3/25",
-        "images": []
+        "images": ["/images/portfolio/IMG_0190.jpg"]
     },
     {
         "name": "Montara State Beach",
@@ -202,7 +202,7 @@
     {
         "name": "Spicy Joi",
         "rating": "good",
-        "description": "",
+        "description": "yeah this place fire",
         "coords": [37.9735586358711, -122.0421143316963],
         "type": "place",
         "activity": ["eating"],
@@ -237,6 +237,26 @@
         "type": "place",
         "activity": ["fishing", "camping"],
         "date": "7/2025",
+        "images": []
+    },
+    {
+        "name": "Centerville Beach County Park",
+        "rating": "good",
+        "description": "Right next to the town of Ferndale. Keep watch for some highland cows in the nearby fields.",
+        "coords": [40.57439009648983, -124.34916251938662],
+        "type": "place",
+        "activity": ["hiking", "fishing"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "cool hidden beach",
+        "rating": "good",
+        "description": "I don't know where this beach is. It's somewhere along the drive from fortuna to crescent city. You have to pull off the highway and then drive down towards the coast for a bit.",
+        "coords": [41.28430756823132, -124.12981411705499],
+        "type": "place",
+        "activity": ["hiking", "fishing"],
+        "date": "",
         "images": []
     }
 ]

@@ -19,14 +19,14 @@ html {
 
 #sidebar {
     box-sizing:border-box;
-    overflow: hidden;
+    overflow-y: scroll;
     z-index: 1;
 
     position: fixed;
     top: 0;
     bottom: 0;
-    right: -22rem;
-    width: 22rem;
+    right: -25rem;
+    width: 25rem;
 
     padding: 2rem;
     padding-top: 3rem;
@@ -39,6 +39,8 @@ html {
     background-color: var(--bgcolor);
     box-shadow: 0px 0px 10px var(--bgcolorhover);
 	transition: 200ms;
+    scroll-behavior: auto;
+    overscroll-behavior: none;
 }
 
 @media (max-width: 48rem) { /* 768px */
@@ -342,4 +344,32 @@ label {
     border-width: 0.1rem;
     transition: 200ms;
     overflow: hidden;
+}
+
+.sidebar-section img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/* Button */
+.viewable-image {
+    color: var(--textcolor);
+    border-radius: var(--borderradius);
+    border-color: var(--border-color);
+    border-style: solid;
+    background-color: var(--bgcolortile);
+    border-width: 0.1rem;
+    box-shadow: 0rem 0rem 0.63rem var(--bgcolor3);
+    transition-duration: var(--transitionms);
+    outline: None;
+    cursor: pointer;
+}
+
+.viewable-image:hover {
+    border-color: var(--color1);
+}
+.viewable-image:active {
+    filter: brightness(80%);
 }
