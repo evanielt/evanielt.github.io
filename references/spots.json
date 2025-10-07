@@ -215,7 +215,7 @@
         "description": "Best guitar center",
         "coords": [37.53523658266157, -122.29883658578991],
         "type": "place",
-        "activity": [""],
+        "activity": ["other"],
         "date": "7/2025",
         "images": []
     },
@@ -223,10 +223,10 @@
         "name": "Hidden Valley",
         "rating": "fine",
         "description": "Caught 25 crawdads here. Brennan said we shouldn't eat the things here",
-        "coords": [37.53523658266157, -122.29883658578991],
+        "coords": [37.98246863505968, -122.09114185401768],
         "type": "place",
         "activity": ["fishing"],
-        "date": "7/2025",
+        "date": "",
         "images": []
     },
     {
@@ -236,7 +236,7 @@
         "coords": [38.072491, -121.928041],
         "type": "place",
         "activity": ["fishing", "camping"],
-        "date": "7/2025",
+        "date": "",
         "images": []
     },
     {
@@ -262,7 +262,7 @@
     {
         "name": "Canyon Creek Campground",
         "rating": "unexplored",
-        "description": "Closed as of August 25, 2025. <br> <a href=\"https://freecampsites.net/#!10096&query=sitedetails\">FreeCampsites link</a> <br> Located on Canyon Creek in a mixed conifer forest. Remote with limited services. Dirt road is rough, rocky, and narrow. 16-29 campsites. Images need to be replaced once I go there. ",
+        "description": "Closed as of August 25, 2025. <br> Located on Canyon Creek in a mixed conifer forest. Remote with limited services. Dirt road is rough, rocky, and narrow. 16-29 campsites. <br> <a href=\"https://freecampsites.net/#!10096&query=sitedetails\">FreeCampsites</a> <br> not my photos",
         "coords": [39.435464, -120.576968],
         "type": "place",
         "activity": ["camping", "fishing"],
@@ -272,11 +272,31 @@
     {
         "name": "Little North Fork Campground",
         "rating": "unexplored",
-        "description": "First come first serve free campground. Open when no snow.",
+        "description": "First come first serve free campground. Open when no snow. <br> <a href=\"https://freecampsites.net/#!13941&query=sitedetails\">FreeCampsites</a>",
         "coords": [39.782, -121.259],
         "type": "place",
         "activity": ["camping", "fishing"],
         "date": "",
         "images": []
+    },
+    {
+        "name": "Stanislaus National Forest Road 4N12",
+        "rating": "unexplored",
+        "description": "\"several spacious sites on paved road off 108. Good cell service.\" -Staci <br> <a href=\"https://freecampsites.net/#!233141&query=sitedetails\">FreeCampsites</a> <br> not my photos",
+        "coords": [38.210723, -120.002415],
+        "type": "place",
+        "activity": ["camping"],
+        "date": "",
+        "images": ["https://freecampsites.net/wp-content/uploads/2020/06/20200615_164133-800x600.jpg", "https://freecampsites.net/wp-content/uploads/2020/06/20200615_164256-800x600.jpg"]
+    },
+    {
+        "name": "Lumsden Bridge Campground",
+        "rating": "unexplored",
+        "description": "6-15 campsites in a pine and oak forest. Burnt down in fall of 2013, but is likely grown back now. Road is narrow but doable in a Jetta. <br> \"Note: Dispersed camping is allowed in the forest and dispersed sites exist along both Ferretti and Lumsden roads.\" <br> <a href=\"https://freecampsites.net/#!3862&query=sitedetails\">FreeCampsites</a> <br> not my photos",
+        "coords": [37.848259, -120.03112],
+        "type": "place",
+        "activity": ["camping", "fishing"],
+        "date": "",
+        "images": ["https://freecampsites.net/wp-content/uploads/2016/11/IMG-20161118-WA0000-800x450.jpg", "https://photos.thedyrt.com/photo/118225/media/california-lumsden_4ae6009f1d83c0f0314302a29770da7c.jpg?format=auto&width=1972"]
     }
 ]

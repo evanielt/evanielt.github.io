@@ -96,6 +96,12 @@ var markerData = {
             style: null,
             checked: false,
         },
+        other: {
+            name: "Other",
+            color: "#757575ff",
+            style: null,
+            checked: false,
+        }
         // boning: {
         //     name: "Boning",
         //     color: "#8b1010ff",
@@ -225,18 +231,17 @@ function createMarkerLayer(markerSource) {
 
 function createMarkers(dropdownValue) {
     for(const spotData of spots) {
-        var shouldCreateMarker = 
-            (markerData.type[spotData.type]?.checked || false) &&
-            (markerData.rating[spotData.rating]?.checked || false) &&
-            (Object.keys(markerData.activity).some(activity => 
+        var r = markerData.rating[spotData.rating]?.checked || false;
+        var u = (spotData.rating == "unexplored") && unexploredData.checked;
+
+        var type = markerData.type[spotData.type]?.checked || false;
+        var rating = r || u;
+        var activity = (Object.keys(markerData.activity).some(activity => 
                 spotData.activity.includes(activity) && 
                 markerData.activity[activity]?.checked
             ));
 
-
-        if(spotData.rating == "unexplored" && unexploredData.checked) {
-            shouldCreateMarker = true;
-        }
+        var shouldCreateMarker = type && rating && activity;
 
         if(!shouldCreateMarker) {
             continue;
@@ -357,6 +362,7 @@ function getCheckboxState() {
     markerData.activity.fishing.checked = document.getElementById('check-activity-fishing').checked;
     markerData.activity.camping.checked = document.getElementById('check-activity-camping').checked;
     markerData.activity.eating.checked = document.getElementById('check-activity-eating').checked;
+    markerData.activity.other.checked = document.getElementById('check-activity-other').checked;
 }
 
 // ------------------------------------- global functions -------------------------------------
