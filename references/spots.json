@@ -12,12 +12,12 @@
     { 
         "name": "Walk in Briones",
         "rating": "good",
-        "description": "Really pretty in late summer and autumn. When you get to the top you enter into this meadow that doesn't even feel real",
+        "description": "Really pretty in late summer and autumn. When you get to the top you enter into this really cool meadow",
         "coords": [37.954060, -122.135206],
         "type": "place",
         "activity": ["hiking", "biking"],
         "date": "8/15/2025",
-        "images": []
+        "images": ["/images/map/IMG_20250815_182909_694.jpg", "/images/map/IMG_20250815_184021_734.jpg", "/images/map/IMG_20250815_192601_749.jpg"]
     },
     { 
         "name": "Cool park",
@@ -51,13 +51,13 @@
     },
     {
         "name": "Pinole overlook",
-        "rating": "bad",
+        "rating": "fine",
         "description": "Very pretty, especially in the evening, but it smells shyte",
         "coords": [38.014334, -122.296809],
         "type": "place",
         "activity": ["hiking"],
         "date": "",
-        "images": []
+        "images": ["/images/map/IMG_20250816_192301_478.jpg", "/images/map/IMG_20250816_192316_865.jpg"]
     },
     {
         "name": "Eastport Staging Area",
@@ -115,7 +115,7 @@
         "description": "A pretty drive leads past hot springs, mountains, and lakes.",
         "coords": [37.787740, -119.072453],
         "type": "place",
-        "activity": ["hiking", "driving"],
+        "activity": ["driving", "hiking"],
         "date": "",
         "images": []
     },
@@ -167,7 +167,7 @@
         "type": "place",
         "activity": ["fishing", "hiking"],
         "date": "8/30/25",
-        "images": []
+        "images": ["/images/map/IMG_20250830_192449_077.jpg"]
     },
     {
         "name": "Japanese Gardens",
@@ -231,7 +231,7 @@
     },
     {
         "name": "Honker Bay",
-        "rating": "unexplored",
+        "rating": "good",
         "description": "🤯",
         "coords": [38.072491, -121.928041],
         "type": "place",
@@ -256,6 +256,26 @@
         "coords": [41.28430756823132, -124.12981411705499],
         "type": "place",
         "activity": ["hiking", "fishing"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Canyon Creek Campground",
+        "rating": "unexplored",
+        "description": "Closed as of August 25, 2025. <br> <a href=\"https://freecampsites.net/#!10096&query=sitedetails\">FreeCampsites link</a> <br> Located on Canyon Creek in a mixed conifer forest. Remote with limited services. Dirt road is rough, rocky, and narrow. 16-29 campsites. Images need to be replaced once I go there. ",
+        "coords": [39.435464, -120.576968],
+        "type": "place",
+        "activity": ["camping", "fishing"],
+        "date": "",
+        "images": ["https://freecampsites.net/wp-content/uploads/2022/04/forestcreekcamp-800x600.jpg", "https://freecampsites.net/wp-content/uploads/2022/04/granitegravelrd-800x600.jpg"]
+    },
+    {
+        "name": "Little North Fork Campground",
+        "rating": "unexplored",
+        "description": "First come first serve free campground. Open when no snow.",
+        "coords": [39.782, -121.259],
+        "type": "place",
+        "activity": ["camping", "fishing"],
         "date": "",
         "images": []
     }

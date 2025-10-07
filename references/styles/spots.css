@@ -172,72 +172,6 @@ label {
     margin:0;
 }
 
-.check-box {
-    display: block;
-    position: relative;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;    
-}
-
-.check-box input {
-    position: absolute;
-    opacity: 0;
-    height: 0;
-    width: 0;
-    cursor: pointer;
-}
-
-/* Create a custom checkbox */
-.checkmark {
-    display: inline-block;
-    vertical-align: middle;
-    top: 0;
-    left: 0;
-    height: 0.7rem;
-    width: 0.7rem;
-    cursor: pointer;
-    background-color: var(--bgcolortile);
-
-
-    border-radius: var(--borderradius);
-    border-radius: var(--borderradius);
-    border-color: var(--border-color);
-    border-style: solid;
-    border-width: 0.1rem;
-}
-
-/* On mouse-over*/
-.check-box:hover input ~ .checkmark {
-    border-color: var(--color1);
-}
-/* When checkbox is checked */
-.check-box input:checked ~ .checkmark {
-    color: var(--color1);
-    border-color: var(--color1);
-}
-
-
-/* Show the checkmark when checked */
-.check-box input:checked ~ .checkmark:after {
-    display: block;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-    content: "«";
-    display: none;
-    position: absolute;
-    color: var(--color1);
-    vertical-align: middle;
-    text-align: center;
-    font-size: 1.5rem;
-    left: 0.45rem;
-    top: -0.1rem;
-}
-
 .legend-color {
     display: inline-block;
     vertical-align: middle;
@@ -355,23 +289,6 @@ label {
     object-fit: cover;
 }
 
-/* Button */
-.viewable-image {
-    color: var(--textcolor);
-    border-radius: var(--borderradius);
-    border-color: var(--border-color);
-    border-style: solid;
-    background-color: var(--bgcolortile);
-    border-width: 0.1rem;
-    box-shadow: 0rem 0rem 0.63rem var(--bgcolor3);
-    transition-duration: var(--transitionms);
-    outline: None;
-    cursor: pointer;
-}
-
-.viewable-image:hover {
-    border-color: var(--color1);
-}
-.viewable-image:active {
-    filter: brightness(80%);
+.sidebar-section img:hover {
+    box-shadow: 0.12rem 0.12rem 0px var(--color2);
 }

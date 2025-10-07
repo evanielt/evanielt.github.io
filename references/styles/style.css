@@ -63,7 +63,7 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100%;
-    height: 100%;
+    height: auto;
 }
 
 /* Main content area */
@@ -154,6 +154,12 @@ hr {
     margin-left: 1.88rem;
     margin-right: 1.88rem;
     border-image: var(--tricolorgradient);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 iframe {
@@ -465,27 +471,26 @@ a.tile:hover {
     position: absolute;
     text-align: left;
     vertical-align: bottom;
-    left: 1.25rem; /* 20px */
-    bottom: 5rem; /* 50px */
-    margin-right: 1.25rem; /* 20px */
+    left: 1.25rem;
+    bottom: 5rem;
+    margin-right: 1.25rem;
     padding: 0;
     margin: 0;
-    /* text-wrap-mode: nowrap; */
     overflow: hidden;
 }
 .tile p {
-    padding-left: 1.25rem; /* 20px */
+    padding-left: 1.25rem;
     position: absolute;
-    top: 9.38rem; /* 150px */
+    top: 9.38rem;
 }
 
 .tile-small {
-    height: 6rem; /* already in rem */
+    height: 6rem;
 }
 .tile-small h2 {
     position: absolute;
-    left: 1.2rem; /* already in rem */
-    bottom: 0.7rem; /* corrected from --1rem to -1rem */
+    left: 1.2rem;
+    bottom: 0.7rem;
 }
 .tile-small img {
     height: 100%;
@@ -493,15 +498,168 @@ a.tile:hover {
 }
 
 .tile-title {
-    height: 4.38rem; /* 70px */
-    margin-top: 3.13rem; /* 50px */
+    height: 4.38rem;
+    margin-top: 3.13rem;
 }
 .tile-title h2 {
     position: absolute;
-    left: 1.25rem; /* 20px */
-    bottom: 0.7rem; /* -20px */
+    left: 1.25rem;
+    bottom: 0.7rem;
 }
 
 .tile-title:first-of-type {
-    margin-top: 0rem; /* 0px */
+    margin-top: 0rem;
+}
+
+
+/* Button */
+.viewable-image {
+    color: var(--textcolor);
+    border-radius: var(--borderradius);
+    border-color: var(--border-color);
+    border-style: solid;
+    background-color: var(--bgcolortile);
+    border-width: 0.1rem;
+    box-shadow: 0rem 0rem 0.63rem var(--bgcolor3);
+    transition-duration: var(--transitionms);
+    outline: None;
+    cursor: pointer;
+}
+
+.viewable-image:hover {
+    border-color: var(--color1);
+}
+.viewable-image:active {
+    filter: brightness(80%);
+}
+
+#image-viewer {
+    z-index: 100;
+    position: fixed;
+    display: none;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+    transition: 50ms;
+    overflow-y: hidden;
+}
+
+#image-viewer-image {
+    position: relative;
+    z-index: 10000;
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    height: auto;
+    width: auto;
+    box-shadow: 0 0 3rem #00000067;
+}
+
+#image-viewer-background {
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: var(--bgcolor3); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+}
+
+#image-viewer-caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  /* height: 150px; */
+}
+
+.sidebar-section img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+
+.no-scroll {
+    overflow: hidden !important;
+    background-color: #ffffff !important;
+}
+
+
+
+.check-box {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;    
+}
+
+.check-box input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    display: inline-block;
+    vertical-align: middle;
+    top: 0;
+    left: 0;
+    height: 0.7rem;
+    width: 0.7rem;
+    cursor: pointer;
+    background-color: var(--bgcolortile);
+
+
+    border-radius: var(--borderradius);
+    border-radius: var(--borderradius);
+    border-color: var(--border-color);
+    border-style: solid;
+    border-width: 0.1rem;
+}
+
+/* On mouse-over*/
+.check-box:hover input ~ .checkmark {
+    border-color: var(--color1);
+}
+/* When checkbox is checked */
+.check-box input:checked ~ .checkmark {
+    color: var(--color1);
+    border-color: var(--color1);
+}
+
+.check-box:active {
+    filter: brightness(80%);
+}
+
+/* Show the checkmark when checked */
+.check-box input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "«";
+    display: none;
+    position: absolute;
+    color: var(--color1);
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.5rem;
+    left: 0.45rem;
+    top: -0.1rem;
 }

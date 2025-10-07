@@ -355,10 +355,8 @@ function getCheckboxState() {
     markerData.activity.biking.checked = document.getElementById('check-activity-biking').checked;
     markerData.activity.driving.checked = document.getElementById('check-activity-driving').checked;
     markerData.activity.fishing.checked = document.getElementById('check-activity-fishing').checked;
-    // markerData.activity.camping.checked = document.getElementById('check-activity-camping').checked;
+    markerData.activity.camping.checked = document.getElementById('check-activity-camping').checked;
     markerData.activity.eating.checked = document.getElementById('check-activity-eating').checked;
-
-    console.log(markerData);
 }
 
 // ------------------------------------- global functions -------------------------------------
@@ -403,17 +401,13 @@ window.openSidebar = function openSidebar(spotData) {
     var imagesText = "";
     for(var i in spotData.images) {
         var url = spotData.images[i];
-        imagesText += `<img src="${url}" class="viewable-image" onclick="viewImage('${url}')">`
+        imagesText += `<img src="${url}" class="viewable-image" onclick="openImageViewer('${url}')">`
 
         if(i + 1 < spotData.activity.length) {
             activityText += "<br>"
         }
     }
     document.getElementById('sidebar-images').innerHTML = imagesText;
-}
-
-window.viewImage = function viewImage(url) {
-    console.log("viewing image " + url);
 }
 
 window.setSidebarContent = function setSidebarContent(text) {
@@ -493,15 +487,12 @@ function initMap() {
         closeMapButtons();
     }
 
-    // set coordinates to map position initially, only noticeable on mobile
+    // set coordinates to map position initially
     
-    var l = map.getView();
+    var lonlat = ol.proj.transform(map.getView().getCenter(), 'EPSG:3857', 'EPSG:4326');
 
-    var lonlat = ol.proj.transform();
     var x = lonlat[1].toFixed(6);
     var y = lonlat[0].toFixed(6);
-
-    console.log(l);
 
     mouseCoords = document.getElementById('mouse-coords');
     mouseCoords.innerHTML = x + ", " + y;
