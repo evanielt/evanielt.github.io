@@ -331,7 +331,8 @@ footer {
 	top: 0;
 	left: 0;
 	z-index: 1;
-	overflow: scroll;
+	overflow-x: auto;
+    overflow-y: none;
 
 	height: 3.13rem; 
 	width: 100%;
@@ -348,7 +349,6 @@ footer {
     border-image: var(--tricolorgradient);
     border-width: 0.13rem; /* 2px */
     transition-duration: 250ms;
-
 }
 
 #navbar a {

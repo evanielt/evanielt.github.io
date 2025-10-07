@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta content="width=device-width, initial-scale=1" charset="utf-8"/>
-			<title>
-				VDS
-			</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8"/>
+
+        <title>
+            DRVC
+        </title>
+
 		<link rel="stylesheet" type="text/css" href="/references/styles/style.css">
-		<script src="/references/scripts/script.js"></script>
+
+        <!-- jquery needed to load html into other html -->
 		<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-		<script src="/references/scripts/load.js"></script>
+        <script src="/references/scripts/load.js"></script>
 	</head>
 	<body>
 
@@ -17,7 +20,7 @@
 				Deformable Rigidbody Vehicle Creator
 			</h1>
 			<p>
-				Blender addon to make deformable rigidbody vehicles (wow)
+				Blender addon to make deformable rigidbody vehicles
 			</p>
 			<a href="https://github.com/evanielt/DeformableRigidbodyVehicleCreator">Github Repository</a>
 
@@ -26,4 +29,8 @@
 
 		<div id="navbar"></div>
 	</body>
+    
+    <!-- necessary scripts for modules that jquery loads -->
+    <!-- <script src="/references/scripts/imageViewer.js"></script> -->
+    <script src="/references/scripts/navbar.js"></script>
 </html>
