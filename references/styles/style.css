@@ -563,26 +563,13 @@ a.tile:hover {
     height: 100%;
 }
 
-#image-viewer-container {
-    z-index: 1000;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: fit-content;
-    height: 95%;
-    display: flex;
-    align-items: center;
-}
-
 #image-viewer-image {
     position: relative;
-    z-index: 1000;
+    z-index: 10000;
     margin: auto;
     display: block;
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 80%;
+    max-height: 80%;
     height: auto;
     width: auto;
     box-shadow: 0 0 3rem #00000067;
@@ -600,22 +587,22 @@ a.tile:hover {
 }
 
 #image-viewer-previous, #image-viewer-next {
-    z-index: 1001;
+    z-index: 100;
     position: fixed;
-    top: calc(50% - 1.5rem);
+    top: 50%;
 
     width: 3rem;
     height: 3rem;
-    font-size: 2em;
-    padding-top: 0.093em;
+    font-size: 1.5em;
+    padding-top: 0.28em;
 }
 
 #image-viewer-previous {
-    left: -15%;
+    left: 3rem;
 }
 
 #image-viewer-next {
-    right: -15%;
+    right: 3rem;
 }
 
 .sidebar-section img {
