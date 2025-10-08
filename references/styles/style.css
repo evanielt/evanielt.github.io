@@ -553,20 +553,8 @@ a.tile:hover {
     overflow-y: hidden;
 }
 
-#image-viewer-image {
-    position: relative;
-    z-index: 10000;
-    margin: auto;
-    display: block;
-    max-width: 80%;
-    max-height: 80%;
-    height: auto;
-    width: auto;
-    box-shadow: 0 0 3rem #00000067;
-}
-
 #image-viewer-background {
-    z-index: 100;
+    z-index: 99;
     position: fixed;
     left: 0;
     top: 0;
@@ -575,15 +563,59 @@ a.tile:hover {
     height: 100%;
 }
 
+#image-viewer-container {
+    z-index: 1000;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: fit-content;
+    height: 95%;
+    display: flex;
+    align-items: center;
+}
+
+#image-viewer-image {
+    position: relative;
+    z-index: 1000;
+    margin: auto;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+    box-shadow: 0 0 3rem #00000067;
+}
+
+
 #image-viewer-caption {
   margin: auto;
   display: block;
   width: 80%;
   max-width: 700px;
   text-align: center;
-  color: #ccc;
   padding: 10px 0;
   /* height: 150px; */
+}
+
+#image-viewer-previous, #image-viewer-next {
+    z-index: 1001;
+    position: fixed;
+    top: calc(50% - 1.5rem);
+
+    width: 3rem;
+    height: 3rem;
+    font-size: 2em;
+    padding-top: 0.093em;
+}
+
+#image-viewer-previous {
+    left: -15%;
+}
+
+#image-viewer-next {
+    right: -15%;
 }
 
 .sidebar-section img {

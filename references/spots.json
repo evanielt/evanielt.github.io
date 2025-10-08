@@ -51,12 +51,12 @@
     },
     {
         "name": "Pinole overlook",
-        "rating": "fine",
+        "rating": "bad",
         "description": "Very pretty, especially in the evening, but it smells shyte",
         "coords": [38.014334, -122.296809],
         "type": "place",
         "activity": ["hiking"],
-        "date": "",
+        "date": "8/16/2025",
         "images": ["/images/map/IMG_20250816_192301_478.jpg", "/images/map/IMG_20250816_192316_865.jpg"]
     },
     {
@@ -231,7 +231,7 @@
     },
     {
         "name": "Honker Bay",
-        "rating": "good",
+        "rating": "unexplored",
         "description": "🤯",
         "coords": [38.072491, -121.928041],
         "type": "place",
@@ -298,5 +298,25 @@
         "activity": ["camping", "fishing"],
         "date": "",
         "images": ["https://freecampsites.net/wp-content/uploads/2016/11/IMG-20161118-WA0000-800x450.jpg", "https://photos.thedyrt.com/photo/118225/media/california-lumsden_4ae6009f1d83c0f0314302a29770da7c.jpg?format=auto&width=1972"]
+    },
+    {
+        "name": "Sobrante Ridge Road",
+        "rating": "bad",
+        "description": "the trail is crumbly and in a weird spot. You have to park down the main road and it's sketch to bike on",
+        "coords": [37.971114254366356, -122.25033546441969],
+        "type": "place",
+        "activity": ["hiking", "biking"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Las Cabañas Mexican Grill & Taqueria",
+        "rating": "",
+        "description": "",
+        "coords": [37.971114254366356, -122.25033546441969],
+        "type": "place",
+        "activity": ["hiking", "biking"],
+        "date": "",
+        "images": []
     }
 ]

@@ -407,13 +407,15 @@ window.openSidebar = function openSidebar(spotData) {
     var imagesText = "";
     for(var i in spotData.images) {
         var url = spotData.images[i];
-        imagesText += `<img src="${url}" class="viewable-image" onclick="openImageViewer('${url}')">`
+        imagesText += `<img src="${url}" class="viewable-image"')">`
 
         if(i + 1 < spotData.activity.length) {
             activityText += "<br>"
         }
     }
     document.getElementById('sidebar-images').innerHTML = imagesText;
+
+    IndexImages();
 }
 
 window.setSidebarContent = function setSidebarContent(text) {
