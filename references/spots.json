@@ -312,10 +312,130 @@
     {
         "name": "Las Cabañas Mexican Grill & Taqueria",
         "rating": "",
-        "description": "",
+        "description": "The kiosk was broken so I could only type my name as Cha. Tasted good cause I was famished",
         "coords": [37.971114254366356, -122.25033546441969],
         "type": "place",
-        "activity": ["hiking", "biking"],
+        "activity": ["eating"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Centerville Flat Dispersed Campground",
+        "rating": "unexplored",
+        "description": "Centerville Flat Dispersed Campground is a free, dispersed camping area offered by Humboldt-Toiyabe National Forest. The only amenities found here are vault toilets. There are no trash cans either. Otherwise this is strictly a designated boondocking area where camping is allowed anywhere. <br> <a href=\"https://www.boondockersbible.com/campsite/centerville-flat-dispersed-campground-markleeville-ca/\">Boondockers Bible</a> <br> not my photos",
+        "coords": [38.6315, -119.7210],
+        "type": "place",
+        "activity": ["camping"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Wolf Creek Dispersed Campground",
+        "rating": "unexplored",
+        "description": "https://www.boondockersbible.com/campsite/wolf-creek-dispersed-campground-markleeville-ca/",
+        "coords": [38.5767, -119.6970],
+        "type": "place",
+        "activity": ["camping"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Wentworth Springs Campground",
+        "rating": "unexplored",
+        "description": "This is a free, developed campground offered by El Dorado National Forest strictly for high clearance, 4WD vehicles. There are eight (8) sites, all of which are designed for tent camping. The campground is only open from June to October. There are picnic tables, fire rings, and a vault toilet. <br> <a href=\"https://www.boondockersbible.com/campsite/wentworth-springs-campground-pollock-pines-ca\">Boondockers Bible</a> <br> not my photos",
+        "coords": [39.0119, -120.3253],
+        "type": "place",
+        "activity": ["camping"],
+        "date": "",
+        "images": ["https://www.boondockersbible.com/wp-content/uploads/2024/06/wentworth-springs-campground-pollock-pines-ca-pond-768x576.webp", "https://www.boondockersbible.com/wp-content/uploads/2024/06/wentworth-springs-campground-pollock-pines-ca-marker-768x576.webp", "https://www.boondockersbible.com/wp-content/uploads/2024/06/wentworth-springs-campground-pollock-pines-ca-forest-768x576.webp"]
+    },
+    {
+        "name": "Upper Virginia Creek Primitive Campground",
+        "rating": "unexplored",
+        "description": "https://www.boondockersbible.com/campsite/upper-virginia-creek-primitive-campground-lee-vining-ca/",
+        "coords": [38.0583, -119.2409],
+        "type": "place",
+        "activity": ["camping"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Lower Virginia Creek Primitive Campground",
+        "rating": "unexplored",
+        "description": "https://www.boondockersbible.com/campsite/lower-virginia-creek-primitive-campground-lee-vining-ca/",
+        "coords": [38.0641, -119.2266],
+        "type": "place",
+        "activity": ["camping"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Hartley Springs Campground",
+        "rating": "unexplored",
+        "description": "https://www.boondockersbible.com/campsite/hartley-springs-campground-june-lake-ca/",
+        "coords": [37.7715, -119.0376],
+        "type": "place",
+        "activity": ["camping"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Alamo Creek",
+        "rating": "unexplored",
+        "description": "lowk looks dih on google maps <br> https://fishbrain.com/fishing-waters/G8KM5Ilw/alamo-creek",
+        "coords": [37.77058734321543, -121.90599125022614],
+        "type": "place",
+        "activity": ["fishing"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Loch Lomond",
+        "rating": "unexplored",
+        "description": "https://fishoak.com/lochlomond",
+        "coords": [37.114962861073224, -122.0631847482253],
+        "type": "place",
+        "activity": ["fishing", "hiking"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Tassajara Creek",
+        "rating": "unexplored",
+        "description": "also looks a bit dih <br> https://fishbrain.com/fishing-waters/6_VTeixp/tassajara-creek",
+        "coords": [37.7677, -121.8639],
+        "type": "place",
+        "activity": ["fishing", "hiking"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "McNear Beach Fishing Pier",
+        "rating": "unexplored",
+        "description": "https://fishbrain.com/fishing-waters/gTQNgx-Z/mcnear-beach-fishing-pier",
+        "coords": [37.99247847710561, -122.44908555848548],
+        "type": "place",
+        "activity": ["fishing"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Wrights Lake",
+        "rating": "unexplored",
+        "description": "looks nice if you're in the area of lake tahoe <br> https://fishoak.com/wrights",
+        "coords": [38.84966967619452, -120.23162597696053],
+        "type": "place",
+        "activity": ["fishing"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Silver Fork American River",
+        "rating": "unexplored",
+        "description": "this coord is also home to the china flats camprground <br> https://fishoak.com/silverfork",
+        "coords": [38.75517174985729, -120.2679417478389],
+        "type": "place",
+        "activity": ["fishing", "camping"],
         "date": "",
         "images": []
     }
