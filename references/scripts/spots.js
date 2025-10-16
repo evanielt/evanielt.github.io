@@ -164,9 +164,13 @@ var map = new Map({
 createMarkerStyles();
 
 
-var markerLayer;
 var markerSource;
-// fills in the spots variable with data from the spots.json file
+var markerLayer;
+
+var gpsSource;
+var gpsLayer;
+
+// after filling in the spots variable with data from spots.json, it runs the necessary startup code
 fetch('/references/spots.json')
     .then(response => {
         if (!response.ok) {
@@ -182,12 +186,11 @@ fetch('/references/spots.json')
         var dropdown = document.getElementById("marker-color-shows");
         var val = dropdown.options[dropdown.selectedIndex].value;
 
-        markerSource = createMarkerSource();
-        markerLayer = createMarkerLayer(markerSource);
+        createSourcesAndLayers();
+
         getCheckboxState();
         createMarkers(val);
         setLegend(val);
-
 
         initSelect(markerLayer);
     })
@@ -210,24 +213,49 @@ function createMarkerStyles() {
             });
         });
     });
+
+    console.log(markerData);
 }
 
 
-function createMarkerSource() {
-    var vectorSource = new VectorSource();
-    return vectorSource;
-}
+const testStyle = {
+    'Point': new Style({
+        image: new ol.style.Icon({
+        anchor: [0.5, 1],
+        src: '/images/marker.svg',
+        scale: 0.05,
+        color: colorError,
+        })
+    }),
+    'LineString': new Style({
+        stroke: new Stroke({
+        color: '#f00',
+        width: 3,
+        }),
+    }),
+    'MultiLineString': new Style({
+        stroke: new Stroke({
+        color: '#0f0',
+        width: 3,
+        }),
+    }),
+};
 
-function createMarkerLayer(markerSource) {
-    vectorLayer = new VectorLayer({
+
+function createSourcesAndLayers() {
+    markerSource = new VectorSource();
+    markerLayer = new VectorLayer({
         source: markerSource,
     });
 
-    map.addLayer(vectorLayer);
+    gpsSource = new VectorSource({format: new ol.format.GPX()})
+    gpsLayer = new VectorLayer({
+        source: gpsSource,
+    });
 
-    return vectorLayer;
+    map.addLayer(markerLayer);
+    map.addLayer(gpsLayer);
 }
-
 
 function createMarkers(dropdownValue) {
     for(const spotData of spots) {
@@ -248,44 +276,71 @@ function createMarkers(dropdownValue) {
         }
 
         switchedCoords = [spotData.coords[1], spotData.coords[0]]
-        var spot = new Feature({
-            geometry: new Point(fromLonLat(switchedCoords)),
-        });
 
-        spot.setProperties({
-            name: spotData.name,
-            coords: spotData.coords,
-            description: spotData.description,
-            type: spotData.type,
-            rating: spotData.rating,
-            activity: spotData.activity,
-            images: spotData.images
-        });
+        if(spotData.gpx == null) { // single spot
+            var spot = new Feature({
+                geometry: new Point(fromLonLat(switchedCoords)),
+            });
 
-        if(spot.get("rating") == "unexplored") {
-            spot.setStyle(spotUnexploredStyle);
-        } else {
-            var dropdownValueSingle;
-            if(Array.isArray(spot.get(dropdownValue))) {
-                dropdownValueSingle = spot.get(dropdownValue)[0];
+            spot.setProperties({
+                name: spotData.name,
+                coords: spotData.coords,
+                description: spotData.description,
+                type: spotData.type,
+                rating: spotData.rating,
+                activity: spotData.activity,
+                images: spotData.images
+            });
+
+            if(spot.get("rating") == "unexplored") {
+                spot.setStyle(spotUnexploredStyle);
             } else {
-                dropdownValueSingle = spot.get(dropdownValue);
+                var dropdownValueSingle;
+                if(Array.isArray(spot.get(dropdownValue))) {
+                    dropdownValueSingle = spot.get(dropdownValue)[0];
+                } else {
+                    dropdownValueSingle = spot.get(dropdownValue);
+                }
+                var v = markerData[dropdownValue][dropdownValueSingle]
+                if(v != null) {
+                    var sLocal = v.style;
+                }
+                
+                if(sLocal != null) {
+                    spot.setStyle(sLocal);
+                } else {
+                    spot.setStyle(spotErrorStyle);
+                }
             }
-            var v = markerData[dropdownValue][dropdownValueSingle]
-            if(v != null) {
-                var sLocal = v.style;
-            }
+
+            markerSource.addFeature(spot);
+
+            console.log("Created marker " + spotData.name);
+        } else { // road
+            console.log("Loading GPX features...");
+
+            var gpxFormat = new ol.format.GPX();
             
-            if(sLocal != null) {
-                spot.setStyle(sLocal);
-            } else {
-                spot.setStyle(spotErrorStyle);
-            }
+            fetch('https://openlayers.org/en/v4.6.5/examples/data/gpx/fells_loop.gpx')
+                .then(response => response.text())
+                .then(gpxText => {
+                    var gpxFeatures = gpxFormat.readFeatures(gpxText, {
+                        featureProjection: 'EPSG:3857'
+                    });
+
+                    gpxFeatures.forEach(feature => {
+                        var correctStyleForFeatureType = testStyle[feature.getGeometry().getType()];
+                        feature.setStyle(correctStyleForFeatureType);                        
+                    });
+
+                    // gpxFeatures.setStyle();
+                    
+                    // Add features to the source
+                    gpsSource.addFeatures(gpxFeatures);
+                    console.log("GPX features loaded successfully:", gpxFeatures);
+                })
+                .catch(error => console.error("Error loading GPX data:", error));
         }
-
-        markerSource.addFeature(spot);
-
-        console.log("created marker " + spotData.name);
     }
 }
 

@@ -264,6 +264,7 @@ br {
 
 select:hover {
     border-color: var(--color1);
+    box-shadow: 0.06rem 0.06rem 0px var(--color2);
 }
 select:active {
     filter: brightness(80%);
@@ -660,6 +661,7 @@ a.tile:hover {
 /* On mouse-over*/
 .check-box:hover input ~ .checkmark {
     border-color: var(--color1);
+    box-shadow: 0.06rem 0.06rem 0px var(--color2);
 }
 /* When checkbox is checked */
 .check-box input:checked ~ .checkmark {
