@@ -2,14 +2,24 @@
     { 
         "name": "River in Arnold",
         "rating": "good",
-        "description": "Caught my first fish in about 8 years here. These photos are just from the trip up there not of the river",
+        "description": "Caught my first fish in about 8 years here.",
         "coords": [38.231973, -120.295568], 
         "type": "place",
         "activity": ["fishing", "hiking"],
         "date": "2025-07-20",
-        "images": ["/images/portfolio/IMG_20250720_152017_668.jpg", "/images/portfolio/IMG_9964.jpg"]
+        "images": []
     },
     { 
+        "name": "Forest Route 6N45",
+        "rating": "good",
+        "description": "This spot is pretty cool. It was a nice place to pull over and cook some food (I burned the rice). The road is a fun dirt road and it's super peaceful. I used google street view and my racked my brain and actually was able to find the exact coordinates I was at.",
+        "coords": [38.389323884379195, -120.18361981510711], 
+        "type": "place",
+        "activity": ["driving", "hiking"],
+        "date": "2025-07-20",
+        "images": ["/images/portfolio/IMG_20250720_152017_668.jpg", "/images/portfolio/IMG_9964.jpg"]
+    },
+    {
         "name": "Walk in Briones",
         "rating": "good",
         "description": "Really pretty in late summer and autumn. When you get to the top you enter into this really cool meadow",
@@ -37,7 +47,8 @@
         "type": "road",
         "activity": ["driving"],
         "date": "",
-        "images": []
+        "images": [],
+        "gpx": "/references/gpx/redwoodrd.gpx"
     },
     { 
         "name": "Cummings Skyway",
@@ -47,7 +58,8 @@
         "type": "road",
         "activity": ["driving"],
         "date": "",
-        "images": []
+        "images": [],
+        "gpx": "/references/gpx/cummingsskyway.gpx"
     },
     {
         "name": "Pinole overlook",
@@ -82,12 +94,13 @@
     {
         "name": "Mines Rd",
         "rating": "bad",
-        "description": "kinda dih",
+        "description": "It's kinda cool but kinda dih. Saw some cops hanging on it so be wary.",
         "coords": [37.548186, -121.570929],
         "type": "road",
         "activity": ["driving"],
         "date": "",
-        "images": []
+        "images": [],
+        "gpx": "/references/gpx/minesrd.gpx"
     },
     {
         "name": "Yumy Gurt",
@@ -304,10 +317,11 @@
         "rating": "bad",
         "description": "the trail is crumbly and in a weird spot. You have to park down the main road and it's sketch to bike on",
         "coords": [37.971114254366356, -122.25033546441969],
-        "type": "place",
-        "activity": ["hiking", "biking"],
+        "type": "road",
+        "activity": ["biking", "hiking"],
         "date": "",
-        "images": []
+        "images": [],
+        "gpx": "/references/gpx/sobranteridgerd.gpx"
     },
     {
         "name": "Las Cabañas Mexican Grill & Taqueria",
@@ -464,12 +478,23 @@
     {
         "name": "Summit Rd",
         "rating": "unexplored",
-        "description": "Although technically public, it. The internet has plenty of stories of rude locals or illegitimate \"no trespassing\" signs. An interesting read on the story is <a href=\"https://bikepacking.com/plog/fight-for-summit-road/\">here</a>. Although legal and a place I would like to explore sometime, it seems like you gotta be alert. <br> Photos from bikepacking.com",
+        "description": "Although technically public, it. The internet has plenty of stories of rude locals or illegitimate \"no trespassing\" signs. An interesting read on  is <a href=\"https://bikepacking.com/plog/fight-for-summit-road/\">here</a>. Legal and cool to explore, but seems like you gotta be alert. A while back a motorcyclist was beheaded by a wire stretched across the road by a hillbilly. <br> Photos from bikepacking.com https://openlayers.org/en/v4.6.5/examples/data/gpx/fells_loop.gpx",
         "coords": [37.89470794267704, -122.45594460844566],
-        "type": "place",
+        "type": "road",
         "activity": ["driving", "biking"],
         "date": "",
         "images": ["https://bikepacking.com/wp-content/uploads/2020/02/Aaron-Rickel-Fight-for-Summit-Road-10-960x640.jpg"],
-        "gpx": "test"
+        "gpx": null
+    },
+    {
+        "name": "Coast Rd",
+        "rating": "good",
+        "description": "Down in big sur. Dirt road.",
+        "coords": [36.31382410699903, -121.86037578463618],
+        "type": "road",
+        "activity": ["driving", "biking"],
+        "date": "",
+        "images": [],
+        "gpx": "/references/gpx/coastrd.gpx"
     }
 ]
