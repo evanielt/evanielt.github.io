@@ -505,15 +505,5 @@
         "activity": ["eating"],
         "date": "",
         "images": []
-    },
-    {
-        "name": "Jollibee",
-        "rating": "unexplored",
-        "description": "https://maps.app.goo.gl/meZR15uyBF2ByxvYA",
-        "coords": [37.93729981074987, -122.02532083078388],
-        "type": "place",
-        "activity": ["eating"],
-        "date": "",
-        "images": []
     }
 ]
