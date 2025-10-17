@@ -114,7 +114,7 @@ var unexploredData = {
                 anchor: [0.5, 0.8],
                 src: '/images/marker.svg',
                 scale: 0.05,
-                color: unexploredData.color,
+                color: colorUnexplored,
             })
         }),
         'MultiLineString': new Style({
@@ -157,6 +157,7 @@ var roadDropdownValue;
 var gpxFormat = new ol.format.GPX();
 
 var spots = [];
+var map = null;
 
 
 createMap();
@@ -187,7 +188,7 @@ fetch('/references/spots.json')
 
 
 function createMap() {
-    var map = new Map({
+    map = new Map({
         layers: [
             new Tile({
                 source: new OSM(),
@@ -259,7 +260,7 @@ function initSelect() {
     map.addInteraction(select);
 
     select.on('select', function(evt) {
-        console.log("spot selected");
+        console.log("select happened");
         if(evt.selected.length > 0) {
             var selectedFeature = evt.selected[0];
             var selectedName = selectedFeature.get('name');
@@ -268,11 +269,9 @@ function initSelect() {
             
             if(spotData) {
                 openSidebar(spotData);
-                if(spotData.gpx == null) {
-                    selectedFeature.setStyle(spotSelectedStyle['Point']);
-                } else {
-                    selectedFeature.setStyle(spotSelectedStyle['MultiLineString']);
-                }
+
+                var type = spotSelectedStyle[selectedFeature.getGeometry().getType()];
+                selectedFeature.setStyle(type);
             }
         } else {
             closeSidebar();
@@ -281,18 +280,12 @@ function initSelect() {
 }
 
 
-// ------------------------------------- global functions -------------------------------------
-
+// ------------------------------------- marker functions -------------------------------------
 
 window.redrawMarkers = function redrawMarkers() {
     console.log("redrawn");
     markerSource.clear();
     gpsSource.clear();
-
-    var markerColorShows = document.getElementById("marker-color-shows");
-    // var dropdown = document.getElementById("show-roads-as");
-
-    colorDropdownValue = markerColorShows.options[markerColorShows.selectedIndex].value;
 
     getCheckboxState();
     createMarkers();
@@ -300,6 +293,12 @@ window.redrawMarkers = function redrawMarkers() {
 }
 
 function getCheckboxState() {
+    var markerColorShows = document.getElementById("marker-color-shows");
+    colorDropdownValue = markerColorShows.options[markerColorShows.selectedIndex].value;
+
+    var showRoadsAs = document.getElementById("show-roads-as");
+    roadDropdownValue = showRoadsAs.options[showRoadsAs.selectedIndex].value;
+
     markerData.type.place.checked = document.getElementById('check-type-place').checked;
     markerData.type.road.checked = document.getElementById('check-type-road').checked;
 
@@ -337,7 +336,7 @@ function createMarkers() {
 
         switchedCoords = [spotData.coords[1], spotData.coords[0]]
 
-        if(spotData.gpx == null) { // single spot
+        if(spotData.gpx == null || (roadDropdownValue === "marker" || roadDropdownValue === "both")) { // single spot
             var spot = new Feature({
                 geometry: new Point(fromLonLat(switchedCoords)),
             });
@@ -358,43 +357,43 @@ function createMarkers() {
             markerSource.addFeature(spot);
 
             console.log("Created spot: " + spotData.name);
-        } else { // road
-            fetch(spotData.gpx)
-                .then(response => response.text())
-                .then(gpxText => {
-                    var road = gpxFormat.readFeatures(gpxText, {
-                        featureProjection: 'EPSG:3857'
-                    });                    
+        }
+        if(spotData.gpx != null) { // road
+            if(roadDropdownValue === "both" || roadDropdownValue === "road") {
+                fetch(spotData.gpx)
+                    .then(response => response.text())
+                    .then(gpxText => {
+                        var road = gpxFormat.readFeatures(gpxText, {
+                            featureProjection: 'EPSG:3857'
+                        });                    
 
-                    road.forEach(feature => {
-                        feature.setProperties({
-                            name: spotData.name,
-                            coords: spotData.coords,
-                            description: spotData.description,
-                            type: spotData.type,
-                            rating: spotData.rating,
-                            activity: spotData.activity,
-                            images: spotData.images
+                        road.forEach(feature => {
+                            feature.setProperties({
+                                name: spotData.name,
+                                coords: spotData.coords,
+                                description: spotData.description,
+                                type: spotData.type,
+                                rating: spotData.rating,
+                                activity: spotData.activity,
+                                images: spotData.images
+                            });
                         });
 
-                        // console.log(finalStyle['MultiLineString'].stroke)
-                    });
+                        var finalStyle = getStyle(road[0]);
 
-                    var finalStyle = getStyle(road[0]);
+                        road.forEach(feature => {
+                            feature.setStyle(finalStyle['MultiLineString']);
+                        });
 
-                    road.forEach(feature => {
-                        feature.setStyle(finalStyle['MultiLineString']);
-                    });
-
-                    
-                    gpsSource.addFeatures(road);
-                    console.log("Created road: ", spotData.name);
-                })
-                .catch(error => console.error("Error loading GPX data:", error));
+                        
+                        gpsSource.addFeatures(road);
+                        console.log("Created road: ", spotData.name);
+                    })
+                    .catch(error => console.error("Error loading GPX data:", error));
+            }
         }
     }
 }
-
 
 function getStyle(spot) {
     var style = null;
@@ -410,7 +409,6 @@ function getStyle(spot) {
         }
 
         var v = markerData[colorDropdownValue][dropdownValueSingle];
-
 
         if(v != null) {
             if(spot.gpx == null) {
@@ -457,7 +455,7 @@ function setLegend() {
     document.getElementById('legend').innerHTML = legendText;
 }
 
-// ------------------------------------- global functions -------------------------------------
+// ------------------------------------- regular functions -------------------------------------
 
 window.closeSidebar = function closeSidebar() {
     if(window.matchMedia("(max-width: 768px)")) { // mobile

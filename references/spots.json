@@ -3,7 +3,7 @@
         "name": "River in Arnold",
         "rating": "good",
         "description": "Caught my first fish in about 8 years here.",
-        "coords": [38.231973, -120.295568], 
+        "coords": [38.32346822252473, -120.21319606214912],
         "type": "place",
         "activity": ["fishing", "hiking"],
         "date": "2025-07-20",
@@ -461,8 +461,7 @@
         "type": "place",
         "activity": ["fishing"],
         "date": "",
-        "images": [],
-        "gpx": null
+        "images": []
     },
     {
         "name": "New Idria Mine",
@@ -473,22 +472,22 @@
         "activity": ["driving", "biking", "hiking", "camping"],
         "date": "",
         "images": ["https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ffarm3.staticflickr.com%2F2404%2F2273486964_45fcfce5b6_o_d.jpg&f=1&nofb=1&ipt=5a2fb90ad9d0f8b2b354f6c0bb0867ed29427db97a524e4cbfac417c6f027bf7", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwesternmininghistory.com%2Fimages%2Ftown_gallery%2FNew_Idria_CA_003.jpg&f=1&nofb=1&ipt=20ebcace0fca6995b111114a905cf682a6fdff84f2a29a064226554b2cfe329e"],
-        "gpx": null
+        "gpx": "/references/gpx/newidria.gpx"
     },
     {
         "name": "Summit Rd",
         "rating": "unexplored",
-        "description": "Although technically public, it. The internet has plenty of stories of rude locals or illegitimate \"no trespassing\" signs. An interesting read on  is <a href=\"https://bikepacking.com/plog/fight-for-summit-road/\">here</a>. Legal and cool to explore, but seems like you gotta be alert. A while back a motorcyclist was beheaded by a wire stretched across the road by a hillbilly. <br> Photos from bikepacking.com https://openlayers.org/en/v4.6.5/examples/data/gpx/fells_loop.gpx",
+        "description": "Although technically public, it. The internet has plenty of stories of rude locals or illegitimate \"no trespassing\" signs. An interesting read on  is <a href=\"https://bikepacking.com/plog/fight-for-summit-road/\">here</a>. Legal and cool to explore, but seems like you gotta be alert. A while back a motorcyclist was beheaded by a wire stretched across the road by a hillbilly. <br> this route shown here should be a good bike ride. I had it go all the way up to the summit of Loma Prieta. Hopefully it's all accessible. <br> Photos from bikepacking.com (i'm not allowed to use these)",
         "coords": [37.89470794267704, -122.45594460844566],
         "type": "road",
         "activity": ["driving", "biking"],
         "date": "",
-        "images": ["https://bikepacking.com/wp-content/uploads/2020/02/Aaron-Rickel-Fight-for-Summit-Road-10-960x640.jpg"],
-        "gpx": null
+        "images": ["https://bikepacking.com/wp-content/uploads/2020/02/Aaron-Rickel-Fight-for-Summit-Road-3-1536x1024.jpg", "https://bikepacking.com/wp-content/uploads/2020/02/Aaron-Rickel-Fight-for-Summit-Road-10-960x640.jpg"],
+        "gpx": "/references/gpx/summitrd.gpx"
     },
     {
         "name": "Coast Rd",
-        "rating": "good",
+        "rating": "unexplored",
         "description": "Down in big sur. Dirt road.",
         "coords": [36.31382410699903, -121.86037578463618],
         "type": "road",
@@ -496,5 +495,25 @@
         "date": "",
         "images": [],
         "gpx": "/references/gpx/coastrd.gpx"
+    },
+    {
+        "name": "88 Bao Bao",
+        "rating": "unexplored",
+        "description": "https://maps.app.goo.gl/EPgegqFPj41PPJZv8",
+        "coords": [37.93729981074987, -122.02532083078388],
+        "type": "place",
+        "activity": ["eating"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Jollibee",
+        "rating": "unexplored",
+        "description": "https://maps.app.goo.gl/meZR15uyBF2ByxvYA",
+        "coords": [37.93729981074987, -122.02532083078388],
+        "type": "place",
+        "activity": ["eating"],
+        "date": "",
+        "images": []
     }
 ]
