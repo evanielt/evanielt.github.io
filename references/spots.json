@@ -2,21 +2,31 @@
     { 
         "name": "River in Arnold",
         "rating": "good",
-        "description": "Caught my first fish in about 8 years here. These photos are just from the trip up there not of the river",
-        "coords": [38.231973, -120.295568], 
+        "description": "Caught my first fish in about 8 years here.",
+        "coords": [38.32346822252473, -120.21319606214912],
         "type": "place",
         "activity": ["fishing", "hiking"],
-        "date": "7/20/2025",
-        "images": ["/images/portfolio/IMG_20250720_152017_668.jpg", "/images/portfolio/IMG_9964.jpg"]
+        "date": "2025-07-20",
+        "images": []
     },
     { 
+        "name": "Forest Route 6N45",
+        "rating": "good",
+        "description": "This spot is pretty cool. It was a nice place to pull over and cook some food (I burned the rice). The road is a fun dirt road and it's super peaceful. I used google street view and my racked my brain and actually was able to find the exact coordinates I was at.",
+        "coords": [38.389323884379195, -120.18361981510711], 
+        "type": "place",
+        "activity": ["driving", "hiking"],
+        "date": "2025-07-20",
+        "images": ["/images/portfolio/IMG_20250720_152017_668.jpg", "/images/portfolio/IMG_9964.jpg"]
+    },
+    {
         "name": "Walk in Briones",
         "rating": "good",
         "description": "Really pretty in late summer and autumn. When you get to the top you enter into this really cool meadow",
         "coords": [37.954060, -122.135206],
         "type": "place",
         "activity": ["hiking", "biking"],
-        "date": "8/15/2025",
+        "date": "2025-08-15",
         "images": ["/images/map/IMG_20250815_182909_694.jpg", "/images/map/IMG_20250815_184021_734.jpg", "/images/map/IMG_20250815_192601_749.jpg"]
     },
     { 
@@ -37,7 +47,8 @@
         "type": "road",
         "activity": ["driving"],
         "date": "",
-        "images": []
+        "images": [],
+        "gpx": "/references/gpx/redwoodrd.gpx"
     },
     { 
         "name": "Cummings Skyway",
@@ -47,7 +58,8 @@
         "type": "road",
         "activity": ["driving"],
         "date": "",
-        "images": []
+        "images": [],
+        "gpx": "/references/gpx/cummingsskyway.gpx"
     },
     {
         "name": "Pinole overlook",
@@ -56,7 +68,7 @@
         "coords": [38.014334, -122.296809],
         "type": "place",
         "activity": ["hiking"],
-        "date": "8/16/2025",
+        "date": "2025-08-16",
         "images": ["/images/map/IMG_20250816_192301_478.jpg", "/images/map/IMG_20250816_192316_865.jpg"]
     },
     {
@@ -66,8 +78,8 @@
         "coords": [37.839777, -122.181212], 
         "type": "place",
         "activity": ["biking", "hiking"],
-        "date": "9/2/2025",
-        "images": []
+        "date": "2025-09-18",
+        "images": ["/images/map/IMG_20250902_174744_497.jpg"]
     },
     {
         "name": "Mt Hamilton",
@@ -82,12 +94,13 @@
     {
         "name": "Mines Rd",
         "rating": "bad",
-        "description": "kinda dih",
+        "description": "It's kinda cool but kinda dih. Saw some cops hanging on it so be wary.",
         "coords": [37.548186, -121.570929],
         "type": "road",
         "activity": ["driving"],
         "date": "",
-        "images": []
+        "images": [],
+        "gpx": "/references/gpx/minesrd.gpx"
     },
     {
         "name": "Yumy Gurt",
@@ -136,7 +149,7 @@
         "coords": [37.932929, -121.693852],
         "type": "place",
         "activity": ["eating"],
-        "date": "7/29/2025",
+        "date": "2025-07-29",
         "images": []
     },
     {
@@ -156,7 +169,7 @@
         "coords": [37.497876, -122.109268],
         "type": "place",
         "activity": ["hiking"],
-        "date": "8/3/25",
+        "date": "2025-08-03",
         "images": ["/images/portfolio/IMG_0190.jpg"]
     },
     {
@@ -166,7 +179,7 @@
         "coords": [37.547668, -122.514862],
         "type": "place",
         "activity": ["fishing", "hiking"],
-        "date": "8/30/25",
+        "date": "2025-08-30",
         "images": ["/images/map/IMG_20250830_192449_077.jpg"]
     },
     {
@@ -196,7 +209,7 @@
         "coords": [37.80816480223186, -121.94403384614154],
         "type": "place",
         "activity": ["hiking"],
-        "date": "7/2025",
+        "date": "2025-07-??",
         "images": []
     },
     {
@@ -206,7 +219,7 @@
         "coords": [37.9735586358711, -122.0421143316963],
         "type": "place",
         "activity": ["eating"],
-        "date": "7/2025",
+        "date": "2025-07-??",
         "images": []
     },
     {
@@ -216,18 +229,18 @@
         "coords": [37.53523658266157, -122.29883658578991],
         "type": "place",
         "activity": ["other"],
-        "date": "7/2025",
+        "date": "2025-09-18",
         "images": []
     },
     {
         "name": "Hidden Valley",
         "rating": "fine",
-        "description": "Caught 25 crawdads here. Brennan said we shouldn't eat the things here",
+        "description": "Caught 25 crawdads here. Brennan said we shouldn't eat them",
         "coords": [37.98246863505968, -122.09114185401768],
         "type": "place",
         "activity": ["fishing"],
         "date": "",
-        "images": []
+        "images": ["/images/map/PXL_20250928_043832587.jpg"]
     },
     {
         "name": "Honker Bay",
@@ -242,12 +255,12 @@
     {
         "name": "Centerville Beach County Park",
         "rating": "good",
-        "description": "Right next to the town of Ferndale. Keep watch for some highland cows in the nearby fields.",
+        "description": "Right next to the town of Ferndale. Keep watch for some highland cows in the nearby fields. Date might not be accurate, I need to double check",
         "coords": [40.57439009648983, -124.34916251938662],
         "type": "place",
         "activity": ["hiking", "fishing"],
-        "date": "",
-        "images": []
+        "date": "2025-06-04",
+        "images": ["/images/map/IMG_20250602_173445_309.jpg"]
     },
     {
         "name": "cool hidden beach",
@@ -304,10 +317,11 @@
         "rating": "bad",
         "description": "the trail is crumbly and in a weird spot. You have to park down the main road and it's sketch to bike on",
         "coords": [37.971114254366356, -122.25033546441969],
-        "type": "place",
-        "activity": ["hiking", "biking"],
+        "type": "road",
+        "activity": ["biking", "hiking"],
         "date": "",
-        "images": []
+        "images": [],
+        "gpx": "/references/gpx/sobranteridgerd.gpx"
     },
     {
         "name": "Las Cabañas Mexican Grill & Taqueria",
@@ -322,7 +336,7 @@
     {
         "name": "Centerville Flat Dispersed Campground",
         "rating": "unexplored",
-        "description": "Centerville Flat Dispersed Campground is a free, dispersed camping area offered by Humboldt-Toiyabe National Forest. The only amenities found here are vault toilets. There are no trash cans either. Otherwise this is strictly a designated boondocking area where camping is allowed anywhere. <br> <a href=\"https://www.boondockersbible.com/campsite/centerville-flat-dispersed-campground-markleeville-ca/\">Boondockers Bible</a> <br> not my photos",
+        "description": "Free dispersed camping area. Vault toilets, no trash cans. <br> <a href=\"https://www.boondockersbible.com/campsite/centerville-flat-dispersed-campground-markleeville-ca/\">Boondockers Bible</a> <br> not my photos",
         "coords": [38.6315, -119.7210],
         "type": "place",
         "activity": ["camping"],
@@ -332,17 +346,17 @@
     {
         "name": "Wolf Creek Dispersed Campground",
         "rating": "unexplored",
-        "description": "https://www.boondockersbible.com/campsite/wolf-creek-dispersed-campground-markleeville-ca/",
+        "description": "Free dispersed camping area. High ground clearance recommended but doable for 2wd when it's dry. Borders wolf creek so fishings probably possible, but fishbrain doesn't say anything on it. <br> <a href=\"https://www.boondockersbible.com/campsite/wolf-creek-dispersed-campground-markleeville-ca/\">Boondockers Bible</a> <br> <a href=\"https://fishbrain.com/fishing-waters/MrP8pEFS/wolf-creek\">Fishbrain</a> <br> not my photos",
         "coords": [38.5767, -119.6970],
         "type": "place",
-        "activity": ["camping"],
+        "activity": ["camping", "fishing"],
         "date": "",
-        "images": []
+        "images": ["https://www.boondockersbible.com/wp-content/uploads/2024/07/wolf-creek-dispersed-campground-markleeville-ca-water-768x576.webp", "https://www.boondockersbible.com/wp-content/uploads/2024/07/wolf-creek-dispersed-campground-markleeville-ca-fall-colors-768x576.webp", "https://www.boondockersbible.com/wp-content/uploads/2024/07/wolf-creek-dispersed-campground-markleeville-ca-camper-768x576.webp"]
     },
     {
         "name": "Wentworth Springs Campground",
         "rating": "unexplored",
-        "description": "This is a free, developed campground offered by El Dorado National Forest strictly for high clearance, 4WD vehicles. There are eight (8) sites, all of which are designed for tent camping. The campground is only open from June to October. There are picnic tables, fire rings, and a vault toilet. <br> <a href=\"https://www.boondockersbible.com/campsite/wentworth-springs-campground-pollock-pines-ca\">Boondockers Bible</a> <br> not my photos",
+        "description": "Free developed campground only for 4x4s with high ground clearance. Eight sites for tent camping. Only open June to October. Picnic tables, fire pits, and a vault toilet. <br> <a href=\"https://www.boondockersbible.com/campsite/wentworth-springs-campground-pollock-pines-ca\">Boondockers Bible</a> <br> not my photos",
         "coords": [39.0119, -120.3253],
         "type": "place",
         "activity": ["camping"],
@@ -352,7 +366,7 @@
     {
         "name": "Upper Virginia Creek Primitive Campground",
         "rating": "unexplored",
-        "description": "https://www.boondockersbible.com/campsite/upper-virginia-creek-primitive-campground-lee-vining-ca/",
+        "description": "<a href=\"https://www.boondockersbible.com/campsite/upper-virginia-creek-primitive-campground-lee-vining-ca/\">Boondockers Bible</a>",
         "coords": [38.0583, -119.2409],
         "type": "place",
         "activity": ["camping"],
@@ -362,7 +376,7 @@
     {
         "name": "Lower Virginia Creek Primitive Campground",
         "rating": "unexplored",
-        "description": "https://www.boondockersbible.com/campsite/lower-virginia-creek-primitive-campground-lee-vining-ca/",
+        "description": "<a href=\"https://www.boondockersbible.com/campsite/lower-virginia-creek-primitive-campground-lee-vining-ca\">Boondockers Bible</a>",
         "coords": [38.0641, -119.2266],
         "type": "place",
         "activity": ["camping"],
@@ -372,7 +386,7 @@
     {
         "name": "Hartley Springs Campground",
         "rating": "unexplored",
-        "description": "https://www.boondockersbible.com/campsite/hartley-springs-campground-june-lake-ca/",
+        "description": "<a href=\"https://www.boondockersbible.com/campsite/hartley-springs-campground-june-lake-ca\">Boondockers Bible</a>",
         "coords": [37.7715, -119.0376],
         "type": "place",
         "activity": ["camping"],
@@ -382,7 +396,7 @@
     {
         "name": "Alamo Creek",
         "rating": "unexplored",
-        "description": "lowk looks dih on google maps <br> https://fishbrain.com/fishing-waters/G8KM5Ilw/alamo-creek",
+        "description": "lowk looks dih on google maps <br> <a href=\"https://fishbrain.com/fishing-waters/G8KM5Ilw/alamo-creek\">Fish Brain</a>",
         "coords": [37.77058734321543, -121.90599125022614],
         "type": "place",
         "activity": ["fishing"],
@@ -390,20 +404,20 @@
         "images": []
     },
     {
-        "name": "Loch Lomond",
+        "name": "Tassajara Creek",
         "rating": "unexplored",
-        "description": "https://fishoak.com/lochlomond",
-        "coords": [37.114962861073224, -122.0631847482253],
+        "description": "also looks a bit dih <br> <a href=\"https://fishbrain.com/fishing-waters/6_VTeixp/tassajara-creek\">Fish Brain</a>",
+        "coords": [37.7677, -121.8639],
         "type": "place",
         "activity": ["fishing", "hiking"],
         "date": "",
         "images": []
     },
     {
-        "name": "Tassajara Creek",
+        "name": "Loch Lomond",
         "rating": "unexplored",
-        "description": "also looks a bit dih <br> https://fishbrain.com/fishing-waters/6_VTeixp/tassajara-creek",
-        "coords": [37.7677, -121.8639],
+        "description": "<a href=\"https://fishoak.com/lochlomond\">Fishoak</a>",
+        "coords": [37.114962861073224, -122.0631847482253],
         "type": "place",
         "activity": ["fishing", "hiking"],
         "date": "",
@@ -412,7 +426,7 @@
     {
         "name": "McNear Beach Fishing Pier",
         "rating": "unexplored",
-        "description": "https://fishbrain.com/fishing-waters/gTQNgx-Z/mcnear-beach-fishing-pier",
+        "description": "biggest thing for me is it seems to get crowded easy so i should get there real early <br> <a href=\"https://www.pierfishing.com/mcnear-beach-fishing-pier/\">Pier Fishing (article intro is goofy)</a>",
         "coords": [37.99247847710561, -122.44908555848548],
         "type": "place",
         "activity": ["fishing"],
@@ -420,22 +434,85 @@
         "images": []
     },
     {
-        "name": "Wrights Lake",
+        "name": "Wrights Lake and Twin lakes",
         "rating": "unexplored",
-        "description": "looks nice if you're in the area of lake tahoe <br> https://fishoak.com/wrights",
+        "description": "looks nice if you're in the area of lake tahoe <br> <a href=\"https://fishoak.com/wrights\">Fishoak</a> <br> photos from fishoak",
         "coords": [38.84966967619452, -120.23162597696053],
+        "type": "place",
+        "activity": ["fishing"],
+        "date": "",
+        "images": ["https://fishoak.com/assets/images/wrights_rainbow.webp", "https://fishoak.com/assets/images/twin_brook.webp"]
+    },
+    {
+        "name": "Silver Fork American River",
+        "rating": "unexplored",
+        "description": "this place also has the china flats camprground <br> <a href=\"https://fishoak.com/silverfork\">Fishoak</a> <br> photos from fishoak",
+        "coords": [38.75517174985729, -120.2679417478389],
+        "type": "place",
+        "activity": ["fishing", "camping"],
+        "date": "",
+        "images": ["https://fishoak.com/assets/images/silverfork.webp", "https://fishoak.com/assets/images/silverfork2.webp"]
+    },
+    {
+        "name": "Paradise Beach Pier",
+        "rating": "unexplored",
+        "description": "its in ✨tiburon✨ <br> <a href=\"https://www.pierfishing.com/paradise-beach-pier-tiburon/\">Pier Fishing</a>",
+        "coords": [37.89470794267704, -122.45594460844566],
         "type": "place",
         "activity": ["fishing"],
         "date": "",
         "images": []
     },
     {
-        "name": "Silver Fork American River",
+        "name": "New Idria Mine",
         "rating": "unexplored",
-        "description": "this coord is also home to the china flats camprground <br> https://fishoak.com/silverfork",
-        "coords": [38.75517174985729, -120.2679417478389],
+        "description": "The road in is a cool but easy dirt trail. Seems like a cool old abandoned mine. <br> images are ripped from duckduckgo",
+        "coords": [36.41605146485153, -120.67294196907092],
         "type": "place",
-        "activity": ["fishing", "camping"],
+        "activity": ["driving", "biking", "hiking", "camping"],
+        "date": "",
+        "images": ["https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ffarm3.staticflickr.com%2F2404%2F2273486964_45fcfce5b6_o_d.jpg&f=1&nofb=1&ipt=5a2fb90ad9d0f8b2b354f6c0bb0867ed29427db97a524e4cbfac417c6f027bf7", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwesternmininghistory.com%2Fimages%2Ftown_gallery%2FNew_Idria_CA_003.jpg&f=1&nofb=1&ipt=20ebcace0fca6995b111114a905cf682a6fdff84f2a29a064226554b2cfe329e"],
+        "gpx": "/references/gpx/newidria.gpx"
+    },
+    {
+        "name": "Summit Rd",
+        "rating": "unexplored",
+        "description": "Although technically public, it. The internet has plenty of stories of rude locals or illegitimate \"no trespassing\" signs. An interesting read on  is <a href=\"https://bikepacking.com/plog/fight-for-summit-road/\">here</a>. Legal and cool to explore, but seems like you gotta be alert. A while back a motorcyclist was beheaded by a wire stretched across the road by a hillbilly. <br> this route shown here should be a good bike ride. I had it go all the way up to the summit of Loma Prieta. Hopefully it's all accessible. <br> Photos from bikepacking.com (i'm not allowed to use these)",
+        "coords": [37.89470794267704, -122.45594460844566],
+        "type": "road",
+        "activity": ["driving", "biking"],
+        "date": "",
+        "images": ["https://bikepacking.com/wp-content/uploads/2020/02/Aaron-Rickel-Fight-for-Summit-Road-3-1536x1024.jpg", "https://bikepacking.com/wp-content/uploads/2020/02/Aaron-Rickel-Fight-for-Summit-Road-10-960x640.jpg"],
+        "gpx": "/references/gpx/summitrd.gpx"
+    },
+    {
+        "name": "Coast Rd",
+        "rating": "unexplored",
+        "description": "Down in big sur. Dirt road.",
+        "coords": [36.31382410699903, -121.86037578463618],
+        "type": "road",
+        "activity": ["driving", "biking"],
+        "date": "",
+        "images": [],
+        "gpx": "/references/gpx/coastrd.gpx"
+    },
+    {
+        "name": "88 Bao Bao",
+        "rating": "unexplored",
+        "description": "https://maps.app.goo.gl/EPgegqFPj41PPJZv8",
+        "coords": [37.93729981074987, -122.02532083078388],
+        "type": "place",
+        "activity": ["eating"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Jollibee",
+        "rating": "unexplored",
+        "description": "https://maps.app.goo.gl/meZR15uyBF2ByxvYA",
+        "coords": [37.93729981074987, -122.02532083078388],
+        "type": "place",
+        "activity": ["eating"],
         "date": "",
         "images": []
     }

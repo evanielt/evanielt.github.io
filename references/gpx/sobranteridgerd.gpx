@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- track-length = 782 filtered ascend = 68 plain-ascend = 70 cost=819 energy=0.0kwh time=10m 37s -->
+<gpx 
+ xmlns="http://www.topografix.com/GPX/1/1" 
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" 
+ version="1.1" 
+ creator="BRouter-Web 0.18.1">
+ <trk>
+  <name>sobranteridgerd</name>
+  <trkseg>
+   <trkpt lat="37.971613" lon="-122.244881"><ele>63.75</ele></trkpt>
+   <trkpt lat="37.971348" lon="-122.24529"><ele>68.75</ele></trkpt>
+   <trkpt lat="37.971342" lon="-122.245299"><ele>68.75</ele></trkpt>
+   <trkpt lat="37.971056" lon="-122.245687"><ele>72.5</ele></trkpt>
+   <trkpt lat="37.970743" lon="-122.246113"><ele>76.75</ele></trkpt>
+   <trkpt lat="37.970625" lon="-122.246328"><ele>79.25</ele></trkpt>
+   <trkpt lat="37.970568" lon="-122.24652"><ele>81</ele></trkpt>
+   <trkpt lat="37.970561" lon="-122.246543"><ele>81</ele></trkpt>
+   <trkpt lat="37.970515" lon="-122.246867"><ele>82.5</ele></trkpt>
+   <trkpt lat="37.970519" lon="-122.247159"><ele>84</ele></trkpt>
+   <trkpt lat="37.970614" lon="-122.247618"><ele>87</ele></trkpt>
+   <trkpt lat="37.970745" lon="-122.247996"><ele>91.25</ele></trkpt>
+   <trkpt lat="37.970763" lon="-122.248038"><ele>93.5</ele></trkpt>
+   <trkpt lat="37.970832" lon="-122.248195"><ele>93.5</ele></trkpt>
+   <trkpt lat="37.970872" lon="-122.248364"><ele>95</ele></trkpt>
+   <trkpt lat="37.970881" lon="-122.248565"><ele>97</ele></trkpt>
+   <trkpt lat="37.970906" lon="-122.248903"><ele>100.5</ele></trkpt>
+   <trkpt lat="37.970992" lon="-122.249355"><ele>104.25</ele></trkpt>
+   <trkpt lat="37.97111" lon="-122.249693"><ele>106</ele></trkpt>
+   <trkpt lat="37.97133" lon="-122.250159"><ele>109</ele></trkpt>
+   <trkpt lat="37.971556" lon="-122.250594"><ele>112.5</ele></trkpt>
+   <trkpt lat="37.972038" lon="-122.251659"><ele>115.75</ele></trkpt>
+   <trkpt lat="37.972117" lon="-122.251884"><ele>114.75</ele></trkpt>
+   <trkpt lat="37.972187" lon="-122.252263"><ele>114</ele></trkpt>
+   <trkpt lat="37.972209" lon="-122.252375"><ele>114</ele></trkpt>
+   <trkpt lat="37.972207" lon="-122.252376"><ele>119</ele></trkpt>
+   <trkpt lat="37.971995" lon="-122.252553"><ele>119</ele></trkpt>
+   <trkpt lat="37.971945" lon="-122.252607"><ele>124.5</ele></trkpt>
+  </trkseg>
+ </trk>
+</gpx>

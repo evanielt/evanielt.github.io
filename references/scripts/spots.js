@@ -9,8 +9,8 @@ const {
     proj: { fromLonLat },
     interaction: { Select },
     events: { condition: { click } },
-    control: { MousePosition } // Destructure MousePosition here
-    } = ol;
+    control: { MousePosition }
+} = ol;
 
 
 var color0 = "#f1ebe0";
@@ -102,71 +102,68 @@ var markerData = {
             style: null,
             checked: false,
         }
-        // boning: {
-        //     name: "Boning",
-        //     color: "#8b1010ff",
-        //     style: null,
-        //     checked: false,
-        // }
     }
 }
-
-var spots = [];
 
 var unexploredData = {
     name: "Unexplored", 
     color: "#971591ff",
-    style: null,
+    style: {
+        'Point': new Style({
+                image: new ol.style.Icon({
+                anchor: [0.5, 0.8],
+                src: '/images/marker.svg',
+                scale: 0.05,
+                color: colorUnexplored,
+            })
+        }),
+        'MultiLineString': new Style({
+            stroke: new Stroke({
+                color: colorUnexplored,
+                width: 3,
+            }),
+        }),
+    },
     checked: false,
 }
 
-var spotUnexploredStyle = new Style({
-    image: new ol.style.Icon({
-      anchor: [0.5, 1],
-      src: '/images/marker.svg',
-      scale: 0.05,
-      color: unexploredData.color,
-    })
-});
-var spotErrorStyle = new Style({
-    image: new ol.style.Icon({
-      anchor: [0.5, 1],
-      src: '/images/marker.svg',
-      scale: 0.05,
-      color: colorError,
-    })
-});
-var spotSelectedStyle = new Style({
-    image: new ol.style.Icon({
-      anchor: [0.5, 1],
-      src: '/images/marker.svg',
-      scale: 0.05,
-      color: color0,
-    })
-});
-
-// creates map
-var map = new Map({
-    layers: [
-        new Tile({
-            source: new OSM(),
-            className: 'ol_bw',
-         }),
-        
-    ],
-    view: new View({
-        center: fromLonLat([-121.59163, 37.77023]),
-        zoom: 9,
+var spotSelectedStyle = {
+    'Point': new Style({
+        image: new ol.style.Icon({
+        anchor: [0.5, 0.8],
+        src: '/images/marker.svg',
+        scale: 0.05,
+        color: color0,
+        })
     }),
-    target: 'map',
-});
+    'MultiLineString': new Style({
+        stroke: new Stroke({
+        color: color0,
+        width: 3,
+        }),
+    }),
+};
 
+
+var markerSource;
+var markerLayer;
+
+var gpsSource;
+var gpsLayer;
+
+var colorDropdownValue;
+var roadDropdownValue;
+
+var gpxFormat = new ol.format.GPX();
+
+var spots = [];
+var map = null;
+
+
+createMap();
 createMarkerStyles();
 
-
-var markerLayer;
-var markerSource;
-// fills in the spots variable with data from the spots.json file
+// after filling in the spots variable with data from spots.json, it runs the necessary startup code
 fetch('/references/spots.json')
     .then(response => {
         if (!response.ok) {
@@ -179,57 +176,147 @@ fetch('/references/spots.json')
             spots.push(spotData);
         }
 
-        var dropdown = document.getElementById("marker-color-shows");
-        var val = dropdown.options[dropdown.selectedIndex].value;
+        createSourcesAndLayers();
 
-        markerSource = createMarkerSource();
-        markerLayer = createMarkerLayer(markerSource);
-        getCheckboxState();
-        createMarkers(val);
-        setLegend(val);
+        redrawMarkers();
 
-
-        initSelect(markerLayer);
+        initSelect();
     })
     .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
     });
 
 
+function createMap() {
+    map = new Map({
+        layers: [
+            new Tile({
+                source: new OSM(),
+                className: 'ol_bw',
+            }),
+            
+        ],
+        view: new View({
+            center: fromLonLat([-121.59163, 37.77023]),
+            zoom: 9,
+        }),
+        target: 'map',
+    });
+}
 
 function createMarkerStyles() {
     Object.entries(markerData).forEach(([key, val]) => {
         Object.entries(val).forEach(([key2, markerData]) => {
-            markerData.style = new Style({
-                image: new ol.style.Icon({
-                    anchor: [0.5, 1],
-                    src: '/images/marker.svg',
-                    scale: 0.05,
-                    color: markerData.color,
-                })
-            });
-        });
-    });
+
+            markerData.style = {
+                'Point': new Style({
+                    image: new ol.style.Icon({
+                        anchor: [0.5, 0.8],
+                        src: '/images/marker.svg',
+                        scale: 0.05,
+                        color: markerData.color,
+                    })
+                }),
+                // 'LineString': new Style({
+                //     stroke: new Stroke({
+                //         color: color0,
+                //         width: 3,
+                //     }),
+                // }),
+                'MultiLineString': new Style({
+                    stroke: new Stroke({
+                        color: markerData.color,
+                        width: 3,
+                    }),
+                }),
+            };
+        })
+    })
 }
 
-
-function createMarkerSource() {
-    var vectorSource = new VectorSource();
-    return vectorSource;
-}
-
-function createMarkerLayer(markerSource) {
-    vectorLayer = new VectorLayer({
+function createSourcesAndLayers() {
+    markerSource = new VectorSource();
+    markerLayer = new VectorLayer({
         source: markerSource,
     });
+    markerLayer.setZIndex(1);
 
-    map.addLayer(vectorLayer);
+    gpsSource = new VectorSource({format: new ol.format.GPX()})
+    gpsLayer = new VectorLayer({
+        source: gpsSource,
+    });
+    gpsLayer.setZIndex(0);
 
-    return vectorLayer;
+    map.addLayer(markerLayer);
+    map.addLayer(gpsLayer);
+}
+
+function initSelect() {
+    var select = new Select({
+        condition: click,
+        layers: [markerLayer, gpsLayer],
+    });
+
+    map.addInteraction(select);
+
+    select.on('select', function(evt) {
+        console.log("select happened");
+        if(evt.selected.length > 0) {
+            var selectedFeature = evt.selected[0];
+            var selectedName = selectedFeature.get('name');
+
+            var spotData = spots.find(spot => spot.name === selectedName);
+            
+            if(spotData) {
+                openSidebar(spotData);
+
+                var type = spotSelectedStyle[selectedFeature.getGeometry().getType()];
+                selectedFeature.setStyle(type);
+            }
+        } else {
+            closeSidebar();
+        }
+    });
 }
 
 
-function createMarkers(dropdownValue) {
+// ------------------------------------- marker functions -------------------------------------
+
+window.redrawMarkers = function redrawMarkers() {
+    console.log("redrawn");
+    markerSource.clear();
+    gpsSource.clear();
+
+    getCheckboxState();
+    createMarkers();
+    setLegend();
+}
+
+function getCheckboxState() {
+    var markerColorShows = document.getElementById("marker-color-shows");
+    colorDropdownValue = markerColorShows.options[markerColorShows.selectedIndex].value;
+
+    var showRoadsAs = document.getElementById("show-roads-as");
+    roadDropdownValue = showRoadsAs.options[showRoadsAs.selectedIndex].value;
+
+    markerData.type.place.checked = document.getElementById('check-type-place').checked;
+    markerData.type.road.checked = document.getElementById('check-type-road').checked;
+
+    markerData.rating.good.checked = document.getElementById('check-rating-good').checked;
+    markerData.rating.fine.checked = document.getElementById('check-rating-fine').checked;
+    markerData.rating.bad.checked = document.getElementById('check-rating-bad').checked;
+    unexploredData.checked = document.getElementById('check-rating-unexplored').checked;
+
+    markerData.activity.hiking.checked = document.getElementById('check-activity-hiking').checked;
+    markerData.activity.biking.checked = document.getElementById('check-activity-biking').checked;
+    markerData.activity.driving.checked = document.getElementById('check-activity-driving').checked;
+    markerData.activity.fishing.checked = document.getElementById('check-activity-fishing').checked;
+    markerData.activity.camping.checked = document.getElementById('check-activity-camping').checked;
+    markerData.activity.eating.checked = document.getElementById('check-activity-eating').checked;
+    markerData.activity.other.checked = document.getElementById('check-activity-other').checked;
+}
+
+function createMarkers() {
     for(const spotData of spots) {
         var r = markerData.rating[spotData.rating]?.checked || false;
         var u = (spotData.rating == "unexplored") && unexploredData.checked;
@@ -248,85 +335,106 @@ function createMarkers(dropdownValue) {
         }
 
         switchedCoords = [spotData.coords[1], spotData.coords[0]]
-        var spot = new Feature({
-            geometry: new Point(fromLonLat(switchedCoords)),
-        });
 
-        spot.setProperties({
-            name: spotData.name,
-            coords: spotData.coords,
-            description: spotData.description,
-            type: spotData.type,
-            rating: spotData.rating,
-            activity: spotData.activity,
-            images: spotData.images
-        });
+        if(spotData.gpx == null || (roadDropdownValue === "marker" || roadDropdownValue === "both")) { // single spot
+            var spot = new Feature({
+                geometry: new Point(fromLonLat(switchedCoords)),
+            });
 
-        if(spot.get("rating") == "unexplored") {
-            spot.setStyle(spotUnexploredStyle);
-        } else {
-            var dropdownValueSingle;
-            if(Array.isArray(spot.get(dropdownValue))) {
-                dropdownValueSingle = spot.get(dropdownValue)[0];
-            } else {
-                dropdownValueSingle = spot.get(dropdownValue);
-            }
-            var v = markerData[dropdownValue][dropdownValueSingle]
-            if(v != null) {
-                var sLocal = v.style;
-            }
-            
-            if(sLocal != null) {
-                spot.setStyle(sLocal);
-            } else {
-                spot.setStyle(spotErrorStyle);
+            spot.setProperties({
+                name: spotData.name,
+                coords: spotData.coords,
+                description: spotData.description,
+                type: spotData.type,
+                rating: spotData.rating,
+                activity: spotData.activity,
+                images: spotData.images
+            });
+
+            var finalStyle = getStyle(spot);
+            spot.setStyle(finalStyle['Point']);
+
+            markerSource.addFeature(spot);
+
+            console.log("Created spot: " + spotData.name);
+        }
+        if(spotData.gpx != null) { // road
+            if(roadDropdownValue === "both" || roadDropdownValue === "road") {
+                fetch(spotData.gpx)
+                    .then(response => response.text())
+                    .then(gpxText => {
+                        var road = gpxFormat.readFeatures(gpxText, {
+                            featureProjection: 'EPSG:3857'
+                        });                    
+
+                        road.forEach(feature => {
+                            feature.setProperties({
+                                name: spotData.name,
+                                coords: spotData.coords,
+                                description: spotData.description,
+                                type: spotData.type,
+                                rating: spotData.rating,
+                                activity: spotData.activity,
+                                images: spotData.images
+                            });
+                        });
+
+                        var finalStyle = getStyle(road[0]);
+
+                        road.forEach(feature => {
+                            feature.setStyle(finalStyle['MultiLineString']);
+                        });
+
+                        
+                        gpsSource.addFeatures(road);
+                        console.log("Created road: ", spotData.name);
+                    })
+                    .catch(error => console.error("Error loading GPX data:", error));
             }
         }
-
-        markerSource.addFeature(spot);
-
-        console.log("created marker " + spotData.name);
     }
 }
 
-function initSelect(vectorLayer) {
-    var select = new Select({
-        condition: click,
-        layers: [vectorLayer],
-    });
+function getStyle(spot) {
+    var style = null;
 
-    map.addInteraction(select);
-
-    
-    select.on('select', function(evt) {
-    console.log("spot selected");
-    if (evt.selected.length > 0) {
-        var selectedFeature = evt.selected[0];
-        var selectedName = selectedFeature.get('name');
-
-        var spotData = spots.find(spot => spot.name === selectedName);
-        
-        if(spotData) {
-            openSidebar(spotData);
-            selectedFeature.setStyle(spotSelectedStyle);
-        }
+    if(spot.get("rating") == "unexplored") {
+        style = unexploredData.style;
     } else {
-        closeSidebar();
+        var dropdownValueSingle;
+        if(Array.isArray(spot.get(colorDropdownValue))) {
+            dropdownValueSingle = spot.get(colorDropdownValue)[0];
+        } else {
+            dropdownValueSingle = spot.get(colorDropdownValue);
+        }
+
+        var v = markerData[colorDropdownValue][dropdownValueSingle];
+
+        if(v != null) {
+            if(spot.gpx == null) {
+                style = v.style;
+            } else {
+                style = v.styleRoad;
+            }
+        }
+        
+        return style;
     }
-    });
+
+    return style;
 }
 
-function setLegend(dropdownValue) {
+function setLegend() {
     var legendText = `<ul>`;
 
-    if(dropdownValue == null) {
-        console.log("dropdownValue is null, this wont work");
+    if(colorDropdownValue == null) {
+        console.log("colorDropdownValue is null, this wont work");
         return;
     }
 
-    for(var key in markerData[dropdownValue]) {
-        if(markerData[dropdownValue].hasOwnProperty(key)) {
-            var marker = markerData[dropdownValue][key];
+    for(var key in markerData[colorDropdownValue]) {
+        if(markerData[colorDropdownValue].hasOwnProperty(key)) {
+            var marker = markerData[colorDropdownValue][key];
             var color = marker.color; // Get the color value
             
             // Create a tinted SVG using a filter
@@ -347,25 +455,7 @@ function setLegend(dropdownValue) {
     document.getElementById('legend').innerHTML = legendText;
 }
 
-function getCheckboxState() {
-    markerData.type.place.checked = document.getElementById('check-type-place').checked;
-    markerData.type.road.checked = document.getElementById('check-type-road').checked;
-
-    markerData.rating.good.checked = document.getElementById('check-rating-good').checked;
-    markerData.rating.fine.checked = document.getElementById('check-rating-fine').checked;
-    markerData.rating.bad.checked = document.getElementById('check-rating-bad').checked;
-    unexploredData.checked = document.getElementById('check-rating-unexplored').checked;
-
-    markerData.activity.hiking.checked = document.getElementById('check-activity-hiking').checked;
-    markerData.activity.biking.checked = document.getElementById('check-activity-biking').checked;
-    markerData.activity.driving.checked = document.getElementById('check-activity-driving').checked;
-    markerData.activity.fishing.checked = document.getElementById('check-activity-fishing').checked;
-    markerData.activity.camping.checked = document.getElementById('check-activity-camping').checked;
-    markerData.activity.eating.checked = document.getElementById('check-activity-eating').checked;
-    markerData.activity.other.checked = document.getElementById('check-activity-other').checked;
-}
-
-// ------------------------------------- global functions -------------------------------------
+// ------------------------------------- regular functions -------------------------------------
 
 window.closeSidebar = function closeSidebar() {
     if(window.matchMedia("(max-width: 768px)")) { // mobile
@@ -436,17 +526,6 @@ window.firstLetterToUpperCase = function firstLetterToUpperCase(word) {
     return word[0].toUpperCase() + word.slice(1);
 }
 
-window.redrawMarkers = function redrawMarkers() {
-    console.log("redrawn");
-    markerSource.clear();
-
-    var dropdown = document.getElementById("marker-color-shows");
-    var val = dropdown.options[dropdown.selectedIndex].value;
-
-    getCheckboxState();
-    createMarkers(val);
-    setLegend(val);
-}
 
 
 window.closeMapButtons = function closeMapButtons() {
