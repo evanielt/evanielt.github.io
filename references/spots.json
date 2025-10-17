@@ -466,12 +466,12 @@
     {
         "name": "New Idria Mine",
         "rating": "unexplored",
-        "description": "The road in is a cool but easy dirt trail. Seems like a cool old abandoned mine. <br> images are ripped from duckduckgo",
+        "description": "The road in is a cool but easy dirt trail. Seems like a cool old abandoned mine. Sounds like the road from the north is rougher, but <a href=\"https://irate4x4.com/threads/california-peeps-anyone-been-to-new-iridia-mine-ghost-town.399647/\">here</a> has people saying they did it in a passat or a 2wd truck. Seems like VW sedans go anywhere. <br> images are ripped from duckduckgo",
         "coords": [36.41605146485153, -120.67294196907092],
         "type": "place",
         "activity": ["driving", "biking", "hiking", "camping"],
         "date": "",
-        "images": ["https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ffarm3.staticflickr.com%2F2404%2F2273486964_45fcfce5b6_o_d.jpg&f=1&nofb=1&ipt=5a2fb90ad9d0f8b2b354f6c0bb0867ed29427db97a524e4cbfac417c6f027bf7", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwesternmininghistory.com%2Fimages%2Ftown_gallery%2FNew_Idria_CA_003.jpg&f=1&nofb=1&ipt=20ebcace0fca6995b111114a905cf682a6fdff84f2a29a064226554b2cfe329e"],
+        "images": ["https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ffarm3.staticflickr.com%2F2404%2F2273486964_45fcfce5b6_o_d.jpg&f=1&nofb=1&ipt=5a2fb90ad9d0f8b2b354f6c0bb0867ed29427db97a524e4cbfac417c6f027bf7", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwesternmininghistory.com%2Fimages%2Ftown_gallery%2FNew_Idria_CA_003.jpg&f=1&nofb=1&ipt=20ebcace0fca6995b111114a905cf682a6fdff84f2a29a064226554b2cfe329e", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fc1.staticflickr.com%2F3%2F2722%2F4293019041_bc53f4ba8a_b.jpg&f=1&nofb=1&ipt=1ba88fec6ef1325b08bda632f72f4cf828bbe2ff6177c2b3bb3d341623baf81d"],
         "gpx": "/references/gpx/newidria.gpx"
     },
     {
