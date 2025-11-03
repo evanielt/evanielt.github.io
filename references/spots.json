@@ -12,7 +12,7 @@
     { 
         "name": "Forest Route 6N45",
         "rating": "good",
-        "description": "This spot is pretty cool. It was a nice place to pull over and cook some food (I burned the rice). The road is a fun dirt road and it's super peaceful. I used google street view and my racked my brain and actually was able to find the exact coordinates I was at.",
+        "description": "This spot is pretty cool. It was a nice place to pull over and cook some food (I burned the rice). The road is a fun dirt road and it's super peaceful. I used google street view and my brain and was actually able to find the exact coordinates I was at.",
         "coords": [38.389323884379195, -120.18361981510711], 
         "type": "place",
         "activity": ["driving", "hiking"],
@@ -472,12 +472,12 @@
         "activity": ["driving", "biking", "hiking", "camping"],
         "date": "",
         "images": ["https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ffarm3.staticflickr.com%2F2404%2F2273486964_45fcfce5b6_o_d.jpg&f=1&nofb=1&ipt=5a2fb90ad9d0f8b2b354f6c0bb0867ed29427db97a524e4cbfac417c6f027bf7", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwesternmininghistory.com%2Fimages%2Ftown_gallery%2FNew_Idria_CA_003.jpg&f=1&nofb=1&ipt=20ebcace0fca6995b111114a905cf682a6fdff84f2a29a064226554b2cfe329e", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fc1.staticflickr.com%2F3%2F2722%2F4293019041_bc53f4ba8a_b.jpg&f=1&nofb=1&ipt=1ba88fec6ef1325b08bda632f72f4cf828bbe2ff6177c2b3bb3d341623baf81d"],
-        "gpx": "/references/gpx/newidria.gpx"
+        "gpx": "/references/gpx/newidria.gpx" 
     },
     {
         "name": "Summit Rd",
         "rating": "unexplored",
-        "description": "Although technically public, it. The internet has plenty of stories of rude locals or illegitimate \"no trespassing\" signs. An interesting read on  is <a href=\"https://bikepacking.com/plog/fight-for-summit-road/\">here</a>. Legal and cool to explore, but seems like you gotta be alert. A while back a motorcyclist was beheaded by a wire stretched across the road by a hillbilly. <br> this route shown here should be a good bike ride. I had it go all the way up to the summit of Loma Prieta. Hopefully it's all accessible. <br> Photos from bikepacking.com (i'm not allowed to use these)",
+        "description": "Although technically public, the internet has plenty of stories of rude locals or illegitimate \"no trespassing\" signs. An interesting read on this road is <a href=\"https://bikepacking.com/plog/fight-for-summit-road/\">here</a>. Should be legal to explore, but gotta be alert. A while back a motorcyclist was beheaded by a wire stretched across the road by a hillbilly. <br> this route shown here should be a good bike ride. I had it go all the way up to the summit of Loma Prieta. Hopefully it's all accessible. <br> Photos from bikepacking.com (i'm not allowed to use these)",
         "coords": [37.89470794267704, -122.45594460844566],
         "type": "road",
         "activity": ["driving", "biking"],
@@ -505,5 +505,78 @@
         "activity": ["eating"],
         "date": "",
         "images": []
+    },
+    {
+        "name": "Allen Lookout",
+        "rating": "unexplored",
+        "description": "https://maps.app.goo.gl/EPgegqFPj41PPJZv8",
+        "coords": [37.93729981074987, -122.02532083078388],
+        "type": "place",
+        "activity": ["hiking"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Yountville",
+        "rating": "unexplored",
+        "description": "looks fun, pretty in fall",
+        "coords": [38.401542115358225, -122.36346320690446],
+        "type": "place",
+        "activity": ["hiking"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Manchester State Beach",
+        "rating": "unexplored",
+        "description": "good for <a href=\"https://crabbinghub.com/crabbing-spots-in-california-the-complete-list/\">crabbing</a> <br> People describe this place as an “untouched” or “raw” beach, and for good reason! This is a rarely-visited spot along the California coast and is used mostly by locals and surfers, which means more crabs for you. This is the ideal spot to use crab snares for Dungeness and Rock crabs. It’s mostly sandy-bottomed shoreline, so expect more Dungeness. ",
+        "coords": [38.98434467593752, -123.70679356970255],
+        "type": "place",
+        "activity": ["fishing", "hiking"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Half Moon Bay Jetties",
+        "rating": "unexplored",
+        "description": "North better for Dungeness Crabs, South better for Rock Crabs <br> <a href=\"https://crabbinghub.com/crabbing-spots-in-california-the-complete-list/\">crabbinghub</a>",
+        "coords": [37.4948508425751, -122.48569351214645],
+        "type": "place",
+        "activity": ["fishing", "hiking"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Cataract Trail",
+        "rating": "unexplored",
+        "description": "Steep and rocky, Pacific Northwestish. Lots of cool waterfalls. Leads to Alpine lake at the end. <br> <a href=\"https://www.alltrails.com/trail/us/california/cataract-falls-via-rock-spring-trailhead\">alltrails</a>",
+        "coords": [37.910761, -122.612747],
+        "type": "place",
+        "activity": ["hiking"],
+        "date": "",
+        "images": [],
+        "gpx": "/references/gpx/cataracttrail.gpx"
+    },
+    {
+        "name": "Dipsea Trail to Steep Ravine Trail",
+        "rating": "unexplored",
+        "description": "its got a cool ladder and some boards as bridges <br> <a href=\"https://www.alltrails.com/trail/us/california/dipsea-and-steep-ravine-loop-from-stinson-beach\">alltrails</a>",
+        "coords": [37.897852, -122.6372],
+        "type": "place",
+        "activity": ["hiking"],
+        "date": "",
+        "images": [],
+        "gpx": "/references/gpx/dipseatosteepravine.gpx"
+    },
+    {
+        "name": "Montara Mountain North Peak East",
+        "rating": "unexplored",
+        "description": "This trail looks like a good biking area. Lots of downhill trails nearby.",
+        "coords": [37.560783, -122.47791],
+        "type": "place",
+        "activity": ["biking", "hiking"],
+        "date": "",
+        "images": [],
+        "gpx": "/references/gpx/montaranorthpeakeast.gpx"
     }
 ]
