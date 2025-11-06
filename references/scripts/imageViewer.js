@@ -7,6 +7,7 @@ window.IndexImages = function IndexImages() {
     images = document.querySelectorAll('.viewable-image');
     var imgIndex = 0;
 
+    console.log("Indexing Images");
     images.forEach((image) => {
         image.onclick = function() {
             openImageViewer(image);
@@ -28,9 +29,8 @@ window.openImageViewer = function openImageViewer(imageToOpen) {
 
     viewer.style.display = "block";
     img.src = imageToOpen.src;
-    if(img.alt != null) {
-        caption.innerHTML = img.alt;
-    }
+
+    caption.innerHTML = imageToOpen.alt;
 
     document.body.classList.add('no-scroll');
 
@@ -84,7 +84,6 @@ function clampImageIndex() {
         currentImageIndex = 0;
     }
 }
-
 
 
 IndexImages();

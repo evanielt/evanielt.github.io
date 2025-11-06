@@ -13,22 +13,39 @@
 		<script src="/references/scripts/load.js"></script>
 	</head>
 	<body>
+        <div id="image-viewer"></div>
+
 		<div id="main">
 			
 			<h1>
 				Portfolio
 			</h1>
-			<p>
-				hey guys whats going on i didnt finish this yet
-			</p>
+			
+
+            <div id="portfolio-columns">
+                <div class="column">
+                    <div id="images1"></div>
+                </div>
+
+                <div class="column">
+                    <div id="images2"></div>
+                </div>
+                <div class="column">
+                    <div id="images3"></div>
+                </div>
+            </div>
+
+            
 
 			<div id="footer"></div>
 		</div>
 
 		<div id="navbar"></div>
+
+        <script src="/references/scripts/portfolio.js" defer></script>
 	</body>
     
     <!-- necessary scripts for modules that jquery loads -->
-    <!-- <script src="/references/scripts/imageViewer.js"></script> -->
+    <script src="/references/scripts/imageViewer.js"></script>
     <script src="/references/scripts/navbar.js"></script>
 </html>

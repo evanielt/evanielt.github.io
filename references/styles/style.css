@@ -7,7 +7,7 @@
 :root {
     --bgcolor: #131313; /*for the background these colors arent quite whats shown cause of the filters applied */
     --bgcolor2: #070707;
-    --bgcolor3: #1a1c1f6b; /* transparency */
+    --bgcolor3: #0b0c0eab; /* transparency */
     --bggradient: linear-gradient(
         to bottom right,
         var(--bgcolor), var(--bgcolor2)
@@ -157,7 +157,7 @@ hr {
 }
 
 img {
-    width: 100%;
+    /* width: 100%; 99 so that border will be accounted for. it means technically, some things are off center */
     height: auto;
     object-fit: cover;
 }
@@ -413,27 +413,49 @@ footer {
     filter: sepia(50%) brightness(50%);
 }
 
-/* Default (desktop) */
 #columns {
     display: grid;
-    grid-template-columns: 3fr 2fr;   /* keep fractional units */
-    gap: 4rem;                         /* use rem for spacing */
+    grid-template-columns: 3fr 2fr;
+    gap: 4rem;
+}
+
+#portfolio-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+
+    .column {
+        min-height: 0;
+    }
 }
 
 /* Mobile */
 @media (max-width: 48rem) { /* 768px */
     #columns {
         display: flex;
-        flex-direction: column-reverse; /* already there */
+        flex-direction: column-reverse;
         gap: 1rem;
+    }
+
+    #portfolio-columns {
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+    }
+
+    #portfolio-columns .column {
+        padding-bottom: 0;
+        padding-top: 0;
+        margin: 0;
     }
 }
 
 .column {
-    /* background-color: #000000; */
-    min-height: 31.25rem; /* 500px */
+    width: 99%;
+    min-height: 31.25rem;
     padding: 0rem;
     color: white;
+    overflow-x: visible;
 }
 
 .tile-column {
@@ -519,6 +541,25 @@ a.tile:hover {
 }
 
 
+.portfolio-image {
+    width: 100%;
+
+	display: block;
+	position: relative;
+
+	white-space: normal;
+	margin-bottom: 1rem;
+    border-width: 0.1rem;
+	border-radius: var(--borderradius);
+	border-style: solid;
+	background-color: var(--bgcolortile);
+    
+    border-color: var(--border-color);
+
+	color: var(--color1);
+    z-index: 0;
+}
+
 /* Button */
 .viewable-image {
     color: var(--textcolor);
@@ -566,24 +607,32 @@ a.tile:hover {
 
 #image-viewer-image {
     position: relative;
-    z-index: 10000;
+    z-index: 100;
     margin: auto;
     display: block;
     max-width: 80%;
     max-height: 80%;
     height: auto;
     width: auto;
-    box-shadow: 0 0 3rem #00000067;
+    box-shadow: 0 0 2rem var(--bgcolor2);
 }
 
 
 #image-viewer-caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  padding: 10px 0;
+    margin: auto;
+    display: block;
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+    overflow-wrap: normal;
+    text-align: center;
+    z-index: 1000001;
+    padding: 1rem;
+    box-sizing: border-box;
+
+    color: var(--color0);
+    text-shadow: 0.03rem 0.03rem 0px var(--color1);
   /* height: 150px; */
 }
 
@@ -596,6 +645,14 @@ a.tile:hover {
     height: 3rem;
     font-size: 1.5em;
     padding-top: 0.28em;
+}
+
+
+/* Mobile */
+@media (max-width: 48rem) { /* 768px */
+    #image-viewer-previous, #image-viewer-next {
+        top: 90%;
+    }
 }
 
 #image-viewer-previous {
