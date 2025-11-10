@@ -539,8 +539,8 @@
     {
         "name": "Half Moon Bay North Jetty",
         "rating": "good",
-        "description": "The farther you go out the deeper the water and the deeper the layers of bird shit. Good place for poke poling. Fish for rockfish in the deeper parts of this jetty. Just drop your line next to the rocks. Better for Dungeness Crabs <br> <a href=\"https://fishoak.com/hmbjetty\">fishoak</a>",
-        "coords": [37.4948508425751, -122.48569351214645],
+        "description": "The farther you go out the deeper the water and the deeper the layers of bird shit. Good place for poke poling. <br> Fish for rockfish in the deeper parts of this jetty by dropping your line right next to the rocks. People also snare for rock crab here. <br> I don't know why this is the North jetty since it's more southern. <br> <a href=\"https://fishoak.com/hmbjetty\">fishoak</a>",
+        "coords": [37.494099230497795, -122.49007931537872],
         "type": "place",
         "activity": ["fishing"],
         "date": "",
@@ -549,8 +549,8 @@
     {
         "name": "Half Moon Bay South Jetty",
         "rating": "good",
-        "description": " Better for Rock Crabs <br> <a href=\"https://fishoak.com/hmbjetty\">fishoak</a>",
-        "coords": [37.4948508425751, -122.48569351214645],
+        "description": "The farther you go out the deeper the water and the deeper the layers of bird shit. Good place for poke poling.  <br> People snare for Dungeness Crab here. Cast out as far as possible. <br> I don't know why this is the North jetty since it's more southern. <br> <a href=\"https://fishoak.com/hmbjetty\">fishoak</a>",
+        "coords": [37.49725058700436, -122.47939568090871],
         "type": "place",
         "activity": ["fishing"],
         "date": "",
