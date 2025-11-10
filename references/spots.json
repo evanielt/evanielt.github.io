@@ -537,12 +537,22 @@
         "images": []
     },
     {
-        "name": "Half Moon Bay Jetties",
-        "rating": "unexplored",
-        "description": "North better for Dungeness Crabs, South better for Rock Crabs <br> <a href=\"https://crabbinghub.com/crabbing-spots-in-california-the-complete-list/\">crabbinghub</a>",
+        "name": "Half Moon Bay North Jetty",
+        "rating": "good",
+        "description": "The farther you go out the deeper the water and the deeper the layers of bird shit. Good place for poke poling. Fish for rockfish in the deeper parts of this jetty. Just drop your line next to the rocks. Better for Dungeness Crabs <br> <a href=\"https://fishoak.com/hmbjetty\">fishoak</a>",
         "coords": [37.4948508425751, -122.48569351214645],
         "type": "place",
-        "activity": ["fishing", "hiking"],
+        "activity": ["fishing"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Half Moon Bay South Jetty",
+        "rating": "good",
+        "description": " Better for Rock Crabs <br> <a href=\"https://fishoak.com/hmbjetty\">fishoak</a>",
+        "coords": [37.4948508425751, -122.48569351214645],
+        "type": "place",
+        "activity": ["fishing"],
         "date": "",
         "images": []
     },
