@@ -539,17 +539,17 @@
     {
         "name": "Half Moon Bay North Jetty",
         "rating": "good",
-        "description": "The farther you go out the deeper the water and the deeper the layers of bird shit. Good place for poke poling. <br> Fish for rockfish in the deeper parts of this jetty by dropping your line right next to the rocks. People also snare for rock crab here. <br> I don't know why this is the North jetty since it's more southern. <br> <a href=\"https://fishoak.com/hmbjetty\">fishoak</a>",
+        "description": "Great place for poke poling. I caught two rockfish by sticking my pole into the rocks. Used some safeway shrimp as bait. <br> Fish for rockfish in the deeper parts of this jetty by dropping your line right next to the rocks. People also snare for rock crab here. <br> I don't know why this is called the North Jetty since it's more southern. <br> <a href=\"https://fishoak.com/hmbjetty\">fishoak</a>",
         "coords": [37.494099230497795, -122.49007931537872],
         "type": "place",
         "activity": ["fishing"],
-        "date": "11/9/2025",
+        "date": "11/16/2025",
         "images": []
     },
     {
         "name": "Half Moon Bay South Jetty",
         "rating": "good",
-        "description": "The farther you go out the deeper the water and the deeper the layers of bird shit. Good place for poke poling.  <br> People snare for Dungeness Crab here. Cast out as far as possible. <br> I don't know why this is the North jetty since it's more southern. <br> <a href=\"https://fishoak.com/hmbjetty\">fishoak</a>",
+        "description": "I caught some crabs on this jetty with my snare. One was a Dungeness and the other a rock. Cast it out as far as possible. I prefer the North Jetty since it's less crowded and it's deeper. <br> I don't know why this is called the South Jetty since it's more northern. <br> <a href=\"https://fishoak.com/hmbjetty\">fishoak</a>",
         "coords": [37.49725058700436, -122.47939568090871],
         "type": "place",
         "activity": ["fishing"],
@@ -559,7 +559,7 @@
     {
         "name": "Cataract Trail",
         "rating": "unexplored",
-        "description": "Steep and rocky, Pacific Northwestish. Lots of cool waterfalls. Leads to Alpine lake at the end. <br> <a href=\"https://www.alltrails.com/trail/us/california/cataract-falls-via-rock-spring-trailhead\">alltrails</a>",
+        "description": "Steep and rocky, Pacific Northwestish feeling (maybe). Lots of cool waterfalls. Leads to Alpine lake at the end. <br> <a href=\"https://www.alltrails.com/trail/us/california/cataract-falls-via-rock-spring-trailhead\">alltrails</a>",
         "coords": [37.910761, -122.612747],
         "type": "place",
         "activity": ["hiking"],
@@ -608,5 +608,16 @@
         "activity": ["fishing"],
         "date": "",
         "images": []
+    },
+    {
+        "name": "Eagle Peak",
+        "rating": "unexplored",
+        "description": "Cool hiking trail in the Diablo range. More trees and water than the other parts of Mt. Diablo. <br> <a href=\"https://www.alltrails.com/trail/us/california/eagle-peak-loop\">alltrails</a>",
+        "coords": [37.920384, -121.94163],
+        "type": "place",
+        "activity": ["hiking"],
+        "date": "",
+        "images": [],
+        "gpx": "/references/gpx/eaglepeak.gpx"
     }
 ]
