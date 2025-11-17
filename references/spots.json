@@ -588,5 +588,25 @@
         "date": "",
         "images": [],
         "gpx": "/references/gpx/montaranorthpeakeast.gpx"
+    },
+    {
+        "name": "San Mateo Rocks",
+        "rating": "unexplored",
+        "description": "Lots of tidal variation. Good poke poling at negative tides, snaring for Dungeness in the ocean, and surfperch and rockfish fishing. Not always prolific if the waves are choppy.",
+        "coords": [37.181569019070274, -122.39461542307622],
+        "type": "place",
+        "activity": ["fishing"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Monterey Cliffs",
+        "rating": "unexplored",
+        "description": "Deep water right next to the cliffs. Good for rockfish. Sharp rocks and lots of snags. Use 50 lb line.",
+        "coords": [36.46774315843551, -121.93144879892081],
+        "type": "place",
+        "activity": ["fishing"],
+        "date": "",
+        "images": []
     }
 ]
