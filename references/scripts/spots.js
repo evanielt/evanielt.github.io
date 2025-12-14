@@ -1,3 +1,7 @@
+// TODO:
+// -Better error logging
+// -No case sensitivity (or show that that's the error and where that error is)
+
 const {
     Map,
     View,
@@ -352,6 +356,7 @@ function createMarkers() {
             });
 
             var finalStyle = getStyle(spot);
+            console.log(spotData.name);
             spot.setStyle(finalStyle['Point']);
 
             markerSource.addFeature(spot);
@@ -380,6 +385,9 @@ function createMarkers() {
                         });
 
                         var finalStyle = getStyle(road[0]);
+                        if(finalStyle === null) {
+                            console.error("Could not get style from road type with path " + spotData.gpx +". Is the GPX path valid? This error log should be improved later")
+                        }
 
                         road.forEach(feature => {
                             feature.setStyle(finalStyle['MultiLineString']);

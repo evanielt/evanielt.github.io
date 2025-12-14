@@ -178,7 +178,7 @@
         "description": "Okay, people are saying that this beach, it's the best. Everyone's talking about it, they're saying it's an incredible beach. And believe me, this beach, it's fabulous. Absolutely fabulous. One of the most fabulous beaches you'll ever see.",
         "coords": [37.547668, -122.514862],
         "type": "place",
-        "activity": ["fishing", "hiking"],
+        "activity": ["hiking", "fishing"],
         "date": "2025-08-30",
         "images": ["/images/map/IMG_20250830_192449_077.jpg"]
     },
@@ -325,7 +325,7 @@
     },
     {
         "name": "Las Cabañas Mexican Grill & Taqueria",
-        "rating": "",
+        "rating": "unexplored",
         "description": "The kiosk was broken so I could only type my name as Cha. Tasted good cause I was famished",
         "coords": [37.971114254366356, -122.25033546441969],
         "type": "place",
@@ -579,14 +579,14 @@
         "gpx": "/references/gpx/dipseatosteepravine.gpx"
     },
     {
-        "name": "Montara Mountain North Peak East",
-        "rating": "unexplored",
-        "description": "This trail looks like a good biking area. Lots of downhill trails nearby.",
+        "name": "Montara Mountain",
+        "rating": "good",
+        "description": "One of my favorite hikes for the atmosphere. Start at the trailhead near Montara State Beach and hike about 2 hours to the top.The trail looks like a good biking area too. Apparently a lot of single tracks to bomb down.",
         "coords": [37.560783, -122.47791],
         "type": "place",
-        "activity": ["biking", "hiking"],
-        "date": "",
-        "images": [],
+        "activity": ["hiking", "biking"],
+        "date": "2025-12-13",
+        "images": ["/images/map/IMG_0260.jpg", "/images/map/IMG_0303.jpg"],
         "gpx": "/references/gpx/montaranorthpeakeast.gpx"
     },
     {
@@ -619,5 +619,25 @@
         "date": "",
         "images": [],
         "gpx": "/references/gpx/eaglepeak.gpx"
+    },
+    {
+        "name": "Muir Trestle",
+        "rating": "good",
+        "description": "you're not supposed to go on here",
+        "coords": [37.990284366075954, -122.12792144255407],
+        "type": "place",
+        "activity": ["hiking"],
+        "date": "2025-12-07",
+        "images": ["/images/map/PXL_20251207_231740686.jpg"]
+    },
+    {
+        "name": "Dinosaur Hill Park",
+        "rating": "fine",
+        "description": "nice little spot, i liked it in the winter weather",
+        "coords": [37.936471197621344, -122.08984900836036],
+        "type": "place",
+        "activity": ["hiking"],
+        "date": "2025-12-07",
+        "images": []
     }
 ]

@@ -142,6 +142,23 @@
         "description": "",
         "url": "/images/portfolio/IMG_0044.jpg",
         "spot": ""
+    },
+    {
+        "name": "grand teton",
+        "description": "",
+        "url": "/images/portfolio/IMG_8486.JPG",
+        "spot": ""
+    },
+    {
+        "name": "lamplight poker",
+        "description": "hard",
+        "url": "/images/portfolio/lamplight poker.jpg",
+        "spot": ""
+    },
+    {
+        "name": "sticky monkeys",
+        "description": "ive always liked this plant",
+        "url": "/images/portfolio/IMG_0283.jpg",
+        "spot": ""
     }
-    
 ]
