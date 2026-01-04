@@ -530,10 +530,10 @@ a.tile:hover {
     height: 4.38rem;
     margin-top: 3.13rem;
 }
-.tile-title h2 {
+.tile-title h1 {
     position: absolute;
     left: 1.25rem;
-    bottom: 0.7rem;
+    top: 0rem;
 }
 
 .tile-title:first-of-type {

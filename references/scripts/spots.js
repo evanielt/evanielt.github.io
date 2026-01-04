@@ -88,6 +88,12 @@ var markerData = {
             style: null,
             checked: false,
         },
+        boating: {
+            name: "Boating", 
+            color: "#7e5bffff",
+            style: null,
+            checked: false,
+        },
         camping: {
             name: "Camping",
             color: "#82ce3bff",
@@ -315,6 +321,7 @@ function getCheckboxState() {
     markerData.activity.biking.checked = document.getElementById('check-activity-biking').checked;
     markerData.activity.driving.checked = document.getElementById('check-activity-driving').checked;
     markerData.activity.fishing.checked = document.getElementById('check-activity-fishing').checked;
+    markerData.activity.boating.checked = document.getElementById('check-activity-boating').checked;
     markerData.activity.camping.checked = document.getElementById('check-activity-camping').checked;
     markerData.activity.eating.checked = document.getElementById('check-activity-eating').checked;
     markerData.activity.other.checked = document.getElementById('check-activity-other').checked;

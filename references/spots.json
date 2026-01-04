@@ -265,7 +265,7 @@
     {
         "name": "cool hidden beach",
         "rating": "good",
-        "description": "I don't know where this beach is. It's somewhere along the drive from fortuna to crescent city. You have to pull off the highway and then drive down towards the coast for a bit.",
+        "description": "I don't know where this beach is. It's somewhere along the drive from fortuna to crescent city. You have to pull off the highway and then drive down towards the coast for a bit. <br> i'm pretty sure this beach was named after the small pebbles that you could pick up. The pebbles were special in some way and had a different name but I can't remember what it was.",
         "coords": [41.28430756823132, -124.12981411705499],
         "type": "place",
         "activity": ["hiking", "fishing"],
@@ -638,6 +638,87 @@
         "type": "place",
         "activity": ["hiking"],
         "date": "2025-12-07",
+        "images": []
+    },
+    {
+        "name": "Redwood Hike",
+        "rating": "good",
+        "description": "spooky hike at night. very pretty",
+        "coords": [37.81831648750573, -122.14669285414115],
+        "type": "place",
+        "activity": ["hiking"],
+        "date": "2025-?",
+        "images": [],
+        "gpx": "/references/gpx/redwoodtrail.gpx"
+    },
+    {
+        "name": "Fort Bragg Lighthouse",
+        "rating": "fine",
+        "description": "It's pretty, but a little hard to get to and not much going on.",
+        "coords": [39.34858787815766, -123.82622421503174],
+        "type": "place",
+        "activity": ["hiking"],
+        "date": "2025-12-27",
+        "images": []
+    },
+    {
+        "name": "The Lone Toilet",
+        "rating": "unexplored",
+        "description": "4.9 stars on Google. You have to wade through mud to get to it, and there might be shit in it.",
+        "coords": [38.15707292872098, -122.40886995289092],
+        "type": "place",
+        "activity": ["hiking"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Lake Del Valle",
+        "rating": "fine",
+        "description": "It's ok for fishing. I didn't catch much and it's hard to access good spots",
+        "coords": [37.59795437737792, -121.72191386699801],
+        "type": "place",
+        "activity": ["fishing", "boating", "hiking"],
+        "date": "2025-?",
+        "images": []
+    },
+    {
+        "name": "Lake Berryessa",
+        "rating": "unexplored",
+        "description": "You can go boating here",
+        "coords": [38.59701733255658, -122.2313102693958],
+        "type": "place",
+        "activity": ["fishing", "boating", "hiking"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Discovery Bay",
+        "rating": "unexplored",
+        "description": "Dystopian in a way. I think I can put a boat in the water here.",
+        "coords": [37.90488805536374, -121.60124523649296],
+        "type": "place",
+        "activity": ["boating", "fishing"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Random Ass Lake in Bumfuck Nowhere",
+        "rating": "unexplored",
+        "description": "Probably jack shit here. Might not even be worth walking to.",
+        "coords": [37.96079168204505, -122.22321968223302],
+        "type": "place",
+        "activity": ["hiking", "boating"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "A spot to launch a boat",
+        "rating": "unexplored",
+        "description": "Probably good. Looks like theres available parking",
+        "coords": [37.938571878076935, -121.56977258686383],
+        "type": "place",
+        "activity": ["boating"],
+        "date": "",
         "images": []
     }
 ]

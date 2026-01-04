@@ -145,7 +145,7 @@
     },
     {
         "name": "grand teton",
-        "description": "",
+        "description": "grand tetons. one of my best photos ever but i barely knew photography then",
         "url": "/images/portfolio/IMG_8486.JPG",
         "spot": ""
     },
@@ -159,6 +159,30 @@
         "name": "sticky monkeys",
         "description": "ive always liked this plant",
         "url": "/images/portfolio/IMG_0283.jpg",
+        "spot": ""
+    },
+    {
+        "name": "beach birds",
+        "description": "i dont know birds",
+        "url": "/images/portfolio/IMG_0044_1.jpg",
+        "spot": ""
+    },
+    {
+        "name": "beach cliff",
+        "description": "",
+        "url": "/images/portfolio/IMG_0021.jpg",
+        "spot": ""
+    },
+    {
+        "name": "layers",
+        "description": "like an onion",
+        "url": "/images/portfolio/IMG_0012.jpg",
+        "spot": ""
+    },
+    {
+        "name": "closeup sunset",
+        "description": "real pretty",
+        "url": "/images/portfolio/IMG_0123.jpg",
         "spot": ""
     }
 ]
