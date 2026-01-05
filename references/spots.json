@@ -194,7 +194,7 @@
     },
     {
         "name": "Tiburon",
-        "rating": "unexplored",
+        "rating": "bad",
         "description": "elias hates tiburon",
         "coords": [37.874083960527, -122.4554011678015],
         "type": "place",
@@ -265,7 +265,7 @@
     {
         "name": "cool hidden beach",
         "rating": "good",
-        "description": "I don't know where this beach is. It's somewhere along the drive from fortuna to crescent city. You have to pull off the highway and then drive down towards the coast for a bit. <br> i'm pretty sure this beach was named after the small pebbles that you could pick up. The pebbles were special in some way and had a different name but I can't remember what it was.",
+        "description": "I don't know where this beach is. It's somewhere along the drive from fortuna to crescent city. You have to pull off the highway and then drive down towards the coast for a bit. <br> i'm pretty sure this beach was named after the small pebbles that you could pick up. The pebbles were special in some way and had a different name but I can't remember what it was. Was it agate? Is this beach called Agate Beach? I can't find it on the map in this area so idk",
         "coords": [41.28430756823132, -124.12981411705499],
         "type": "place",
         "activity": ["hiking", "fishing"],
@@ -325,9 +325,9 @@
     },
     {
         "name": "Las Cabañas Mexican Grill & Taqueria",
-        "rating": "unexplored",
+        "rating": "fine",
         "description": "The kiosk was broken so I could only type my name as Cha. Tasted good cause I was famished",
-        "coords": [37.971114254366356, -122.25033546441969],
+        "coords": [37.87296573330649, -122.27336612416367],
         "type": "place",
         "activity": ["eating"],
         "date": "",
@@ -611,7 +611,7 @@
     },
     {
         "name": "Eagle Peak",
-        "rating": "unexplored",
+        "rating": "good",
         "description": "Cool hiking trail in the Diablo range. More trees and water than the other parts of Mt. Diablo. <br> <a href=\"https://www.alltrails.com/trail/us/california/eagle-peak-loop\">alltrails</a>",
         "coords": [37.920384, -121.94163],
         "type": "place",
@@ -663,7 +663,7 @@
     },
     {
         "name": "The Lone Toilet",
-        "rating": "unexplored",
+        "rating": "good",
         "description": "4.9 stars on Google. You have to wade through mud to get to it, and there might be shit in it.",
         "coords": [38.15707292872098, -122.40886995289092],
         "type": "place",
@@ -720,5 +720,35 @@
         "activity": ["boating"],
         "date": "",
         "images": []
+    },
+    {
+        "name": "Lafayette Reservoir",
+        "rating": "fine",
+        "description": "It's ok. Fishing is ok. You can boat here. Theres a loop you can walk around the lake on. Its fine.",
+        "coords": [37.88196249291363, -122.14185837493311],
+        "type": "place",
+        "activity": ["hiking", "fishing", "boating"],
+        "date": "2025-06-14",
+        "images": ["/images/portfolio/IMG_9707.jpg"]
+    },
+    {
+        "name": "Lake Chabot",
+        "rating": "good",
+        "description": "I should probably say something but I'm not sure what to say. ",
+        "coords": [37.72665875576963, -122.11104101179933],
+        "type": "place",
+        "activity": ["fishing", "boating", "hiking"],
+        "date": "2025-05-26",
+        "images": [""]
+    },
+    {
+        "name": "Newhall Community Park",
+        "rating": "fine",
+        "description": "Yeah its ok I guess",
+        "coords": [37.72665875576963, -122.11104101179933],
+        "type": "place",
+        "activity": ["fishing", "boating", "hiking"],
+        "date": "2025-05-09",
+        "images": ["/images/portfolio/IMG_9516.jpg"]
     }
 ]
