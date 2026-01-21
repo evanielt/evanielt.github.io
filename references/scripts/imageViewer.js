@@ -13,7 +13,7 @@ window.IndexImages = function IndexImages() {
             openImageViewer(image);
         };
 
-        image.setAttribute("data-imageIndex", imgIndex);
+        image.setAttribute("data-imageIndex", imgIndex);        
         console.log("Image indexed: " + imgIndex);
 
         imgIndex++;

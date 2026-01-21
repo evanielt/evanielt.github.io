@@ -747,8 +747,28 @@
         "description": "Yeah its ok I guess",
         "coords": [37.72665875576963, -122.11104101179933],
         "type": "place",
-        "activity": ["fishing", "boating", "hiking"],
-        "date": "2025-05-09",
+        "activity": ["hiking"],
+        "date": "",
         "images": ["/images/portfolio/IMG_9516.jpg"]
+    },
+    {
+        "name": "Tank House BBQ & Bar",
+        "rating": "good",
+        "description": "Food is so good. Get the big 38 buck plate and split it. The sides are massive",
+        "coords": [38.57694427060299, -121.48018216840507],
+        "type": "place",
+        "activity": ["eating"],
+        "date": "2026-01-19",
+        "images": []
+    },
+    {
+        "name": "Sacramento River & Ferry & Train Yard",
+        "rating": "good",
+        "description": "Pretty, especially at night. A fatass security guard kicked us out",
+        "coords": [38.58331063559796, -121.50624582740802],
+        "type": "place",
+        "activity": ["hiking"],
+        "date": "2026-01-19",
+        "images": ["/images/portfolio/IMG_0256.jpg", "/images/portfolio/IMG_0252.jpg"]
     }
 ]

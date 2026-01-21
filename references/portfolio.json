@@ -172,5 +172,29 @@
         "description": "real pretty",
         "url": "/images/portfolio/IMG_0123.jpg",
         "spot": ""
+    },
+    {
+        "name": "blurry sack",
+        "description": "i like this even tho its like not a good photo",
+        "url": "/images/portfolio/IMG_0179.jpg",
+        "spot": ""
+    },
+    {
+        "name": "colored cars",
+        "description": "i recolored the lights but i think its pretty interesting",
+        "url": "/images/portfolio/IMG_0187.jpg",
+        "spot": ""
+    },
+    {
+        "name": "pyramidical building",
+        "description": "no clue what building this is but i like it",
+        "url": "/images/portfolio/IMG_0252.jpg",
+        "spot": ""
+    },
+    {
+        "name": "Sacramento Ferry",
+        "description": "ferry",
+        "url": "/images/portfolio/IMG_0256.jpg",
+        "spot": ""
     }
 ]
