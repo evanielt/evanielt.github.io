@@ -175,15 +175,22 @@
         </button>
     </div>
 
+    <button onclick="openSearchBar()" id="search-bar-open">
+        🔍︎
+    </button>
+
     <div id="search-bar">
         <input id="search-input" type="search" placeholder="Search" autocomplete="">
 
+        <button onclick="closeSearchBar()" id="search-bar-close">
+            «
+        </button>
+
+        <button onclick="resetSearchBar()" id="search-bar-reset">
+            ×
+        </button>
+
         <div id="search-dropdown">
-            <ul>
-                <li>testitem</li>
-                <li>testitem</li>
-                <li>testitem</li>
-            </ul>
         </div>
     </div>
 

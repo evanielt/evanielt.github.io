@@ -587,6 +587,7 @@ function initMap() {
     // on mobile, hide the map buttons initially
     if(window.matchMedia("(width <= 768px)").matches) {
         closeMapButtons();
+        closeSearchBar();
     }
 
     // set coordinates to map position initially
@@ -630,23 +631,89 @@ function closeContextMenu() {
     menu.style.display = `none`;
 }
 
-
+var searchDropdown;
 function initSearch() {
     var searchInput = document.getElementById('search-input');
-    var searchDropdown = document.getElementById('search-dropdown');
+    searchDropdown = document.getElementById('search-dropdown');
 
     searchInput.addEventListener('input', function(event) {
         if(searchInput.value) {
-            console.log("full");
-            searchDropdown.style.height = "100%";
+            // searchDropdown.style.height = "100%";
+            searchDropdown.style.borderWidth = "0.1rem";
+            searchValue(searchInput.value);
 
         } else {
-            console.log("empty");
-            searchDropdown.style.height = "0%";
+            // searchDropdown.style.height = "0%";
+            searchDropdown.innerHTML = "";
+            searchDropdown.style.borderWidth = "0";
         }
     });
-
 }
+
+function searchValue(val) {
+    var finalList = [];
+
+    for(const spotData of spots) {
+        var searched = spotData.name.toLowerCase().search(val.toLowerCase());
+        if(searched != -1) {
+            finalList.push(spotData);
+        }
+    }
+
+    var finalContent = [];
+    for(const matchedSpot of finalList) {
+        finalContent += `
+                        <a class="search-result">
+                            <h2>
+                                ${matchedSpot.name}
+                            </h2>
+                            <p>
+                                hello
+                            </p>
+                        </a>
+                        `       
+    }
+
+    searchDropdown.innerHTML = finalContent;
+}
+
+window.closeSearchBar = function closeSearchBar() {
+    var elemStyle = document.getElementById('search-bar').style;
+
+    if(window.matchMedia("(max-width: 768px)")) {
+        elemStyle.height = "0";
+        elemStyle.top = "0";
+        elemStyle.opacity = "0";
+        // elemStyle.display = "hidden";
+
+        // document.getElementById('search-input').style.display = "hidden";
+        // document.getElementById('search-bar-close').style.display = "hidden";
+    }
+
+
+
+    document.getElementById('search-bar-open').style.opacity = 1;
+}
+
+window.openSearchBar = function openSearchBar() {
+    var elemStyle = document.getElementById('search-bar').style;
+
+
+    elemStyle.height = "50%";
+    elemStyle.top = "0.5rem";
+    elemStyle.opacity = "1.0";
+
+    document.getElementById('search-bar-open').style.opacity = 0;
+}
+
+
+window.resetSearchBar = function resetSearchBar() {
+    document.getElementById('search-input').value = "";
+
+    // searchDropdown.innerHTML = "";
+    //         searchDropdown.style.borderWidth = "0";
+}
+
 
 initRightClick();
 initMap();
