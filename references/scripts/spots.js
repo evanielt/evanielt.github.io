@@ -530,11 +530,24 @@ window.setSidebarContent = function setSidebarContent(text) {
 window.flyTo = function flyTo(location, dur = 500) {
     var view = map.getView();
     
+    var switched = [location[1], location[0]];
+
     view.animate({
-        center: location,
+        center: fromLonLat(switched),
         duration: dur, // in milliseconds
         // zoom: 12,
     });
+
+
+    // var duration = 2000;
+    // var start = +new Date();
+    // var pan = ol.animation.pan({
+    //     duration: duration,
+    //     source: /** @type {ol.Coordinate} */ (view.getCenter()),
+    //     start: start
+    // });
+    
+    // map.beforeRender(pan, bounce);
 }
 
 window.firstLetterToUpperCase = function firstLetterToUpperCase(word) {
@@ -660,21 +673,31 @@ function searchValue(val) {
         }
     }
 
-    var finalContent = [];
+    // need to make searching through the description also possible
+
+    searchDropdown.innerHTML = "";
+
     for(const matchedSpot of finalList) {
-        finalContent += `
-                        <a class="search-result">
-                            <h2>
+        var elem = document.createElement("a");
+        elem.class = "search-result";
+        elem.innerHTML = `<h2>
                                 ${matchedSpot.name}
                             </h2>
                             <p>
                                 hello
-                            </p>
-                        </a>
-                        `       
-    }
+                            </p>`
 
-    searchDropdown.innerHTML = finalContent;
+        elem.onclick = function() {
+            zoomToSpot(matchedSpot);
+        }
+
+        searchDropdown.append(elem);
+    }
+}
+
+window.zoomToSpot = function zoomToSpot(spot) { // might be inefficient to be looping through it all again
+    openSidebar(spot);
+    flyTo(spot.coords);
 }
 
 window.closeSearchBar = function closeSearchBar() {
@@ -710,8 +733,8 @@ window.openSearchBar = function openSearchBar() {
 window.resetSearchBar = function resetSearchBar() {
     document.getElementById('search-input').value = "";
 
-    // searchDropdown.innerHTML = "";
-    //         searchDropdown.style.borderWidth = "0";
+    searchDropdown.innerHTML = "";
+    searchDropdown.style.borderWidth = "0";
 }
 
 

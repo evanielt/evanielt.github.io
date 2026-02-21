@@ -870,5 +870,25 @@
         "activity": ["biking"],
         "date": "?",
         "images": []
+    },
+    {
+        "name": "Taqueria La Nueva Vallarta",
+        "rating": "fine",
+        "description": "Pretty ok food I think. Nothing really standout though, and we were so famished.",
+        "coords": [38.78926119986505, -121.28249434776302],
+        "type": "place",
+        "activity": ["eating"],
+        "date": "2026-02-7",
+        "images": []
+    },
+    {
+        "name": "Las Trampas Wilderness Regional Preserve",
+        "rating": "unexplored",
+        "description": "I've seen it from a distance. Looks like there's some fun rocks to clamber around on.",
+        "coords": [37.81576158750596, -122.03419700934342],
+        "type": "place",
+        "activity": ["hiking"],
+        "date": "",
+        "images": []
     }
 ]
