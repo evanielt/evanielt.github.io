@@ -901,5 +901,15 @@
         "date": "",
         "images": [],
         "gpx": "/references/gpx/lafayetteridgetrail.gpx"
+    },
+    {
+        "name": "Briones",
+        "rating": "good",
+        "description": "Hopefully I remember to add a gpx to this. Theres a ton of good mountain biking trails out here, check around on trailfork for them. The waypoint's for the trailhead, you can go real deep and real far in",
+        "coords": [37.939340679734784, -122.10149807002615],
+        "type": "trail",
+        "activity": ["hiking", "biking"],
+        "date": "",
+        "images": []
     }
 ]

@@ -48,12 +48,6 @@
         "spot": ""
     },
     {
-        "name": "color corrected maples",
-        "description": "i wanted to mess with ir photography but i didnt have an ir filter so i just changed the colors",
-        "url": "/images/portfolio/IMG_20240407_124828_958.jpg",
-        "spot": ""
-    },
-    {
         "name": "truck on dirt road past arnold",
         "description": "",
         "url": "/images/portfolio/IMG_20250720_152017_668.jpg",
@@ -231,6 +225,12 @@
         "name": "redwood",
         "description": "",
         "url": "/images/portfolio/IMG_0346.jpg",
+        "spot": ""
+    },
+    {
+        "name": "mt diablo radio tower",
+        "description": "its lowk brutalist",
+        "url": "/images/portfolio/IMG_0413.jpg",
         "spot": ""
     }
 ]
