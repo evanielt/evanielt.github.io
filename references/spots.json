@@ -15,7 +15,7 @@
         "description": "This spot is pretty cool. It was a nice place to pull over and cook some food (I burned the rice). The road is a fun dirt road and it's super peaceful. I used google street view and my brain and was actually able to find the exact coordinates I was at.",
         "coords": [38.389323884379195, -120.18361981510711], 
         "type": "place",
-        "activity": ["driving", "hiking"],
+        "activity": ["driving"],
         "date": "2025-07-20",
         "images": ["/images/portfolio/IMG_20250720_152017_668.jpg", "/images/portfolio/IMG_9964.jpg"]
     },
@@ -67,7 +67,7 @@
         "description": "Very pretty, especially in the evening, but it smells shyte",
         "coords": [38.014334, -122.296809],
         "type": "place",
-        "activity": ["hiking"],
+        "activity": ["other"],
         "date": "2025-08-16",
         "images": ["/images/map/IMG_20250816_192301_478.jpg", "/images/map/IMG_20250816_192316_865.jpg"]
     },
@@ -198,7 +198,7 @@
         "description": "elias hates tiburon",
         "coords": [37.874083960527, -122.4554011678015],
         "type": "place",
-        "activity": ["hiking"],
+        "activity": ["other"],
         "date": "",
         "images": []
     },
@@ -208,7 +208,7 @@
         "description": "we go there too much",
         "coords": [37.80816480223186, -121.94403384614154],
         "type": "place",
-        "activity": ["hiking"],
+        "activity": ["other"],
         "date": "2025-07-??",
         "images": []
     },
@@ -522,7 +522,7 @@
         "description": "looks fun, pretty in fall",
         "coords": [38.401542115358225, -122.36346320690446],
         "type": "place",
-        "activity": ["hiking"],
+        "activity": ["other"],
         "date": "",
         "images": []
     },
@@ -626,7 +626,7 @@
         "description": "you're not supposed to go on here",
         "coords": [37.990284366075954, -122.12792144255407],
         "type": "place",
-        "activity": ["hiking"],
+        "activity": ["other"],
         "date": "2025-12-07",
         "images": ["/images/map/PXL_20251207_231740686.jpg"]
     },
@@ -636,7 +636,7 @@
         "description": "nice little spot, i liked it in the winter weather",
         "coords": [37.936471197621344, -122.08984900836036],
         "type": "place",
-        "activity": ["hiking"],
+        "activity": ["other"],
         "date": "2025-12-07",
         "images": []
     },
@@ -657,7 +657,7 @@
         "description": "It's pretty, but a little hard to get to and not much going on.",
         "coords": [39.34858787815766, -123.82622421503174],
         "type": "place",
-        "activity": ["hiking"],
+        "activity": ["other"],
         "date": "2025-12-27",
         "images": []
     },
@@ -745,9 +745,9 @@
         "name": "Newhall Community Park",
         "rating": "fine",
         "description": "Yeah its ok I guess",
-        "coords": [37.72665875576963, -122.11104101179933],
+        "coords": [37.953986269740135, -121.97701055987488],
         "type": "place",
-        "activity": ["hiking"],
+        "activity": ["other"],
         "date": "",
         "images": ["/images/portfolio/IMG_9516.jpg"]
     },
@@ -767,7 +767,7 @@
         "description": "Pretty, especially at night. A bitch ass security guard kicked us out",
         "coords": [38.58331063559796, -121.50624582740802],
         "type": "place",
-        "activity": ["hiking"],
+        "activity": ["other"],
         "date": "2026-01-19",
         "images": ["/images/portfolio/IMG_0256.jpg", "/images/portfolio/IMG_0252.jpg"]
     },
@@ -787,7 +787,7 @@
         "description": "Cool lookin temple",
         "coords": [37.48334355295888, -122.31710116851403],
         "type": "place",
-        "activity": ["hiking"],
+        "activity": ["other"],
         "date": "",
         "images": ["https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.sfpuc.gov%2Fsites%2Fdefault%2Ffiles%2Flearning%2Fcome-visit%2FPulgas_Water_Temple.jpg&f=1&nofb=1&ipt=a0c3481fd10574d1af69d0578decfc59fbacf11de11dfa7e13605375782fd6ff"]
     },
@@ -837,7 +837,7 @@
         "description": "its illegal to do walk on this bridge. its trespassing. i wouldnt trespass on this bridge",
         "coords": [37.93984358521083, -121.5335378092761],
         "type": "place",
-        "activity": ["hiking"],
+        "activity": ["other"],
         "date": "2026-02-15",
         "images": ["/images/portfolio/IMG_0334.jpg", "/images/portfolio/IMG_0331.jpg"]
     },
@@ -890,5 +890,16 @@
         "activity": ["hiking"],
         "date": "",
         "images": []
+    },
+    {
+        "name": "Lafayette Ridge Trail",
+        "rating": "good",
+        "description": "Pretty, especially in the fog and the rain. Winter time is the best for this trail, in the summer it gets pretty hot. I put biking on the list of activities but its lowk pretty hilly",
+        "coords": [37.909948, 122.140430],
+        "type": "trail",
+        "activity": ["hiking", "biking"],
+        "date": "",
+        "images": [],
+        "gpx": "/references/gpx/lafayetteridgetrail.gpx"
     }
 ]
