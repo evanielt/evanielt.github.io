@@ -19,7 +19,7 @@
     --color3: #e2523f;
     --color4: #661717;
     --tricolorgradient: linear-gradient(to right, #dca327 0 33%, #e77541 33% 66%, #d83c38 66%) 1;
-    --border-color: #55534e;
+    --border-color: #514e49;
 
     --textcolor: #e0dfd9;
     --textcolor2: #6d6d6d;
@@ -296,6 +296,13 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: var(--textcolor2);
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: var(--textcolor2);
 }
 
 input[type=number] {

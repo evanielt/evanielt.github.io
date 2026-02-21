@@ -600,4 +600,54 @@ function initMap() {
     mouseCoords.innerHTML = x + ", " + y;
 }
 
+function initRightClick() {
+    document.addEventListener("mousedown", function(event) {
+        closeContextMenu();
+    });
+
+    if(document.addEventListener) {
+        document.addEventListener('contextmenu', function(event) {
+            openContextMenu(event);
+            event.preventDefault();
+        }, false);
+    } else {
+        document.attachEvent('oncontextmenu', function(event) {
+            openContextMenu(event);
+            window.event.returnValue = false;
+        });
+    }
+}
+
+function openContextMenu(event) {
+    var menu = document.getElementById("context-menu")
+    menu.style.display = `block`;
+    menu.style.left = `${event.pageX}px`;
+    menu.style.top = `${event.pageY}px`;
+}
+
+function closeContextMenu() {
+    var menu = document.getElementById("context-menu")
+    menu.style.display = `none`;
+}
+
+
+function initSearch() {
+    var searchInput = document.getElementById('search-input');
+    var searchDropdown = document.getElementById('search-dropdown');
+
+    searchInput.addEventListener('input', function(event) {
+        if(searchInput.value) {
+            console.log("full");
+            searchDropdown.style.height = "100%";
+
+        } else {
+            console.log("empty");
+            searchDropdown.style.height = "0%";
+        }
+    });
+
+}
+
+initRightClick();
 initMap();
+initSearch();
