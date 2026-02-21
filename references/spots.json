@@ -764,11 +764,62 @@
     {
         "name": "Sacramento River & Ferry & Train Yard",
         "rating": "good",
-        "description": "Pretty, especially at night. A fatass security guard kicked us out",
+        "description": "Pretty, especially at night. A bitch ass security guard kicked us out",
         "coords": [38.58331063559796, -121.50624582740802],
         "type": "place",
         "activity": ["hiking"],
         "date": "2026-01-19",
         "images": ["/images/portfolio/IMG_0256.jpg", "/images/portfolio/IMG_0252.jpg"]
+    },
+    {
+        "name": "Gravity Hill",
+        "rating": "unexplored",
+        "description": "looks like you're going uphill because all the landscape cues are tilted.",
+        "coords": [38.342818087754495, -122.61823964980051],
+        "type": "place",
+        "activity": ["driving"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Pulgas Water Temple",
+        "rating": "unexplored",
+        "description": "Cool lookin temple",
+        "coords": [37.48334355295888, -122.31710116851403],
+        "type": "place",
+        "activity": ["hiking"],
+        "date": "",
+        "images": ["https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.sfpuc.gov%2Fsites%2Fdefault%2Ffiles%2Flearning%2Fcome-visit%2FPulgas_Water_Temple.jpg&f=1&nofb=1&ipt=a0c3481fd10574d1af69d0578decfc59fbacf11de11dfa7e13605375782fd6ff"]
+    },
+    {
+        "name": "San Francisco Cable Car Museum",
+        "rating": "unexplored",
+        "description": "Museum of the Cable Cars",
+        "coords": [37.79477404465255, -122.41165199006225],
+        "type": "place",
+        "activity": ["other"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Tunnels in WC",
+        "rating": "unexplored",
+        "description": "honestly, i dont know where they are. some people seem to think they're sacred and should be kept secret.",
+        "coords": [37.893865639035674, -122.05479562282564],
+        "type": "place",
+        "activity": ["hiking"],
+        "date": "",
+        "images": [],
+        "gpx": "/references/gpx/walnutcreektunnel.gpx"
+    },
+    {
+        "name": "Grizzly Peak",
+        "rating": "unexplored",
+        "description": "Great place to see sunsets. A bit trashy though.",
+        "coords": [37.893865639035674, -122.05479562282564],
+        "type": "good",
+        "activity": ["hiking"],
+        "date": "",
+        "images": []
     }
 ]

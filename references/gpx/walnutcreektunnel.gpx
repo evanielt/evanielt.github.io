@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- track-length = 1324 filtered ascend = 0 plain-ascend = 0 cost=0 energy=0.0kwh time=14m 44.92958290380693s -->
+<gpx 
+ xmlns="http://www.topografix.com/GPX/1/1" 
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" 
+ version="1.1" 
+ creator="BRouter-Web 0.18.1">
+ <trk>
+  <name>walnutcreektunnel</name>
+  <trkseg>
+   <trkpt lat="37.893865639035674" lon="-122.05479562282564"/>
+   <trkpt lat="37.89364336460186" lon="-122.05469369888307"/>
+   <trkpt lat="37.89338908427648" lon="-122.05468565225603"/>
+   <trkpt lat="37.893107430882495" lon="-122.05468297004701"/>
+   <trkpt lat="37.892288678502716" lon="-122.05467760562898"/>
+   <trkpt lat="37.89197537335392" lon="-122.05463737249376"/>
+   <trkpt lat="37.89171608966101" lon="-122.0545542240143"/>
+   <trkpt lat="37.891207830602895" lon="-122.0543745160103"/>
+   <trkpt lat="37.8905809729321" lon="-122.05411702394487"/>
+   <trkpt lat="37.88943331406446" lon="-122.05351352691652"/>
+   <trkpt lat="37.88817956316859" lon="-122.05262303352357"/>
+   <trkpt lat="37.88692579092407" lon="-122.05157160758974"/>
+   <trkpt lat="37.88539243233563" lon="-122.05027341842653"/>
+   <trkpt lat="37.88446282897562" lon="-122.04953312873842"/>
+   <trkpt lat="37.8837452620224" lon="-122.04928636550905"/>
+   <trkpt lat="37.88320329910018" lon="-122.04893231391908"/>
+  </trkseg>
+ </trk>
+</gpx>
