@@ -38,8 +38,8 @@
             <label>
                 <select id="marker-color-shows" onchange="redrawMarkers()">
                     <option value="type">Type</option> <!--Place, Road, Trail - last two will probably match up with driving and hiking/biking-->
-                    <option value="rating">Rating</option>
-                    <option value="activity" selected>Best Activity</option>
+                    <option value="rating" selected>Rating</option>
+                    <option value="activity">Best Activity</option>
                 </select>
                 Marker Color
             </label>
@@ -165,6 +165,27 @@
 
         <script src="/references/scripts/spots.js" defer></script>
     </body>
+
+    <div id="context-menu">
+        <button>
+            Copy Coordinates
+        </button>
+        <button>
+            testmenu
+        </button>
+    </div>
+
+    <div id="search-bar">
+        <input id="search-input" type="search" placeholder="Search" autocomplete="">
+
+        <div id="search-dropdown">
+            <ul>
+                <li>testitem</li>
+                <li>testitem</li>
+                <li>testitem</li>
+            </ul>
+        </div>
+    </div>
 
     <!-- necessary scripts for modules that jquery loads -->
     <script src="/references/scripts/imageViewer.js"></script>

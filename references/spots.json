@@ -510,7 +510,7 @@
         "name": "Allen Lookout",
         "rating": "unexplored",
         "description": "https://maps.app.goo.gl/EPgegqFPj41PPJZv8",
-        "coords": [37.93729981074987, -122.02532083078388],
+        "coords": [37.384386, -122.289853],
         "type": "place",
         "activity": ["hiking"],
         "date": "",
@@ -648,7 +648,7 @@
         "type": "place",
         "activity": ["hiking"],
         "date": "2025-?",
-        "images": [],
+        "images": ["/images/portfolio/IMG_0346.jpg"],
         "gpx": "/references/gpx/redwoodtrail.gpx"
     },
     {
@@ -693,11 +693,11 @@
     },
     {
         "name": "Discovery Bay",
-        "rating": "unexplored",
-        "description": "Dystopian in a way. I think I can put a boat in the water here.",
+        "rating": "bad",
+        "description": "What a terrible place. A suburban dystopia. Outsiders can't even access the water, its sweltering in the summer, and everyones hella chopped. stupid ass golf carts roam the place",
         "coords": [37.90488805536374, -121.60124523649296],
         "type": "place",
-        "activity": ["boating", "fishing"],
+        "activity": ["other"],
         "date": "",
         "images": []
     },
@@ -770,5 +770,55 @@
         "activity": ["hiking"],
         "date": "2026-01-19",
         "images": ["/images/portfolio/IMG_0256.jpg", "/images/portfolio/IMG_0252.jpg"]
+    },
+    {
+        "name": "fishing on the middle river",
+        "rating": "good",
+        "description": "barnabas caught a small striper here",
+        "coords": [37.93858751276726, -121.53199965213558],
+        "type": "place",
+        "activity": ["fishing"],
+        "date": "2026-02-15",
+        "images": ["/images/portfolio/IMG_0349.jpg"]
+    },
+    {
+        "name": "Middle River Railroad Bridge",
+        "rating": "good",
+        "description": "its illegal to do walk on this bridge. its trespassing. i wouldnt trespass on this bridge",
+        "coords": [37.93984358521083, -121.5335378092761],
+        "type": "place",
+        "activity": ["hiking"],
+        "date": "2026-02-15",
+        "images": ["/images/portfolio/IMG_0334.jpg", "/images/portfolio/IMG_0331.jpg"]
+    },
+    {
+        "name": "Mt Diablo",
+        "rating": "good",
+        "description": "Lots of good things to do here. Great view, hiking trails, and bike routes. It even snows here on occasion.",
+        "coords": [37.88173959390156, -121.91461834501943],
+        "type": "place",
+        "activity": ["hiking", "biking", "camping"],
+        "date": "2026-02-15",
+        "images": ["/images/portfolio/IMG_0403.jpg"]
+    },
+    {
+        "name": "Donner Ski Ranch",
+        "rating": "good",
+        "description": "Very affordable skiing, and plenty of fun runs. The drive up from the east is also hella pretty",
+        "coords": [39.31832906456843, -120.33019967707749],
+        "type": "place",
+        "activity": ["other", "biking"],
+        "date": "2026-02-7",
+        "images": []
+    },
+    {
+        "name": "Truckee Bike Park",
+        "rating": "good",
+        "description": "Very fun park with some fun runs and a pump track. Theres also some elevated wooden courses",
+        "coords": [39.3291793121537, -120.15790525972194],
+        "type": "place",
+        "activity": ["biking"],
+        "date": "?",
+        "images": []
     }
 ]
