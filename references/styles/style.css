@@ -68,6 +68,7 @@ body {
 
 /* Main content area */
 #main {
+    display: flex;
     box-sizing: border-box; 
     position: absolute;
     flex-direction: column;
@@ -85,6 +86,7 @@ body {
     padding-right: 12%;
     padding-top: 5rem;
     padding-bottom: 0;
+    flex: 1;
 
 
     margin: 0;
@@ -118,9 +120,11 @@ h1 {
     text-shadow: 0.06rem 0.06rem 0px var(--color1);
     font-family: "Oxanium", "Gelasio";
     font-weight: 700;
-    font-size: 2rem;          /* 40px → 2.5rem */
+    font-size: 2.5rem;          /* 40px → 2.5rem */
     font-style: italic;
     line-height: 1em;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 h2 {
@@ -130,6 +134,7 @@ h2 {
     font-size: 1.8rem;         /* 35px → 2.19rem */
     font-weight: 500;
     padding: 0em;
+    margin-top: 0;
 }
 
 h3 {
@@ -137,7 +142,7 @@ h3 {
     text-shadow: 0.06rem 0.06rem 0px var(--color2);
     font-family: "Oxanium", "Gelasio";
     font-weight: 500;
-    margin: 0em;
+    margin: 0;
 }
 
 h4 {
@@ -317,6 +322,7 @@ label {
 
 /* Footer */
 footer {
+    position: relative;
 	flex-grow: 0;
 	flex-shrink: 0;
 	padding-top: 1.88rem; /* 30px */
@@ -540,7 +546,7 @@ a.tile:hover {
 .tile-title h1 {
     position: absolute;
     left: 1.25rem;
-    top: 0rem;
+    top: 0.55rem;
 }
 
 .tile-title:first-of-type {
@@ -753,4 +759,60 @@ a.tile:hover {
     font-size: 1.5rem;
     left: 0.45rem;
     top: -0.1rem;
+}
+
+#article-body, #article-sidebar {
+    box-sizing: border-box;
+}
+
+#article-sidebar {
+    color: var(--textcolor);
+    padding: 0.63rem;          /* 10px → 0.63rem */
+    border-radius: var(--borderradius);
+    border-color: var(--border-color);
+    border-style: solid;
+    border-width: 0.1rem;
+    box-shadow: 0rem 0rem 0.63rem var(--bgcolor3);
+    transition-duration: var(--transitionms);
+    outline: None;
+
+    height: max-content;
+    min-height: auto;
+}
+
+
+#article-header {
+    display: block;    
+    margin-bottom: 1rem;
+}
+
+#article-header h3 {
+    margin-bottom: 0.5rem;
+}
+
+#article-header p {
+    margin-top: 0rem;
+    margin-bottom: 0.5rem;
+}
+
+#article-columns {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 1rem;
+    min-height: 100%; /* this hasnt worked but i may be on to something */
+}
+
+.article-tag {
+    color: var(--textcolor);
+    padding: 0.2rem;          /* 10px → 0.63rem */
+    border-radius: var(--borderradius);
+    border-color: var(--border-color);
+    border-style: solid;
+    background-color: var(--bgcolortile);
+    border-width: 0.1rem;
+    box-shadow: 0rem 0rem 0.63rem var(--bgcolor3);
+    transition-duration: var(--transitionms);
+    outline: None;
+    cursor: pointer;
+    width: max-content;
 }
