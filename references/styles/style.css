@@ -25,7 +25,7 @@
     --textcolor2: #6d6d6d;
     --errorcolor: #751c4d;
 
-    --fontminsize: 14px;   /* 14px → 0.88rem */
+    --fontminsize: 15px;   /* 14px → 0.88rem */
     --fontmaxsize: 18px;   /* 18px → 1.13rem */
     --transitionms: 5ms;
     --borderradius: 0rem;  /* 3px → 0.19rem */
@@ -82,13 +82,11 @@ body {
     flex-grow: 0;
     flex-shrink: 0;
 
-    padding-left: 12%;
-    padding-right: 12%;
-    padding-top: 5rem;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 6rem;
     padding-bottom: 0;
     flex: 1;
-
-
     margin: 0;
 }
 /* because of front image */
@@ -101,7 +99,9 @@ body {
 p {
     line-height: 1.5;
     white-space: normal;
-    color: var(--textcolor)
+    color: var(--textcolor);
+    margin-left: 1rem;
+    font-size: var(--fontminsize);
 }
 
 a {
@@ -131,18 +131,21 @@ h2 {
     color: var(--color0);
     text-shadow: 0.06rem 0.06rem 0px var(--color1);
     font-family: "Oxanium", "Gelasio";
-    font-size: 1.8rem;         /* 35px → 2.19rem */
+    font-size: 1.5rem;         /* 35px → 2.19rem */
     font-weight: 500;
     padding: 0em;
     margin-top: 0;
+    margin-bottom: 1rem;
 }
 
 h3 {
     color: var(--color1);
-    text-shadow: 0.06rem 0.06rem 0px var(--color2);
+    /* text-shadow: 0.06rem 0.06rem 0px var(--color0); */
     font-family: "Oxanium", "Gelasio";
     font-weight: 500;
     margin: 0;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 h4 {
@@ -200,12 +203,12 @@ table {
 
 table tr {
     border: 1px solid var(--color0);
-    padding: 0.63rem;          /* 10px → 0.63rem */
+    padding: 0.63rem;
 }
 
 table td {
     border: 1px solid var(--color0);
-    padding: 0.63rem;          /* 10px → 0.63rem */
+    padding: 0.63rem;
     padding-left: 0;
 }
 
@@ -216,8 +219,8 @@ ul {
 }
 
 li {
-    padding-left: 0.63rem;     /* 10px → 0.63rem */
-    padding-top: 0.19rem;      /* 3px → 0.19rem */
+    padding-left: 0.63rem;
+    padding-top: 0.5rem;
     white-space: normal;
 }
 
@@ -766,6 +769,8 @@ a.tile:hover {
 }
 
 #article-sidebar {
+    top: 2rem;
+    position: sticky;
     color: var(--textcolor);
     padding: 0.63rem;          /* 10px → 0.63rem */
     border-radius: var(--borderradius);
@@ -783,7 +788,14 @@ a.tile:hover {
 
 #article-header {
     display: block;    
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    border-color: var(--border-color);
+    border-style: solid;
+    border-width: 0;
+    border-bottom-width: 0.1rem;
+    box-shadow: 0rem 0rem 0.63rem var(--bgcolor3);
+    transition-duration: var(--transitionms);
+    outline: None;
 }
 
 #article-header h3 {
@@ -815,4 +827,12 @@ a.tile:hover {
     outline: None;
     cursor: pointer;
     width: max-content;
+}
+
+#article-created {
+    color: var(--color2)
+}
+
+#article-updated {
+    color: var(--color3)
 }
