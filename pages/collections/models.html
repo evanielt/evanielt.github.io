@@ -13,6 +13,8 @@
 		<script src="/references/scripts/load.js"></script>
 	</head>
 	<body>
+        <div id="model-viewer"></div>
+
         <div id="main">
 			
 			<h1>
@@ -22,12 +24,29 @@
 				this site will be a place i can host all my 3d models
 			</p>
 
+            <div id="models-grid">
+                <a class="tile viewable-model" data-model="/references/models/monke.glb">
+                    <h2>Test Monkey</h2>
+                    <img src="/images/portfolio/IMG_0331.jpg">
+                    <p>
+                        test Monkey
+                    </p>
+                </a>
+                <a class="tile viewable-model">
+                    <h2>Model 2</h2>
+                    <img src="/images/portfolio/IMG_0331.jpg">
+                    <p>
+                        tbd
+                    </p>
+                </a>
+            </div>
+
 			<div id="footer"></div>
 		</div>
         <div id="navbar"></div>
 	</body>
     
     <!-- necessary scripts for modules that jquery loads -->
-    <!-- <script src="/references/scripts/imageViewer.js"></script> -->
+    <script src="/references/scripts/modelViewer.js"></script>
     <script src="/references/scripts/navbar.js"></script>
 </html>
