@@ -24,13 +24,15 @@ window.IndexModels = function IndexModels() {
 window.openModelViewer = function openModelViewer(modelToOpen) {
     var total = document.getElementById("model-viewer");
     var viewer = document.getElementById("model-viewer-viewer");
+    var title = document.getElementById("model-viewer-title");
     var description = document.getElementById("model-viewer-description");
     var download = document.getElementById("model-viewer-download");
 
     total.style.display = "block";
     document.body.classList.add('no-scroll');
 
-    viewer.setAttribute('src', modelToOpen.getAttribute("data-model"), 2000)
+    title.innerText = modelToOpen.getAttribute("data-title");
+    viewer.setAttribute('src', modelToOpen.getAttribute("data-model"), 2000);
     download.href = modelToOpen.getAttribute("data-model");
 
     description.innerText =  modelToOpen.getAttribute("data-description");

@@ -1,14 +1,14 @@
 [
     { 
-        "name": "Test Monkey",
+        "title": "Test Monkey",
         "description": "Test Description",
         "url": "/references/models/monke.glb",
         "imageurl": "/images/portfolio/IMG_0331.jpg"
     },
     { 
-        "name": "Untested Monkey",
+        "title": "Untested Monkey",
         "description": "Test ",
         "url": "/references/models/monke.glb",
-        "imageurl": "/images/portfolio/IMG_0331.jpg"
+        "imageurl": "/images/portfolio/IMG_0334.jpg"
     }
 ]

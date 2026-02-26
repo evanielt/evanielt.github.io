@@ -911,5 +911,15 @@
         "activity": ["hiking", "biking"],
         "date": "",
         "images": []
+    },
+    {
+        "name": "Grouse Mountain",
+        "rating": "unexplored",
+        "description": "Sounds like good skiing",
+        "coords": [49.380529226307075, -123.08077126700786],
+        "type": "place",
+        "activity": ["other", "biking"],
+        "date": "",
+        "images": []
     }
 ]

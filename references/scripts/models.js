@@ -27,14 +27,14 @@ function setModels() {
     console.log(models);
 
     for(var i in models) {
-        var name = models[i].name;
+        var title = models[i].title;
         var url = models[i].url;
         var description = models[i].description;
         var imageurl = models[i].imageurl;
 
         var modelElement = `
-                <a class="tile viewable-model" data-model="${url}" data-description="${description}">
-                    <h2>${name}</h2>
+                <a class="tile viewable-model" data-model="${url}" data-description="${description}" data-title="${title}">
+                    <h2>${title}</h2>
                     <img src="${imageurl}">
                     <p>
                         ${description}
