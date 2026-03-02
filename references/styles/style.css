@@ -5,13 +5,13 @@
 /* a thing to do eventually is to make everything is the border-box model which is just better */
 
 :root {
-    --bgcolor: #131313; /*for the background these colors arent quite whats shown cause of the filters applied */
+    --bgcolor: #131313;
+    /*for the background these colors arent quite whats shown cause of the filters applied */
     --bgcolor2: #070707;
-    --bgcolor3: #0b0c0eab; /* transparency */
-    --bggradient: linear-gradient(
-        to bottom right,
-        var(--bgcolor), var(--bgcolor2)
-    );
+    --bgcolor3: #0b0c0eab;
+    /* transparency */
+    --bggradient: linear-gradient(to bottom right,
+            var(--bgcolor), var(--bgcolor2));
     --bgcolortile: #131313;
     --color0: #f1ebe0;
     --color1: #e9ae31;
@@ -25,10 +25,13 @@
     --textcolor2: #6d6d6d;
     --errorcolor: #751c4d;
 
-    --fontminsize: 15px;   /* 14px → 0.88rem */
-    --fontmaxsize: 18px;   /* 18px → 1.13rem */
+    --fontminsize: 15px;
+    /* 14px → 0.88rem */
+    --fontmaxsize: 18px;
+    /* 18px → 1.13rem */
     --transitionms: 5ms;
-    --borderradius: 0rem;  /* 3px → 0.19rem */
+    --borderradius: 0rem;
+    /* 3px → 0.19rem */
 }
 
 /* Highlight color */
@@ -42,7 +45,7 @@ html {
     padding: 0;
     margin: 0;
     color: var(--textcolor);
-    font-family:  "Roboto Flex", "Comic Sans Ms";
+    font-family: "Roboto Flex", "Comic Sans Ms";
     font-weight: 150;
     font-style: normal;
     font-size: 16px;
@@ -69,7 +72,7 @@ body {
 /* Main content area */
 #main {
     display: flex;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     position: absolute;
     flex-direction: column;
     z-index: 0;
@@ -89,6 +92,7 @@ body {
     flex: 1;
     margin: 0;
 }
+
 /* because of front image */
 .more-top-margin {
     margin-top: 25rem !important;
@@ -100,8 +104,12 @@ p {
     line-height: 1.5;
     white-space: normal;
     color: var(--textcolor);
-    margin-left: 1rem;
     font-size: var(--fontminsize);
+}
+
+#main p {
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 a {
@@ -120,7 +128,8 @@ h1 {
     text-shadow: 0.06rem 0.06rem 0px var(--color1);
     font-family: "Oxanium", "Gelasio";
     font-weight: 700;
-    font-size: 2.5rem;          /* 40px → 2.5rem */
+    font-size: 2.5rem;
+    /* 40px → 2.5rem */
     font-style: italic;
     line-height: 1em;
     margin-top: 0.5rem;
@@ -131,7 +140,8 @@ h2 {
     color: var(--color0);
     text-shadow: 0.06rem 0.06rem 0px var(--color1);
     font-family: "Oxanium", "Gelasio";
-    font-size: 1.5rem;         /* 35px → 2.19rem */
+    font-size: 1.5rem;
+    /* 35px → 2.19rem */
     font-weight: 500;
     padding: 0em;
     margin-top: 0;
@@ -157,7 +167,8 @@ h4 {
 }
 
 hr {
-    margin-top: 1.88rem;       /* 30px → 1.88rem */
+    margin-top: 1.88rem;
+    /* 30px → 1.88rem */
     margin-bottom: 1.88rem;
     margin-left: 1.88rem;
     margin-right: 1.88rem;
@@ -171,12 +182,11 @@ img {
 }
 
 iframe {
-    border-radius: var(--borderradius);
     color: var(--color1);
-    border-radius: var(--borderradius);
     border-color: var(--border-color);
     border-style: solid;
-    border-width: 0.1rem;     /* 3px → 0.19rem */
+    border-width: 0.1rem;
+    /* 3px → 0.19rem */
     background-color: transparent;
     /* box-shadow: 0.2rem 0.2rem 0px var(--color1); */
     transition-duration: var(--transitionms);
@@ -189,15 +199,14 @@ iframe:hover {
 
 iframe:active {
     background: var(--color1);
-    border-width: 0.1rem;     /* 3px → 0.19rem */
+    border-width: 0.1rem;
+    /* 3px → 0.19rem */
     border-color: var(--color1);
     box-shadow: 0.12rem 0.12rem 0px var(--color2);
 }
 
-/* Table */
 table {
-    border-collapse: collapse; 
-    border-radius: var(--borderradius);
+    border-collapse: collapse;
     border-style: hidden;
 }
 
@@ -229,10 +238,10 @@ li::marker {
 }
 
 /* Button */
-button {
+button, #model-viewer-download {
     color: var(--textcolor);
-    padding: 0.63rem;          /* 10px → 0.63rem */
-    border-radius: var(--borderradius);
+    padding: 0.63rem;
+    /* 10px → 0.63rem */
     border-color: var(--border-color);
     border-style: solid;
     background-color: var(--bgcolortile);
@@ -243,17 +252,18 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+button, #model-viewer-download:hover {
     border-color: var(--color1);
 }
-button:active {
+
+button, #model-viewer-download:active {
     filter: brightness(80%);
 }
 
 select {
     color: var(--color1);
-    padding: 0.63rem;          /* 10px → 0.63rem */
-    border-radius: var(--borderradius);
+    padding: 0.63rem;
+    /* 10px → 0.63rem */
     border-color: var(--border-color);
     border-width: 0.1rem;
     border-style: solid;
@@ -265,15 +275,19 @@ select {
 }
 
 br {
-    display: block; /* makes it have a width */
-    content: ""; /* clears default height */
-    margin-top: 1em; /* change this to whatever height you want it */
+    display: block;
+    /* makes it have a width */
+    content: "";
+    /* clears default height */
+    margin-top: 1em;
+    /* change this to whatever height you want it */
 }
 
 select:hover {
     border-color: var(--color1);
     box-shadow: 0.06rem 0.06rem 0px var(--color2);
 }
+
 select:active {
     filter: brightness(80%);
 }
@@ -281,8 +295,8 @@ select:active {
 /* Input */
 input {
     color: var(--color1);
-    padding: 0.63rem;          /* 10px → 0.63rem */
-    border-radius: var(--borderradius);
+    padding: 0.63rem;
+    /* 10px → 0.63rem */
     border-color: var(--border-color);
     border-width: 0.1rem;
     border-style: solid;
@@ -293,7 +307,8 @@ input {
 }
 
 input:hover {
-    border: 0.13rem solid var(--color2);   /* 2px → 0.13rem */
+    border: 0.13rem solid var(--color2);
+    /* 2px → 0.13rem */
 }
 
 input:focus {
@@ -306,10 +321,13 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
-input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+input::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
     color: var(--textcolor2);
 }
-input::-moz-placeholder { /* Mozilla Firefox 19+ */
+
+input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
     color: var(--textcolor2);
 }
 
@@ -320,98 +338,112 @@ input[type=number] {
 /* Label */
 label {
     display: inline-block;
-    margin-right: 0.63rem;     /* 10px → 0.63rem */
+    margin-right: 0.63rem;
+    /* 10px → 0.63rem */
 }
 
 /* Footer */
 footer {
     position: relative;
-	flex-grow: 0;
-	flex-shrink: 0;
-	padding-top: 1.88rem; /* 30px */
-	padding-bottom: 0.63rem; /* 10px */
-	text-align: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding-top: 1.88rem;
+    /* 30px */
+    padding-bottom: 0.63rem;
+    /* 10px */
+    text-align: center;
 }
 
-/* ----------------------------- Shizzle Mcnizzle -------------------------------------------------------------------*/ 
+/* ----------------------------- Shizzle Mcnizzle -------------------------------------------------------------------*/
 .shrink-text-overflow {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	word-wrap: break-word;
-	display: block;
-	line-height: 1em;
-	max-height: 2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    display: block;
+    line-height: 1em;
+    max-height: 2em;
 }
 
 #navbar {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1;
-	overflow-x: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow-x: auto;
     overflow-y: none;
 
-	height: 3.13rem; 
-	width: 100%;
+    height: 3.13rem;
+    width: 100%;
     margin: 0;
     padding: 0;
     padding-left: 10vw;
 
-	vertical-align: middle;
+    vertical-align: middle;
 
     border-color: transparent;
-    border-bottom: 0.13rem; /* 2px */
+    border-bottom: 0.13rem;
+    /* 2px */
     border-bottom-color: var(--color0);
     border-bottom-style: solid;
     border-image: var(--tricolorgradient);
-    border-width: 0.13rem; /* 2px */
+    border-width: 0.13rem;
+    /* 2px */
     transition-duration: 250ms;
 }
 
 #navbar a {
-	height: 100%;
-	font-size: 1.25rem; /* 20px */
-	float: left;
-	display: block;
-	text-align: center;
-	padding: 0.63rem 1.25rem; /* 10px 20px */
-	text-decoration: none;
-	transition: 0.4s; 
-	border-top-style: solid;
+    height: 100%;
+    font-size: 1.25rem;
+    /* 20px */
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 0.63rem 1.25rem;
+    /* 10px 20px */
+    text-decoration: none;
+    transition: 0.4s;
+    border-top-style: solid;
     border-color: transparent;
-	transition-duration: var(--transitionms);
-	border-width: 0.13rem; /* 2px */
+    transition-duration: var(--transitionms);
+    border-width: 0.13rem;
+    /* 2px */
 
-    border-bottom: 0.13rem; /* 2px */
+    border-bottom: 0.13rem;
+    /* 2px */
     border-bottom-color: transparent;
 
     color: var(--color0);
-    text-shadow: 0.05rem 0.05rem 0px var(--color1); /* 0.75px */
+    text-shadow: 0.05rem 0.05rem 0px var(--color1);
+    /* 0.75px */
     font-family: "Gelasio";
-    font-size: 1.25rem; /* 20px */
+    font-size: 1.25rem;
+    /* 20px */
     font-weight: 200;
     /* text-shadow: 0px 0px 8px #00000079; */
     z-index: -10;
 }
+
 #navbar a:hover {
     color: var(--color1);
     border-bottom-color: var(--color1);
-    text-shadow: 0.05rem 0.05rem 0px var(--color2); /* 0.75px */
+    text-shadow: 0.05rem 0.05rem 0px var(--color2);
+    /* 0.75px */
     border-image: var(--tricolorgradient);
 }
 
 /* Front Image */
-#front-image { 
+#front-image {
     position: absolute;
-	min-width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 0rem;
-	padding: 0rem;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0rem;
+    padding: 0rem;
     z-index: -100;
     top: 13rem;
 }
+
 #front-image h1 {
 	color: var(--color0);
 	font-size: 7rem;
@@ -420,12 +452,14 @@ footer {
 	z-index: 1;
     position: absolute;
 }
+
 #front-image img {
-	z-index: 0;
-	position: fixed;
-	object-fit: cover;
-	height: 56.25rem; /* 90% of 62.5rem (100vh) */
-	width: 100vw;
+    z-index: 0;
+    position: fixed;
+    object-fit: cover;
+    height: 56.25rem;
+    /* 90% of 62.5rem (100vh) */
+    width: 100vw;
     filter: sepia(50%) brightness(50%);
 }
 
@@ -446,7 +480,8 @@ footer {
 }
 
 /* Mobile */
-@media (max-width: 48rem) { /* 768px */
+@media (max-width: 48rem) {
+    /* 768px */
     #columns {
         display: flex;
         flex-direction: column-reverse;
@@ -464,6 +499,16 @@ footer {
         padding-top: 0;
         margin: 0;
     }
+
+    #models-grid {
+        display: flex !important;
+        flex-direction: column;
+        gap: 0rem;
+    }
+
+    #models-grid * {
+        min-width: 100%;
+    }
 }
 
 .column {
@@ -477,52 +522,59 @@ footer {
 .tile-column {
     width: 100%;
 }
+
 .tile {
     width: 100%;
-	height: 13.75rem; /* 220px */
+    height: 13.75rem;
+    /* 220px */
 
-	display: block;
-	position: relative;
+    display: block;
+    position: relative;
 
-	white-space: normal;
-	margin-bottom: 1rem;
+    white-space: normal;
+    margin-bottom: 1rem;
     border-width: 0.1rem;
-	border-radius: var(--borderradius);
-	border-style: solid;
-	background-color: var(--bgcolortile);
-    
+    border-style: solid;
+    background-color: var(--bgcolortile);
+
     border-color: var(--border-color);
 
-	color: var(--color1);
+    color: var(--color1);
     z-index: 0;
 }
+
 a.tile:hover {
-	filter: brightness(80%);
+    filter: brightness(80%);
     border-color: var(--color1);
     box-shadow: 0.12rem 0.12rem 0px var(--color2);
 }
+
 .tile img {
-	border-radius: var(--borderradius) var(--borderradius) 0rem 0rem; /* 0px */
-	object-fit: cover;
-	height: 9.38rem; /* 150px */
-	width: 100%;
-	position: absolute;
-	top: 0rem; /* 0px */
-	left: 0rem; /* 0px */
-	z-index: -1;
+    object-fit: cover;
+    height: 9.38rem;
+    /* 150px */
+    width: 100%;
+    position: absolute;
+    top: 0rem;
+    /* 0px */
+    left: 0rem;
+    /* 0px */
+    z-index: -1;
     filter: brightness(50%);
 }
+
 .tile h2 {
     position: absolute;
     text-align: left;
     vertical-align: bottom;
     left: 1.25rem;
     bottom: 5rem;
-    margin-right: 1.25rem;
+    right: 1.25rem;
     padding: 0;
     margin: 0;
     overflow: hidden;
 }
+
 .tile p {
     padding-left: 1.25rem;
     position: absolute;
@@ -533,20 +585,22 @@ a.tile:hover {
 .tile-small {
     height: 6rem;
 }
+
 .tile-small h2 {
     position: absolute;
     left: 1.2rem;
     bottom: 0.7rem;
 }
+
 .tile-small img {
     height: 100%;
-    border-radius: var(--borderradius);
 }
 
 .tile-title {
     height: 4.38rem;
     margin-top: 3.13rem;
 }
+
 .tile-title h1 {
     position: absolute;
     left: 1.25rem;
@@ -561,26 +615,24 @@ a.tile:hover {
 .portfolio-image {
     width: 100%;
 
-	display: block;
-	position: relative;
+    display: block;
+    position: relative;
 
-	white-space: normal;
-	margin-bottom: 1rem;
+    white-space: normal;
+    margin-bottom: 1rem;
     border-width: 0.1rem;
-	border-radius: var(--borderradius);
-	border-style: solid;
-	background-color: var(--bgcolortile);
-    
+    border-style: solid;
+    background-color: var(--bgcolortile);
+
     border-color: var(--border-color);
 
-	color: var(--color1);
+    color: var(--color1);
     z-index: 0;
 }
 
 /* Button */
 .viewable-image {
     color: var(--textcolor);
-    border-radius: var(--borderradius);
     border-color: var(--border-color);
     border-style: solid;
     background-color: var(--bgcolortile);
@@ -594,6 +646,7 @@ a.tile:hover {
 .viewable-image:hover {
     border-color: var(--color1);
 }
+
 .viewable-image:active {
     filter: brightness(80%);
 }
@@ -617,7 +670,8 @@ a.tile:hover {
     position: fixed;
     left: 0;
     top: 0;
-    background-color: var(--bgcolor3); /* Black w/ opacity */
+    background-color: var(--bgcolor3);
+    /* Black w/ opacity */
     width: 100%;
     height: 100%;
 }
@@ -650,7 +704,7 @@ a.tile:hover {
 
     color: var(--color0);
     text-shadow: 0.03rem 0.03rem 0px var(--color1);
-  /* height: 150px; */
+    /* height: 150px; */
 }
 
 #image-viewer-previous, #image-viewer-next {
@@ -666,7 +720,9 @@ a.tile:hover {
 
 
 /* Mobile */
-@media (max-width: 48rem) { /* 768px */
+@media (max-width: 48rem) {
+
+    /* 768px */
     #image-viewer-previous, #image-viewer-next {
         top: 90%;
     }
@@ -702,7 +758,7 @@ a.tile:hover {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;    
+    user-select: none;
 }
 
 .check-box input {
@@ -724,21 +780,19 @@ a.tile:hover {
     cursor: pointer;
     background-color: var(--bgcolortile);
 
-
-    border-radius: var(--borderradius);
-    border-radius: var(--borderradius);
     border-color: var(--border-color);
     border-style: solid;
     border-width: 0.1rem;
 }
 
 /* On mouse-over*/
-.check-box:hover input ~ .checkmark {
+.check-box:hover input~.checkmark {
     border-color: var(--color1);
     box-shadow: 0.06rem 0.06rem 0px var(--color2);
 }
+
 /* When checkbox is checked */
-.check-box input:checked ~ .checkmark {
+.check-box input:checked~.checkmark {
     color: var(--color1);
     border-color: var(--color1);
 }
@@ -748,7 +802,7 @@ a.tile:hover {
 }
 
 /* Show the checkmark when checked */
-.check-box input:checked ~ .checkmark:after {
+.check-box input:checked~.checkmark:after {
     display: block;
 }
 
@@ -773,8 +827,8 @@ a.tile:hover {
     top: 2rem;
     position: sticky;
     color: var(--textcolor);
-    padding: 0.63rem;          /* 10px → 0.63rem */
-    border-radius: var(--borderradius);
+    padding: 0.63rem;
+    /* 10px → 0.63rem */
     border-color: var(--border-color);
     border-style: solid;
     border-width: 0.1rem;
@@ -788,13 +842,12 @@ a.tile:hover {
 
 
 #article-header {
-    display: block;    
+    display: block;
     margin-bottom: 2rem;
     border-color: var(--border-color);
     border-style: solid;
     border-width: 0;
     border-bottom-width: 0.1rem;
-    box-shadow: 0rem 0rem 0.63rem var(--bgcolor3);
     transition-duration: var(--transitionms);
     outline: None;
 }
@@ -812,13 +865,14 @@ a.tile:hover {
     display: grid;
     grid-template-columns: 4fr 1fr;
     gap: 1rem;
-    min-height: 100%; /* this hasnt worked but i may be on to something */
+    min-height: 100%;
+    /* this hasnt worked but i may be on to something */
 }
 
 .article-tag {
     color: var(--textcolor);
-    padding: 0.2rem;          /* 10px → 0.63rem */
-    border-radius: var(--borderradius);
+    padding: 0.2rem;
+    /* 10px → 0.63rem */
     border-color: var(--border-color);
     border-style: solid;
     background-color: var(--bgcolortile);
@@ -836,4 +890,77 @@ a.tile:hover {
 
 #article-updated {
     color: var(--color3)
+}
+
+#models-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+
+    .column {
+        min-height: 0;
+    }
+}
+
+#models-grid * {
+    cursor: pointer;
+}
+
+#model-viewer {
+    display: none;
+}
+
+#model-viewer-main {
+    position: absolute;
+    z-index: 100;
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    left: 1rem;
+    right: 1rem;
+    top: 1rem;
+    bottom: 1rem;
+
+    /* top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%); */
+
+    color: var(--textcolor);
+    padding: 0.63rem;
+    /* 10px → 0.63rem */
+    border-color: var(--border-color);
+    border-style: solid;
+    border-width: 0.1rem;
+    box-shadow: 0 0 2rem var(--bgcolor2);
+    transition-duration: var(--transitionms);
+    outline: None;
+
+    white-space: normal;
+    background-color: var(--bgcolortile);
+
+    color: var(--color1);
+
+}
+
+#model-viewer-viewer {
+    box-sizing: border-box;
+    width: 100%;
+    height: 70%;
+
+    color: var(--textcolor);
+    padding: 0.63rem;
+    /* 10px → 0.63rem */
+    border-color: var(--border-color);
+    border-style: solid;
+    border-width: 0.1rem;
+
+    transition-duration: var(--transitionms);
+    outline: None;
+}
+
+#model-viewer-text {
+    padding-top: 1rem;
+    /* padding-left: 1rem; */
+    text-align: center;
 }
