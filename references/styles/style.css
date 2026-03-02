@@ -91,7 +91,7 @@ body {
 }
 /* because of front image */
 .more-top-margin {
-    margin-top: 28rem !important;
+    margin-top: 25rem !important;
     padding-top: 3rem !important;
 }
 
@@ -410,13 +410,13 @@ footer {
 	margin: 0rem;
 	padding: 0rem;
     z-index: -100;
-    top: 15rem;
+    top: 13rem;
 }
 #front-image h1 {
 	color: var(--color0);
 	font-size: 7rem;
     text-shadow: 0.2rem 0.2rem 0px var(--color1); /* 0.2rem */
-    top: -8rem;
+    top: -3.5rem;
 	z-index: 1;
     position: absolute;
 }
@@ -527,6 +527,7 @@ a.tile:hover {
     padding-left: 1.25rem;
     position: absolute;
     top: 9.38rem;
+    margin-left: 0
 }
 
 .tile-small {
