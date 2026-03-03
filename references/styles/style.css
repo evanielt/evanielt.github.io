@@ -577,7 +577,7 @@ a.tile:hover {
 }
 
 .tile p {
-    padding-left: 1.25rem;
+    padding-left: 0.5rem;
     position: absolute;
     top: 9.38rem;
 }
