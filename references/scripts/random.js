@@ -1,0 +1,3 @@
+window.s = function s() {
+
+}

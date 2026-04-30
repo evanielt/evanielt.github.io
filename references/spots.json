@@ -921,5 +921,25 @@
         "activity": ["other", "biking"],
         "date": "",
         "images": []
+    },
+    {
+        "name": "",
+        "rating": "",
+        "description": "",
+        "coords": [],
+        "type": "place",
+        "activity": [],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "ktown",
+        "rating": "",
+        "description": "",
+        "coords": [],
+        "type": "place",
+        "activity": [],
+        "date": "",
+        "images": []
     }
 ]

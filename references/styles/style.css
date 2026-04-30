@@ -250,13 +250,14 @@ button, #model-viewer-download {
     transition-duration: var(--transitionms);
     outline: None;
     cursor: pointer;
+    width: 5rem;
 }
 
-button, #model-viewer-download:hover {
+button:hover, #model-viewer-download:hover {
     border-color: var(--color1);
 }
 
-button, #model-viewer-download:active {
+button:active, #model-viewer-download:active {
     filter: brightness(80%);
 }
 
@@ -304,15 +305,16 @@ input {
     box-shadow: 0rem 0rem 0.63rem var(--bgcolor3);
     transition-duration: var(--transitionms);
     outline: None;
+    width: 5rem;
 }
 
 input:hover {
-    border: 0.13rem solid var(--color2);
+    border-color: var(--color2);
     /* 2px → 0.13rem */
 }
 
 input:focus {
-    border: 0.13rem solid var(--color1);
+    border-color: var(--color1);
 }
 
 input::-webkit-outer-spin-button,
