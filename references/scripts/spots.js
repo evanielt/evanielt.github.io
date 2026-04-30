@@ -684,7 +684,7 @@ function searchValue(val) {
                                 ${matchedSpot.name}
                             </h2>
                             <p>
-                                hello
+                                ${matchedSpot.description}
                             </p>`
 
         elem.onclick = function() {

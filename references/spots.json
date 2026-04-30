@@ -923,22 +923,43 @@
         "images": []
     },
     {
-        "name": "",
-        "rating": "",
-        "description": "",
-        "coords": [],
+        "name": "Vancouver Hike",
+        "rating": "good",
+        "description": "This isn't a designated hike, just a trail I stumbled upon. The river is beautiful. Part of this connected with the skyline trail.",
+        "coords": [49.35623539089395, -123.08123411920279],
+        "type": "trail",
+        "activity": ["hiking"],
+        "date": "",
+        "images": [],
+        "gpx": "/references/gpx/vancouvhike.gpx"
+    },
+    {
+        "name": "Mr. Greek Donair Kabab",
+        "rating": "good",
+        "description": "Good fast casual Greek",
+        "coords": [49.281796986589264, -123.13381873867343],
         "type": "place",
-        "activity": [],
+        "activity": ["eating"],
         "date": "",
         "images": []
     },
     {
-        "name": "ktown",
-        "rating": "",
-        "description": "",
-        "coords": [],
+        "name": "Beyond Bread",
+        "rating": "good",
+        "description": "Calls themselved an artisan bakery but the food is really good. One of the best sandwiches and soup combos I've ever had.",
+        "coords": [49.26849162637955, -123.18533681102207],
         "type": "place",
-        "activity": [],
+        "activity": ["eating"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Stinson Beach",
+        "rating": "good",
+        "description": "Gets crowded but it's one of the best beaches in the bay area.",
+        "coords": [37.89647690886162, -122.64094895341421],
+        "type": "place",
+        "activity": ["other", "fishing", "hiking"],
         "date": "",
         "images": []
     }
