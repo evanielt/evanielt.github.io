@@ -43,6 +43,12 @@ var markerData = {
     },
 
     rating: {
+        favorite: {
+            name: "Favorite", 
+            color: "#ffd900",
+            style: null,
+            checked: false,
+        },
         good: {
             name: "Good", 
             color: "#419b58ff",
@@ -174,10 +180,10 @@ createMap();
 createMarkerStyles();
 
 // after filling in the spots variable with data from spots.json, it runs the necessary startup code
-fetch('/references/spots.json')
+fetch('/references/collections/spots.json')
     .then(response => {
         if (!response.ok) {
-            throw new Error('Couldn\'t find spot.json at ROOT/references/spots.json');
+            throw new Error('Couldn\'t find spot.json at ROOT/references/collections/spots.json');
         }
         return response.json();
     })
@@ -217,7 +223,6 @@ function createMap() {
 function createMarkerStyles() {
     Object.entries(markerData).forEach(([key, val]) => {
         Object.entries(val).forEach(([key2, markerData]) => {
-
             markerData.style = {
                 'Point': new Style({
                     image: new ol.style.Icon({
@@ -242,6 +247,23 @@ function createMarkerStyles() {
             };
         })
     })
+
+    markerData.rating.favorite.style = {
+        'Point': new Style({
+            image: new ol.style.Icon({
+                anchor: [0.5, 0.8],
+                src: '/images/markerstar.svg',
+                scale: 0.05,
+                color: markerData.rating.favorite.color,
+            })
+        }),
+        'MultiLineString': new Style({
+            stroke: new Stroke({
+                color: markerData.rating.favorite.color,
+                width: 3,
+            }),
+        }),
+    };
 }
 
 function createSourcesAndLayers() {
@@ -312,6 +334,7 @@ function getCheckboxState() {
     markerData.type.place.checked = document.getElementById('check-type-place').checked;
     markerData.type.road.checked = document.getElementById('check-type-road').checked;
 
+    markerData.rating.favorite.checked = document.getElementById('check-rating-favorite').checked;
     markerData.rating.good.checked = document.getElementById('check-rating-good').checked;
     markerData.rating.fine.checked = document.getElementById('check-rating-fine').checked;
     markerData.rating.bad.checked = document.getElementById('check-rating-bad').checked;
@@ -415,6 +438,8 @@ function getStyle(spot) {
 
     if(spot.get("rating") == "unexplored") {
         style = unexploredData.style;
+    } if(spot.get("rating") == "favorite") {
+        style = markerData.rating.favorite.style;
     } else {
         var dropdownValueSingle;
         if(Array.isArray(spot.get(colorDropdownValue))) {

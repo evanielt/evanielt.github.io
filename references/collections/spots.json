@@ -41,7 +41,7 @@
     },
     { 
         "name": "Redwood Rd",
-        "rating": "good",
+        "rating": "favorite",
         "description": "Cool road to drive on. Starts in Oakland and spits you out in Castro Valley",
         "coords": [37.795490, -122.179934], 
         "type": "road",
@@ -63,7 +63,7 @@
     },
     {
         "name": "Pinole overlook",
-        "rating": "bad",
+        "rating": "fine",
         "description": "Very pretty, especially in the evening, but it smells shyte",
         "coords": [38.014334, -122.296809],
         "type": "place",
@@ -73,7 +73,7 @@
     },
     {
         "name": "Eastport Staging Area",
-        "rating": "good",
+        "rating": "favorite",
         "description": "A cool bike ride from here gets you all the way up into sibley. Really, really steep, but the ride down is fun. I'm timing myself on my ascents so I can see my improvement.",
         "coords": [37.839777, -122.181212], 
         "type": "place",
@@ -93,7 +93,7 @@
     },
     {
         "name": "Mines Rd",
-        "rating": "bad",
+        "rating": "fine",
         "description": "It's kinda cool but kinda dih. Saw some cops hanging on it so be wary.",
         "coords": [37.548186, -121.570929],
         "type": "road",
@@ -174,7 +174,7 @@
     },
     {
         "name": "Montara State Beach",
-        "rating": "good",
+        "rating": "favorite",
         "description": "Okay, people are saying that this beach, it's the best. Everyone's talking about it, they're saying it's an incredible beach. And believe me, this beach, it's fabulous. Absolutely fabulous. One of the most fabulous beaches you'll ever see.",
         "coords": [37.547668, -122.514862],
         "type": "place",
@@ -214,22 +214,12 @@
     },
     {
         "name": "Spicy Joi",
-        "rating": "good",
+        "rating": "favorite",
         "description": "yeah this place fire",
         "coords": [37.9735586358711, -122.0421143316963],
         "type": "place",
         "activity": ["eating"],
         "date": "2025-07-??",
-        "images": []
-    },
-    {
-        "name": "San Mateo Guitar Center",
-        "rating": "good",
-        "description": "Best guitar center",
-        "coords": [37.53523658266157, -122.29883658578991],
-        "type": "place",
-        "activity": ["other"],
-        "date": "2025-09-18",
         "images": []
     },
     {
@@ -314,7 +304,7 @@
     },
     {
         "name": "Sobrante Ridge Road",
-        "rating": "bad",
+        "rating": "fine",
         "description": "the trail is crumbly and in a weird spot. You have to park down the main road and it's sketch to bike on",
         "coords": [37.971114254366356, -122.25033546441969],
         "type": "road",
@@ -322,16 +312,6 @@
         "date": "",
         "images": [],
         "gpx": "/references/gpx/sobranteridgerd.gpx"
-    },
-    {
-        "name": "Las Cabañas Mexican Grill & Taqueria",
-        "rating": "fine",
-        "description": "The kiosk was broken so I could only type my name as Cha. Tasted good cause I was famished",
-        "coords": [37.87296573330649, -122.27336612416367],
-        "type": "place",
-        "activity": ["eating"],
-        "date": "",
-        "images": []
     },
     {
         "name": "Centerville Flat Dispersed Campground",
@@ -642,7 +622,7 @@
     },
     {
         "name": "Redwood Hike",
-        "rating": "good",
+        "rating": "favorite",
         "description": "spooky hike at night. very pretty",
         "coords": [37.81831648750573, -122.14669285414115],
         "type": "place",
@@ -740,16 +720,6 @@
         "activity": ["fishing", "boating", "hiking"],
         "date": "2025-05-26",
         "images": [""]
-    },
-    {
-        "name": "Newhall Community Park",
-        "rating": "fine",
-        "description": "Yeah its ok I guess",
-        "coords": [37.953986269740135, -121.97701055987488],
-        "type": "place",
-        "activity": ["other"],
-        "date": "",
-        "images": ["/images/portfolio/IMG_9516.jpg"]
     },
     {
         "name": "Tank House BBQ & Bar",

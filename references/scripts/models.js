@@ -1,8 +1,8 @@
 var models = []
-fetch('/references/models.json')
+fetch('/references/collections/models.json')
     .then(response => {
         if (!response.ok) {
-            throw new Error('Couldn\'t find models.json at ROOT/references/models.json');
+            throw new Error('Couldn\'t find models.json at ROOT/references/collections/models.json');
         }
         return response.json();
     })

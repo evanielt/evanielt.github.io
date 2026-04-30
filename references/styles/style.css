@@ -838,8 +838,11 @@ a.tile:hover {
 
     height: max-content;
     min-height: auto;
-}
 
+    ul {
+        padding-left: 2rem;
+    }
+}
 
 #article-header {
     display: block;

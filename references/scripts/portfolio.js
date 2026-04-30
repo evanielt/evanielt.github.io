@@ -1,8 +1,8 @@
 var images = []
-fetch('/references/portfolio.json')
+fetch('/references/collections/portfolio.json')
     .then(response => {
         if (!response.ok) {
-            throw new Error('Couldn\'t find portfolio.json at ROOT/references/portfolio.json');
+            throw new Error('Couldn\'t find portfolio.json at ROOT/references/collections/portfolio.json');
         }
         return response.json();
     })
