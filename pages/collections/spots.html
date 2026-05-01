@@ -72,6 +72,11 @@
 
             <h4>Rating</h4>
             <label class="check-box">
+                <input type="checkbox" id="check-rating-favorite" onchange="redrawMarkers()" checked>
+                <span class="checkmark"></span>
+                Favorite
+            </label>
+            <label class="check-box">
                 <input type="checkbox" id="check-rating-good" onchange="redrawMarkers()" checked>
                 <span class="checkmark"></span>
                 Good
@@ -156,9 +161,8 @@
             <p id="sidebar-coords" class="sidebar-section">coords</p>
             <p id="sidebar-date" class="sidebar-section">date</p>
 
-
-            <p id="sidebar-type" class="sidebar-section">type</p>
             <p id="sidebar-rating" class="sidebar-section">rating</p>
+            <p id="sidebar-type" class="sidebar-section">type</p>
             <p id="sidebar-activity" class="sidebar-section">activity</p>
             <p id="sidebar-images" class="sidebar-section">images</p>
         </div>
