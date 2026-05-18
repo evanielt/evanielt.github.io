@@ -897,10 +897,10 @@
         "rating": "good",
         "description": "This isn't a designated hike, just a trail I stumbled upon. The river is beautiful. Part of this connected with the skyline trail.",
         "coords": [49.35623539089395, -123.08123411920279],
-        "type": "trail",
+        "type": "road",
         "activity": ["hiking"],
         "date": "",
-        "images": [],
+        "images": ["/images/portfolio/IMG_0669.jpg"],
         "gpx": "/references/gpx/vancouvhike.gpx"
     },
     {

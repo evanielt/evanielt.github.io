@@ -232,5 +232,41 @@
         "description": "its lowk brutalist",
         "url": "/images/portfolio/IMG_0413.jpg",
         "spot": ""
+    },
+    {
+        "name": "couv mtns",
+        "description": "beautiful british columbia",
+        "url": "/images/portfolio/IMG_0642.jpg",
+        "spot": ""
+    },
+    {
+        "name": "couv smth",
+        "description": "this is sorta by stanley park i think",
+        "url": "/images/portfolio/IMG_0628.jpg",
+        "spot": ""
+    },
+    {
+        "name": "couv forest",
+        "description": "",
+        "url": "/images/portfolio/IMG_0628.jpg",
+        "spot": "Vancouver Hike"
+    },
+    {
+        "name": "devin",
+        "description": "i really like this photo",
+        "url": "/images/portfolio/IMG_0700.jpg",
+        "spot": ""
+    },
+    {
+        "name": "just above montara",
+        "description": "",
+        "url": "/images/portfolio/IMG_0702.jpg",
+        "spot": ""
+    },
+    {
+        "name": "newport beach",
+        "description": "",
+        "url": "/images/portfolio/IMG_0032.jpg",
+        "spot": ""
     }
 ]

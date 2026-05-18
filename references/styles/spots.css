@@ -104,7 +104,7 @@ html {
     overflow: hidden;
 
     font-size: 12px;
-    width: 40rem;
+    width: 40rem !important;
     max-width: 50%;
     max-height: 100%;
 
@@ -140,6 +140,8 @@ html {
 
     pointer-events: auto;
     transition: 100ms;
+
+    width: 100%;
 }
 
 #search-bar-close {
