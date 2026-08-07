@@ -932,5 +932,75 @@
         "activity": ["other", "fishing", "hiking"],
         "date": "",
         "images": []
+    },
+    {
+        "name": "Boba Cafe",
+        "rating": "good",
+        "description": "Pretty good. Fair price and good food",
+        "coords": [33.976252068401365, -117.3382894362363],
+        "type": "place",
+        "activity": ["eating"],
+        "date": "2026-4-2",
+        "images": []
+    },
+    {
+        "name": "Trees Organic Coffee",
+        "rating": "good",
+        "description": "I liked this spot.",
+        "coords": [49.28178067574433, -123.12460042377265],
+        "type": "place",
+        "activity": ["eating"],
+        "date": "2026-3-14",
+        "images": []
+    },
+    {
+        "name": "Acme Burger",
+        "rating": "good",
+        "description": "Theres a few other locations in Petaluma. It's good",
+        "coords": [38.23311928472911, -122.64392870720057],
+        "type": "place",
+        "activity": ["eating"],
+        "date": "2026-3-7",
+        "images": []
+    },
+    {
+        "name": "V-Nam Restaurant",
+        "rating": "fine",
+        "description": "Good and authentic, but i think there wasn't tripe",
+        "coords": [49.31206726916524, -123.07439379967772],
+        "type": "place",
+        "activity": ["eating"],
+        "date": "2026-3-14",
+        "images": []
+    },
+    {
+        "name": "Place along Tomales bay delta",
+        "rating": "good",
+        "description": "Good to boat (small boat) here. Hard to get your boats in right near the parking, its a pretty steep bank, but its definitely doable (I done it)",
+        "coords": [38.06283763105278, -122.81942943401359],
+        "type": "place",
+        "activity": ["boating"],
+        "date": "2026-7-6",
+        "images": []
+    },
+    {
+        "name": "White Rock Lake",
+        "rating": "good",
+        "description": "Beautiful lake. Pretty remote. Technically you don't need a 4x4 but you really should have one. Definitely high ground clearance and decent tires. Don't trust google maps to get here, it takes you the wrong way. Full writeup <a href=\"/pages/articles/whiterocklake.html\">here</a>",
+        "coords": [39.419477995390444, -120.38455502193996],
+        "type": "place",
+        "activity": ["camping", "hiking", "boating", "driving"],
+        "date": "2026-7-20?",
+        "images": []
+    },
+    {
+        "name": "Berryessa Snow Mountain National Monument",
+        "rating": "unexplored",
+        "description": "Looks pretty interesting. Mountainous, but still oak forest in some places. Very diverse area.",
+        "coords": [38.93832615134638, -123.2006731228627],
+        "type": "place",
+        "activity": ["hiking", "camping"],
+        "date": "",
+        "images": []
     }
 ]

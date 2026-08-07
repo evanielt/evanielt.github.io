@@ -48,12 +48,6 @@
         "spot": ""
     },
     {
-        "name": "truck on dirt road past arnold",
-        "description": "",
-        "url": "/images/portfolio/IMG_20250720_152017_668.jpg",
-        "spot": ""
-    },
-    {
         "name": "kauai palms",
         "description": "took this a while back",
         "url": "/images/portfolio/P6170040.JPG",
@@ -267,6 +261,24 @@
         "name": "newport beach",
         "description": "",
         "url": "/images/portfolio/IMG_0032.jpg",
+        "spot": ""
+    },
+    {
+        "name": "taken on a drive to arizona",
+        "description": "",
+        "url": "/images/portfolio/P4010015.jpg",
+        "spot": ""
+    },
+    {
+        "name": "white rock lake night",
+        "description": "",
+        "url": "/images/portfolio/IMG_0049.jpg",
+        "spot": ""
+    },
+    {
+        "name": "white rock lake",
+        "description": "",
+        "url": "/images/portfolio/IMG_0064whiterock.jpg",
         "spot": ""
     }
 ]

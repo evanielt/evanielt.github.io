@@ -25,7 +25,7 @@
     --textcolor2: #6d6d6d;
     --errorcolor: #751c4d;
 
-    --fontminsize: 15px;
+    --fontminsize: 16px;
     /* 14px → 0.88rem */
     --fontmaxsize: 18px;
     /* 18px → 1.13rem */
@@ -34,7 +34,6 @@
     /* 3px → 0.19rem */
 }
 
-/* Highlight color */
 ::selection {
     background: #442c11;
 }
@@ -69,7 +68,6 @@ body {
     height: auto;
 }
 
-/* Main content area */
 #main {
     display: flex;
     box-sizing: border-box;
@@ -107,10 +105,10 @@ p {
     font-size: var(--fontminsize);
 }
 
-#main p {
+/* #main p {
     margin-left: 1rem;
     margin-right: 1rem;
-}
+} */
 
 a {
     color: var(--color1);
@@ -168,7 +166,6 @@ h4 {
 
 hr {
     margin-top: 1.88rem;
-    /* 30px → 1.88rem */
     margin-bottom: 1.88rem;
     margin-left: 1.88rem;
     margin-right: 1.88rem;
@@ -186,7 +183,6 @@ iframe {
     border-color: var(--border-color);
     border-style: solid;
     border-width: 0.1rem;
-    /* 3px → 0.19rem */
     background-color: transparent;
     /* box-shadow: 0.2rem 0.2rem 0px var(--color1); */
     transition-duration: var(--transitionms);
@@ -200,7 +196,6 @@ iframe:hover {
 iframe:active {
     background: var(--color1);
     border-width: 0.1rem;
-    /* 3px → 0.19rem */
     border-color: var(--color1);
     box-shadow: 0.12rem 0.12rem 0px var(--color2);
 }
@@ -231,6 +226,7 @@ li {
     padding-left: 0.63rem;
     padding-top: 0.5rem;
     white-space: normal;
+    color: var((--textcolor))
 }
 
 li::marker {
@@ -482,8 +478,7 @@ footer {
 }
 
 /* Mobile */
-@media (max-width: 48rem) {
-    /* 768px */
+@media (max-width: 768px) {
     #columns {
         display: flex;
         flex-direction: column-reverse;
@@ -551,6 +546,7 @@ a.tile:hover {
     box-shadow: 0.12rem 0.12rem 0px var(--color2);
 }
 
+
 .tile img {
     object-fit: cover;
     height: 9.38rem;
@@ -581,7 +577,7 @@ a.tile:hover {
     padding-left: 0.5rem;
     position: absolute;
     top: 9.38rem;
-    margin-left: 0
+    margin-left: 1rem;
 }
 
 .tile-small {
@@ -721,10 +717,8 @@ a.tile:hover {
 }
 
 
-/* Mobile */
-@media (max-width: 48rem) {
+@media (max-width: 768px) {
 
-    /* 768px */
     #image-viewer-previous, #image-viewer-next {
         top: 90%;
     }
@@ -771,7 +765,6 @@ a.tile:hover {
     cursor: pointer;
 }
 
-/* Create a custom checkbox */
 .checkmark {
     display: inline-block;
     vertical-align: middle;
@@ -787,13 +780,11 @@ a.tile:hover {
     border-width: 0.1rem;
 }
 
-/* On mouse-over*/
 .check-box:hover input~.checkmark {
     border-color: var(--color1);
     box-shadow: 0.06rem 0.06rem 0px var(--color2);
 }
 
-/* When checkbox is checked */
 .check-box input:checked~.checkmark {
     color: var(--color1);
     border-color: var(--color1);
@@ -803,12 +794,10 @@ a.tile:hover {
     filter: brightness(80%);
 }
 
-/* Show the checkmark when checked */
 .check-box input:checked~.checkmark:after {
     display: block;
 }
 
-/* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
     content: "«";
     display: none;
@@ -819,6 +808,77 @@ a.tile:hover {
     font-size: 1.5rem;
     left: 0.45rem;
     top: -0.1rem;
+}
+
+article p {
+    white-space: pre-line;
+    margin-bottom: 2rem;
+}
+
+article iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    #article-columns {
+        grid-template-columns: 1fr !important;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    /* #article-body */
+}
+
+@media (max-width: 1200px) {
+    #main {
+        padding-right: 5rem !important;
+    }
+
+    /* #article-body */
+}
+
+.imgcont, .imgcontshort {
+    width: 100%;
+    display: inline-grid;
+    /* overflow: hidden; */
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+    justify-content: center;
+    grid-gap: 1rem;
+
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.imgcont {
+    max-height: 31rem;
+}
+
+.imgcontshort {
+    max-height: 16rem;
+}
+
+.imgcont * {
+    height: 30rem !important;
+    width: auto;
+}
+
+.imgcontshort * {
+    height: 15rem !important;
+    width: auto;
+}
+
+#article-body {
+    display: block;
+    width: 100% !important;
 }
 
 #article-body, #article-sidebar {
@@ -868,7 +928,7 @@ a.tile:hover {
 
 #article-columns {
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: minmax(0, 1fr) 18rem;
     gap: 1rem;
     min-height: 100%;
     /* this hasnt worked but i may be on to something */
