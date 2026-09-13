@@ -814,7 +814,7 @@
     {
         "name": "Mt Diablo",
         "rating": "good",
-        "description": "Lots of good things to do here. Great view, hiking trails, and bike routes. It even snows here on occasion.",
+        "description": "Lots of good things to do here. Great view, hiking trails, and bike routes. It doesn't snow often, maybe once every couple years.",
         "coords": [37.88173959390156, -121.91461834501943],
         "type": "place",
         "activity": ["hiking", "biking", "camping"],
@@ -1000,6 +1000,87 @@
         "coords": [38.93832615134638, -123.2006731228627],
         "type": "place",
         "activity": ["hiking", "camping"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Mt Thielsen",
+        "rating": "unexplored",
+        "description": "Only seen it from the air, but man is it a striking mountain",
+        "coords": [43.15159697574689, -122.06637774216674],
+        "type": "place",
+        "activity": ["hiking", "camping"],
+        "date": "",
+        "images": ["https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.summitpost.org%2Fimages%2Foriginal%2F318791.JPG&f=1&nofb=1&ipt=2677d4d0c2295aa1806c62d0e5230b771926737c072b35f104e167ec50c1c48a"]
+    },
+    {
+        "name": "Moe's Mediterranean Grill",
+        "rating": "good",
+        "description": "somehow made my way there twice without knowing it. the decorations are weird but the foods good.",
+        "coords": [35.28011026326622, -120.66321038846367],
+        "type": "place",
+        "activity": ["hiking", "camping"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Berkeley Bowl",
+        "rating": "good",
+        "description": "There's two locations, but I think this ones the best one. It's such a good grocery store. So much good food, niche food, bulk food (but maybe not so much cheap food)",
+        "coords": [37.85309709292575, -122.28995739520413],
+        "type": "place",
+        "activity": ["eating"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Mt. Whitney",
+        "rating": "unexplored",
+        "description": "I'd really like to hike it",
+        "coords": [36.57856708252027, -118.29234587702119],
+        "type": "place",
+        "activity": ["hiking", "camping"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Unnecessary Mountain",
+        "rating": "unexplored",
+        "description": "I just want to be able to say I hiked Unnecessary Mountain.",
+        "coords": [49.44866709997321, -123.19857042169382],
+        "type": "place",
+        "activity": ["hiking"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Grouse Grind",
+        "rating": "unexplored",
+        "description": "Just straight stairs. Looks hard and fun.",
+        "coords": [49.37124659432712, -123.09841939929184],
+        "type": "place",
+        "activity": ["hiking"],
+        "date": "",
+        "images": [],
+        "gpx": "/references/gpx/grousegrind.gpx"
+    },
+    {
+        "name": "Urban Ore",
+        "rating": "good",
+        "description": "The ultimate thrift store. I've found so much good stuff here. Love the electronics and the outdoor sections.",
+        "coords": [37.85054907196643, -122.29049107597572],
+        "type": "place",
+        "activity": ["other"],
+        "date": "",
+        "images": []
+    },
+    {
+        "name": "Bigway",
+        "rating": "good",
+        "description": "no way theres a flipping bigway at ubc",
+        "coords": [49.26631800491488, -123.2423075895257],
+        "type": "place",
+        "activity": ["eating"],
         "date": "",
         "images": []
     }
